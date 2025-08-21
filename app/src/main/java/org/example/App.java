@@ -51,8 +51,25 @@ public class App {
         System.out.println(maior);
     }
 
+    static int buscaBinaria(int[] V, int chave) {
+        int L = 0, R = V.length, M;
+        while(L <= R) {
+            M = (L + R) / 2;
+            if (V[M] == chave) {
+                return M;
+            } else if (V[M] > chave) {
+                R = M - 1;
+            } else {
+                L = M + 1;
+            }
+        }
+        return -1;
+    }
+
 
     public static void main(String[] args) {
-        exercicioMatriz();
+//        exercicioMatriz();
+        int[] valores = {-2, 0, 5, 7, 18, 19, 34, 60};
+        System.out.println(buscaBinaria(valores, -2));
     }
 }
