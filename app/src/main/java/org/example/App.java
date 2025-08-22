@@ -3,6 +3,7 @@
  */
 package org.example;
 
+import java.util.Arrays;
 import java.util.Objects;
 import java.util.Scanner;
 
@@ -12,13 +13,13 @@ public class App {
 
     static void exercicio1() {
         Scanner sc = new Scanner(System.in);
-        double a, b, c;
+        float a, b, c;
         System.out.print("Digite o valor de a: ");
-        a = sc.nextDouble();
+        a = sc.nextFloat();
         System.out.print("Digite o valor de b: ");
-        b = sc.nextDouble();
+        b = sc.nextFloat();
         System.out.print("Digite o valor de c: ");
-        c = sc.nextDouble();
+        c = sc.nextFloat();
         System.out.printf("O valor do discriminante é %.2f\n", (b*b)-(4*a*c));
     }
 
@@ -51,6 +52,107 @@ public class App {
         return m / arr.length;
     }
 
+    // Implemente um programa que RECEBE cinco argumentos na linha de comando que representam os cinco
+    // bits da representação binária de um número (por exemplo, ./gradlew run - -args "1 0 0 1 1"), e ESCREVE
+    // esse número em representação decimal. Assuma que os bits são informados do mais significativo para
+    // o menos (da esquerda para direita). Se os argumentos informados não estiverem dentro do padrão
+    // (quantidade, valores, formato), o programa deve imprimir uma mensagem de erro e abordar a execução.
+
+    static void exercicio3(String[] args) {
+        if (args.length != 5) {
+            System.out.println("Erro: não possui 5 argumentos.");
+            return;
+        }
+        byte valor = 0;
+        for (int i = 0; i < args.length; i++) {
+            if (!args[i].equals("1") && !args[i].equals("0")) {
+                System.out.printf("Erro: argumento '%s' nao é binário.\n", args[i]);
+                return;
+            }
+            if (args[i].equals("1")) valor += (byte) Math.pow(2, 4-i);
+        }
+        System.out.printf("Valor: %d\n", valor);
+    }
+
+    // Junto com essa lista de exercícios existe um arquivo chamado valores.csv que contém os valores ordenados
+    // de um vetor para realizar buscas. Implemente um programa para buscar elementos nesse conjunto de
+    // valores. O programa RECEBE a chave via argumento da linha de comandos, LÊ os valores do arquivo via
+    // redirecionamento de entrada, e ESCREVE no terminal o índice da chave no vetor se estiver presente, ou
+    // Ausente caso contrário.
+
+    static void exercicio4(String[] args) {
+        if (args.length != 1) {
+            System.out.println("Erro: não possui 1 argumento.");
+            return;
+        }
+        int chave = Integer.parseInt(args[0]);
+        Scanner sc = new Scanner(System.in);
+        String[] valoresTexto = sc.nextLine().split(";");
+        int[] valores = new int[valoresTexto.length];
+        for (int i = 0; i < valoresTexto.length; i++) {
+            valores[i] = Integer.parseInt(valoresTexto[i]);
+        }
+        int index = buscaBinaria(valores, chave);
+        System.out.println("Index: "+((index != -1) ? index : "ausente"));
+    }
+
+    static int buscaBinaria(int[] V, int chave) {
+        int L = 0, R = V.length, M;
+        do {
+            M = (L + R) / 2;
+            if (V[M] == chave) {
+                return M;
+            } else if (V[M] > chave) {
+                R = M - 1;
+            } else {
+                L = M + 1;
+            }
+        } while(L <= R);
+        return -1;
+    }
+
+    // Implemente um programa que LÊ do teclado um texto e ESCREVE a versão criptografada desse texto em
+    // um arquivo de texto. Use redirecionamento de saída para escrever no arquivo. Caso existam caracteres
+    // não alfabéticos no texto (pontuação, números, espaços), deixe-os intactos.
+
+    static void exercicio5() {
+        Scanner sc = new Scanner(System.in);
+        String texto = sc.nextLine();
+        char[] letras = texto.toCharArray();
+        char[][] faixas = {{'a', 'z'}, {'A', 'Z'}};
+        for (int i = 0; i < letras.length; i++) {
+            for (char[] faixa : faixas) {
+                if (letras[i] >= faixa[0] && letras[i] <= faixa[1]) {
+                    letras[i]  = (char) (((letras[i] - faixa[0] + 3) % 26) + faixa[0]);
+                }
+            }
+        }
+        System.out.println(new String(letras));
+    }
+
+    // Implemente um programa que calcule o desvio padrão δ de um vetor v contendo n = 10 números reais,
+    // onde m é a média dos valores. (eu fiz para os números em valores.csv)
+    static void exercicio6() {
+        Scanner sc = new Scanner(System.in);
+        String[] valoresTexto = sc.nextLine().split(";");
+        int[] valores = new int[valoresTexto.length];
+        for (int i = 0; i < valoresTexto.length; i++) {
+            valores[i] = Integer.parseInt(valoresTexto[i]);
+        }
+        int m = media(valores);
+        double sum = 0;
+        for (int valor : valores) {
+            sum += Math.pow((valor-m), 2);
+        }
+        double dp = Math.sqrt(sum / (valores.length - 1));
+        System.out.printf("%.2f\n", dp);
+    }
+
+    static int media(int[] arr) {
+        int m = 0;
+        for (int v : arr) m += v;
+        return m / arr.length;
+    }
 
 
     static int produto(int[][] mat, int i, int j, int di, int dj, int comp) {
@@ -98,24 +200,13 @@ public class App {
         System.out.println(maior);
     }
 
-    static int buscaBinaria(int[] V, int chave) {
-        int L = 0, R = V.length, M;
-        while(L <= R) {
-            M = (L + R) / 2;
-            if (V[M] == chave) {
-                return M;
-            } else if (V[M] > chave) {
-                R = M - 1;
-            } else {
-                L = M + 1;
-            }
-        }
-        return -1;
-    }
-
 
     public static void main(String[] args) {
 //        exercicioMatriz();
-        exercicio2();
+//        exercicio2();
+//        exercicio3(args);
+//        exercicio4(args);
+//        exercicio5();
+        exercicio6();
     }
 }
