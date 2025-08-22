@@ -3,11 +3,58 @@
  */
 package org.example;
 
+import java.util.Objects;
 import java.util.Scanner;
 
 public class App {
+    // Implemente um programa que LÊ do teclado três números reais a, b e c, representando os coeficientes
+    // de uma equação de segundo grau, e ESCREVE o valor do discriminante ∆ = b^2 − 4ac da equação.
+
+    static void exercicio1() {
+        Scanner sc = new Scanner(System.in);
+        double a, b, c;
+        System.out.print("Digite o valor de a: ");
+        a = sc.nextDouble();
+        System.out.print("Digite o valor de b: ");
+        b = sc.nextDouble();
+        System.out.print("Digite o valor de c: ");
+        c = sc.nextDouble();
+        System.out.printf("O valor do discriminante é %.2f\n", (b*b)-(4*a*c));
+    }
+
+    // Implemente um programa que LÊ do teclado as seis notas de um aluno e a presença (entre 0 e 100), e
+    // ESCREVE o seu resultado R e se o aluno foi aprovado ou reprovado.
+
+    static void exercicio2() {
+        Scanner sc = new Scanner(System.in);
+        byte[] P  = lerValores((byte) 4, "prova"  , sc);
+        byte[] Pj = lerValores((byte) 2, "projeto", sc);
+        System.out.print("Digite a presença (em %): ");
+        byte pre = sc.nextByte();
+        double mediaP = media(P), mediaPj = media(Pj);
+        byte R = (mediaP >= 6 && mediaPj >= 6) ? (byte) Math.round( (3 * mediaP + 2 * mediaPj) / 5 ) : 0;
+        System.out.printf("R: %d | Situacao: %s", R, (R >= 6 && pre >= 75) ? "Aprovado" : "Reprovado");
+    }
+
+    static byte[] lerValores(byte tam, String nome, Scanner sc) {
+        byte[] valores = new byte[tam];
+        for (byte i = 0; i < tam; i++) {
+            System.out.printf("Digite o valor de %s %d: ", nome, i+1);
+            valores[i] = sc.nextByte();
+        }
+        return valores;
+    }
+
+    static double media(byte[] arr) {
+        double m = 0;
+        for (byte b : arr) m += b;
+        return m / arr.length;
+    }
+
+
 
     static int produto(int[][] mat, int i, int j, int di, int dj, int comp) {
+        Objects.requireNonNull(mat);
         int ci = i + (comp - 1)*di, cj = j + (comp - 1)*dj;
         if (ci >= mat.length || ci < 0 || cj >= mat[0].length || cj < 0) {
             return Integer.MIN_VALUE;
@@ -69,7 +116,6 @@ public class App {
 
     public static void main(String[] args) {
 //        exercicioMatriz();
-        int[] valores = {-2, 0, 5, 7, 18, 19, 34, 60};
-        System.out.println(buscaBinaria(valores, -2));
+        exercicio2();
     }
 }
