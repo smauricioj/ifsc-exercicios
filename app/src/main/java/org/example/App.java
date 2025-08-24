@@ -139,32 +139,81 @@ public class App {
         for (int i = 0; i < valoresTexto.length; i++) {
             valores[i] = Integer.parseInt(valoresTexto[i]);
         }
-        int m = media(valores);
-        double sum = 0;
-        for (int valor : valores) {
-            sum += Math.pow((valor-m), 2);
-        }
+        double m = media(valores), sum = 0;
+        for (int valor : valores)  sum += Math.pow((valor-m), 2);
         double dp = Math.sqrt(sum / (valores.length - 1));
         System.out.printf("%.2f\n", dp);
     }
 
-    static int media(int[] arr) {
-        int m = 0;
+    static double media(int[] arr) {
+        double m = 0.0;
         for (int v : arr) m += v;
         return m / arr.length;
     }
 
+    // Implemente um programa que LÊ um número inteiro positivo n e em seguida imprima n linhas do Triângulo
+    //  de Pascal.
+    static void exercicio7(){
+        Scanner sc = new Scanner(System.in);
+        int n = -1;
+        do {
+            System.out.print("Digite o valor de n: ");
+            n = sc.nextInt();
+        } while (n < 0);
+        int[] linhaAtual = new int[n], linhaAnterior = new int[n];
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j <= i; j++) {
+                linhaAtual[j] = (j == 0 || j == i) ? 1 : linhaAnterior[j - 1] + linhaAnterior[j];
+                System.out.print(linhaAtual[j] + " ");
+            }
+            System.out.println();
+            System.arraycopy(linhaAtual, 0, linhaAnterior, 0, i + 1);
+        }
+    }
 
-    static int produto(int[][] mat, int i, int j, int di, int dj, int comp) {
-        Objects.requireNonNull(mat);
-        int ci = i + (comp - 1)*di, cj = j + (comp - 1)*dj;
-        if (ci >= mat.length || ci < 0 || cj >= mat[0].length || cj < 0) {
-            return Integer.MIN_VALUE;
+    // Implemente um programa que gera uma matriz de tamanho 5 × 5, preenche a diagonal principal com 1 e
+    // os demais elementos com 0 e ESCREVE a matriz no terminal de forma legível.
+    static void exercicio8(){
+        byte[][] mat = new byte[5][5];
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 5; j++) {
+                mat[i][j] = (byte) ((i == j) ? 1 : 0);
+                System.out.print(mat[i][j] + " ");
+            }
+            System.out.println();
         }
+    }
+
+    // Implemente um programa que gera uma matriz A de tamanho 10 × 10 onde seus elementos obedecem a
+    // seguinte equação (no pdf)
+    // Em seguida, o programa ESCREVE a matriz para um arquivo de texto usando redirecionamento de saída.
+
+    static void exercicio9(){
+        byte tam = 10;
+        int[][] mat = new int[tam][tam];
+        for (int i = 0; i < tam; i++) {
+            for (int j = 0; j < tam; j++) {
+                if (i < j) {
+                    mat[i][j] = (2 * i) + (7 * j) - 2;
+                }
+                else if (i == j) {
+                    mat[i][j] = (3 * i * i) - 1;
+                } else {
+                    mat[i][j] = (4 * i * i * i) - (5 * j * j);
+                }
+                System.out.print(mat[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+    }
+
+
+    static int produto(int[][] mat, int i, int j, int di, int dj) {
+        int comp = 4, ci = i + (comp - 1)*di, cj = j + (comp - 1)*dj;
+        if (ci >= mat.length || ci < 0 || cj >= mat[0].length || cj < 0) return Integer.MIN_VALUE;
         int valor = 1;
-        for (int k = 0; k < comp; k++) {
-            valor *= mat[i + (k * di)][j + (k * dj)];
-        }
+        for (int k = 0; k < comp; k++) valor *= mat[i + (k * di)][j + (k * dj)];
         return valor;
     }
 
@@ -186,13 +235,12 @@ public class App {
 
         // Buscar maior valor
         int maior = 0;
-        int comp = 4;
         for(i = 0; i < tam; i++){
             for(j = 0; j < tam; j++){
-                maior = Math.max(maior, produto(matriz, i, j, 0, 1, comp));
-                maior = Math.max(maior, produto(matriz, i, j, 1, 0, comp));
-                maior = Math.max(maior, produto(matriz, i, j, 1, 1, comp));
-                maior = Math.max(maior, produto(matriz, i, j, 1, -1, comp));
+                maior = Math.max(maior, produto(matriz, i, j, 0, 1));
+                maior = Math.max(maior, produto(matriz, i, j, 1, 0));
+                maior = Math.max(maior, produto(matriz, i, j, 1, 1));
+                maior = Math.max(maior, produto(matriz, i, j, 1, -1));
             }
         }
 
@@ -207,6 +255,9 @@ public class App {
 //        exercicio3(args);
 //        exercicio4(args);
 //        exercicio5();
-        exercicio6();
+//        exercicio6();
+//        exercicio7();
+        exercicio9();
     }
+
 }
