@@ -1,6 +1,5 @@
 package ifsc.poo.provaUm;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class SegundaChamada {
@@ -17,7 +16,7 @@ public class SegundaChamada {
     }
     public static void main(String[] args) {
         double RAIO_TERRA = 6367.4445;
-        int N_CIDADES = 50;
+        int N_CIDADES = 234, COL_NOME = 1, COL_LAT = 2, COL_LON = 3;
         Scanner sc = new Scanner(System.in);
         String[] nomes = new String[N_CIDADES];
         double[][] coord = new double[N_CIDADES][2];
@@ -25,10 +24,10 @@ public class SegundaChamada {
         for (int i = 0; i < N_CIDADES && sc.hasNext(); i++) {
             String linha = sc.nextLine();
             String[] partes = linha.split(",");
-            nomes[i] = String.valueOf(partes[0]);
+            nomes[i] = String.valueOf(partes[COL_NOME]);
             coord[i] = new double[]{
-                    grau_para_rad(Double.parseDouble(partes[1])),
-                    grau_para_rad(Double.parseDouble(partes[2]))
+                    grau_para_rad(Double.parseDouble(partes[COL_LAT])),
+                    grau_para_rad(Double.parseDouble(partes[COL_LON]))
             };
         }
         double[][] dist = new double[N_CIDADES][N_CIDADES];
