@@ -1,6 +1,6 @@
 package ifsc.poo.listaUm;
 
-public class Exercicio9 {
+public class L1E9 {
     public static void main(String[] args) {
         byte tam = 10;
         int[][] mat = new int[tam][tam];

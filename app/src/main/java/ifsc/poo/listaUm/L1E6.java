@@ -2,7 +2,7 @@ package ifsc.poo.listaUm;
 
 import java.util.Scanner;
 
-public class Exercicio6 {
+public class L1E6 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String[] valoresTexto = sc.nextLine().split(";");

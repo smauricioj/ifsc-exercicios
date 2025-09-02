@@ -2,7 +2,7 @@ package ifsc.poo.listaUm;
 
 import java.util.Scanner;
 
-public class Exercicio4 {
+public class L1E4 {
     public static void main(String[] args) {
         if (args.length != 1) {
             System.out.println("Erro: não possui 1 argumento.");

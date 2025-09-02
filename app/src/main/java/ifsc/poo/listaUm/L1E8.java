@@ -1,6 +1,6 @@
 package ifsc.poo.listaUm;
 
-public class Exercicio8 {
+public class L1E8 {
     public static void main(String[] args) {
         byte[][] mat = new byte[5][5];
         for (int i = 0; i < 5; i++) {

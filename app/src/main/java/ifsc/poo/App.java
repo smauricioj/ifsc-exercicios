@@ -4,24 +4,36 @@
 package ifsc.poo;
 
 import ifsc.poo.listaUm.*;
+import ifsc.poo.provaUm.SegundaChamada;
+
 import java.util.Arrays;
 
 public class App {
     public static void main(String[] args) {
-        if (args.length == 0) return;
-        byte nExercicio = Byte.parseByte(args[0]);
-        args =  Arrays.copyOfRange(args, 1, args.length);
-        switch (nExercicio) {
-            case 1 -> Exercicio1.main(args);
-            case 2 -> Exercicio2.main(args);
-            case 3 -> Exercicio3.main(args);
-            case 4 -> Exercicio4.main(args);
-            case 5 -> Exercicio5.main(args);
-            case 6 -> Exercicio6.main(args);
-            case 7 -> Exercicio7.main(args);
-            case 8 -> Exercicio8.main(args);
-            case 9 -> Exercicio9.main(args);
-            case 10 -> Exercicio10.main(args);
+        if (args.length < 2) return;
+        String pacote = String.valueOf(args[0]);
+        byte qual = Byte.parseByte(args[1]);
+        args =  Arrays.copyOfRange(args, 2, args.length);
+        switch (pacote) {
+            case "listaUm" -> {
+                switch (qual) {
+                    case 1 -> L1E1.main(args);
+                    case 2 -> L1E2.main(args);
+                    case 3 -> L1E3.main(args);
+                    case 4 -> L1E4.main(args);
+                    case 5 -> L1E5.main(args);
+                    case 6 -> L1E6.main(args);
+                    case 7 -> L1E7.main(args);
+                    case 8 -> L1E8.main(args);
+                    case 9 -> L1E9.main(args);
+                    case 10 -> L1E10.main(args);
+                }
+            }
+            case "provaUm" -> {
+                switch (qual) {
+                    case 1 -> SegundaChamada.main(args);
+                }
+            }
         }
     }
 }

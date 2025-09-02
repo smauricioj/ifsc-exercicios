@@ -1,6 +1,6 @@
 package ifsc.poo.listaUm;
 
-public class Exercicio3 {
+public class L1E3 {
     public static void main(String[] args) {
         if (args.length != 5) {
             System.out.println("Erro: não possui 5 argumentos.");

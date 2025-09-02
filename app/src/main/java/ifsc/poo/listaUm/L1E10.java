@@ -2,7 +2,7 @@ package ifsc.poo.listaUm;
 
 import java.util.Scanner;
 
-public class Exercicio10 {
+public class L1E10 {
     public static void main(String[] args) {
         // Entrada
         int tam = 20;
