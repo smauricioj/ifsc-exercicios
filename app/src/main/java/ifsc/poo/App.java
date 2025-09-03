@@ -4,7 +4,7 @@
 package ifsc.poo;
 
 import ifsc.poo.listaUm.*;
-import ifsc.poo.provaUm.SegundaChamada;
+import ifsc.poo.provaUm.*;
 
 import java.util.Arrays;
 
@@ -31,7 +31,8 @@ public class App {
             }
             case "provaUm" -> {
                 switch (qual) {
-                    case 1 -> SegundaChamada.main(args);
+                    case 1 -> CalculadoraResistencia.main(args);
+                    case 3 -> SegundaChamada.main(args);
                 }
             }
         }
