@@ -32,7 +32,7 @@ public class App {
             case "provaUm" -> {
                 switch (qual) {
                     case 1 -> CalculadoraResistencia.main(args);
-                    case 3 -> SegundaChamada.main(args);
+                    case 3 -> Geodistancias.main(args);
                 }
             }
         }

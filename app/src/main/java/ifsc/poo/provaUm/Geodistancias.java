@@ -2,7 +2,7 @@ package ifsc.poo.provaUm;
 
 import java.util.Scanner;
 
-public class SegundaChamada {
+public class Geodistancias {
     public static double grau_para_rad(double grau) {
         return grau*Math.PI/180;
     }

@@ -4,8 +4,9 @@ public class CalculadoraResistencia {
     // CONSTANTES ---------------------------------------------------------
     // Valor usado para indicar que o argumento informado está errado
     static byte VALUE_ERROR = -10;
+    static byte UNDEFINED = -1;
 
-    // Métodos ------------------------------------------------------------
+    // MÈTODOS ------------------------------------------------------------
     static byte getDigito(String cor){
         return switch (cor) {
             case "preto"      -> 0;
@@ -23,6 +24,7 @@ public class CalculadoraResistencia {
     }
 
     static byte getLogMultiplicador(String cor){
+        // Log base 10 do multiplicador, para usar apenas um byte. Depois, basta calcular 10^log
         return switch (cor) {
             case "prata"     -> -2;
             case "ouro"      -> -1;
@@ -75,57 +77,62 @@ public class CalculadoraResistencia {
     }
 
     public static void main(String[] args) {
-        // VARS ---------------------------------------------
-        byte digito_centena, digito_dezena, digito_unidade, log_multi, coef;
-        float tol, resistencia;
+        // VARIAVEIS ---------------------------------------------
+        byte num_faixas = (byte) args.length;
+        byte digito_centena, digito_dezena, digito_unidade, log_multi, coeficiente;
+        float tolerancia, resistencia;
 
         // VALIDACAO --------------------------------------------
-        if (args.length < 3 || args.length > 6) {
-            System.out.printf("Argumentos inválidos: número total de faixas (%d) não é válido\n", args.length);
+        if (num_faixas < 3 || num_faixas > 6) {
+            System.out.printf("Argumentos inválidos: número total de faixas (%d) não é válido\n", num_faixas);
             return;
         }
-        for (byte i = 0; i < args.length; i++) {
+        for (byte i = 1; i <= num_faixas; i++) {
             args[i] = args[i].toLowerCase();
-            if (!validar(args[i], (byte) (i+1), (byte) args.length)) {
-                System.out.printf("Argumentos inválidos: cor (%s) não válida para sua posição (%d)\n", args[i], i+1);
+            if (!validar(args[i], i, num_faixas)) {
+                System.out.printf("Argumentos inválidos: cor (%s) não válida para sua posição (%d)\n", args[i], i);
                 return;
             }
         }
 
-        // RESULTADO ----------------------------------------
-        if (args.length <= 4) {
+        // CALCULO ----------------------------------------
+        if (num_faixas <= 4) {
             digito_centena = 0;
             digito_dezena  = getDigito(args[0]);
             digito_unidade = getDigito(args[1]);
             log_multi      = getLogMultiplicador(args[2]);
-            tol            = (args.length == 3) ? -1 : getTolerancia(args[3]);
-            coef           = -1;
+            tolerancia            = (num_faixas == 3) ? -1 : getTolerancia(args[3]);
+            coeficiente = UNDEFINED;
         } else {
             digito_centena = getDigito(args[0]);
             digito_dezena  = getDigito(args[1]);
             digito_unidade = getDigito(args[2]);
             log_multi      = getLogMultiplicador(args[3]);
-            tol            = getTolerancia(args[4]);
-            coef           = (args.length == 6 ) ? getCoeficiente(args[5]) : -1;
+            tolerancia            = getTolerancia(args[4]);
+            coeficiente = (num_faixas == 6) ? getCoeficiente(args[5]) : UNDEFINED;
         }
-
         resistencia = (float) ((100*digito_centena + 10*digito_dezena + digito_unidade)*Math.pow(10, log_multi));
-        // Define o valor para string e simbolo (ex: 65, K)
-        byte simbolo_index = 1;
-        char[] simbolos = {'m',' ','k','M','G','T'};
-        while(resistencia >= 1000){
-            resistencia /= 1000;
-            simbolo_index++;
-        }
-        while(resistencia < 1){
-            resistencia *= 1000;
-            simbolo_index--;
-        }
-        // Retorna o valor formatado
-        String tolerancia = (tol == -1) ? "" : String.format("(+- %.2f%%)", tol);
-        String coeficiente = (coef == -1) ? "" : String.format("%d ppm / K", coef);
-        System.out.printf("Resistencia: %.2f %sOhm%s %s %s\n", resistencia,
-                (simbolo_index==1)?"":simbolos[simbolo_index], (resistencia==1)?"":"s", tolerancia, coeficiente
+
+        char[] simbolos = {'m',' ','k','M','G','T'};  // ------------------------------------------------------ //
+        byte simbolo_i = 1;                           //
+        while(resistencia >= 1000){                   // Essa parte eu não cobrei na prova
+            resistencia /= 1000;                      // mas está corretamente implementada
+            simbolo_i++;                              //
+        }                                             // Ela garante que o valor da resistência tenha
+        while(resistencia < 1){                       // no máximo 3 dígitos significativos
+            resistencia *= 1000;                      // e que o símbolo apresentado esteja correto
+            simbolo_i--;                              //
+        }                                             // ------------------------------------------------------ //
+
+        // SAIDA -----------------------------------------
+        String tolerancia_texto = (tolerancia != UNDEFINED) ? String.format(" (+- %.2f%%) ", tolerancia) : "";
+        String coeficiente_texto = (coeficiente != UNDEFINED) ? String.format(" %d ppm / K ", coeficiente) : "";
+        System.out.printf("Resistencia: %.2f %sOhm%s%s%s\n",
+                resistencia,
+                (simbolo_i == 1) ? "" : simbolos[simbolo_i],
+                (resistencia == 1) ? "" : "s",
+                tolerancia_texto,
+                coeficiente_texto
         );
     }
 }
