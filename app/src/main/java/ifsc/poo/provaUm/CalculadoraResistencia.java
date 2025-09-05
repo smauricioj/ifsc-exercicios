@@ -101,15 +101,15 @@ public class CalculadoraResistencia {
             digito_dezena  = getDigito(args[0]);
             digito_unidade = getDigito(args[1]);
             log_multi      = getLogMultiplicador(args[2]);
-            tolerancia            = (num_faixas == 3) ? -1 : getTolerancia(args[3]);
-            coeficiente = UNDEFINED;
+            tolerancia     = (num_faixas == 3) ? -1 : getTolerancia(args[3]);
+            coeficiente    = UNDEFINED;
         } else {
             digito_centena = getDigito(args[0]);
             digito_dezena  = getDigito(args[1]);
             digito_unidade = getDigito(args[2]);
             log_multi      = getLogMultiplicador(args[3]);
-            tolerancia            = getTolerancia(args[4]);
-            coeficiente = (num_faixas == 6) ? getCoeficiente(args[5]) : UNDEFINED;
+            tolerancia     = getTolerancia(args[4]);
+            coeficiente    = (num_faixas == 6) ? getCoeficiente(args[5]) : UNDEFINED;
         }
         resistencia = (float) ((100*digito_centena + 10*digito_dezena + digito_unidade)*Math.pow(10, log_multi));
 
