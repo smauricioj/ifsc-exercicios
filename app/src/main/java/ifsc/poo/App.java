@@ -3,6 +3,8 @@
  */
 package ifsc.poo;
 
+import ifsc.poo.listaDois.Contador;
+import ifsc.poo.listaDois.Relogio;
 import ifsc.poo.listaUm.*;
 import ifsc.poo.provaUm.*;
 
@@ -29,10 +31,18 @@ public class App {
                     case 10 -> L1E10.main(args);
                 }
             }
+            case "listaDois" -> {
+                switch (qual) {
+                    case 1 -> Contador.main(args);
+                    case 2 -> Relogio.main(args);
+                }
+            }
             case "provaUm" -> {
                 switch (qual) {
                     case 1 -> CalculadoraResistencia.main(args);
+                    case 2 -> Criptografador.main(args);
                     case 3 -> Geodistancias.main(args);
+                    case 4 -> Calendario.main(args);
                 }
             }
         }

@@ -53,11 +53,8 @@ public class Criptografador {
         Scanner scanner = new Scanner(System.in);
         byte count = 0;
         while (scanner.hasNext()) {
-            if (count++ > 0){
-                System.out.println(); // Para começar em uma nova linha, não precisa na primeira
-            }
-            String line = scanner.nextLine();
-            for (char c :  line.toCharArray()) {
+            if (count++ > 0) System.out.println(); // Para começar em uma nova linha, não precisa na primeira
+            for (char c :  scanner.nextLine().toCharArray()) {
                 System.out.print( args[0].equals("criptografa") ? cifra(c) : decifra(c) );
             }
         }
