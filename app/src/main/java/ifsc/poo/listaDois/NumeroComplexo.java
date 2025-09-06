@@ -86,15 +86,21 @@ public class NumeroComplexo {
     }
 
     public static void main(String[] args) {
+        // Crie dois números complexos, n = (5 + 4i) e m = (7 − 3i);
         NumeroComplexo n = new NumeroComplexo(5,4);
         NumeroComplexo m = new NumeroComplexo(7,-3);
+
+        // Adicione m a n e mostre que o resultado é (12 + i);
         n.somar(m);
         System.out.println(n);
-        n.subtrair(m);
-        System.out.println(n);
+        n.subtrair(m);          // Pra retornar n ao valor inicial
+
+        // Divida n por m e mostre que o resultado é (0.39 + 0.74i)
         n.dividir(m);
         System.out.println(n);
-        n.multiplicar(m);
+        n.multiplicar(m);       // Pra retornar n ao valor inicial
+
+        // Mostre que o módulo de n é 6.4
         System.out.println(n.modulo());
     }
 }

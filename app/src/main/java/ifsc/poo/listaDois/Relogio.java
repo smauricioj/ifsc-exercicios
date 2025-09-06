@@ -108,13 +108,22 @@ public class Relogio {
     }
 
     public static void main(String[] args) {
+        // Crie um relógio e ajuste o seu valor para 14:58:32;
         Relogio relogio = new Relogio("14:58:32");
+
+        // Incremente o valor do relógio em dois minutos. Que horas o relógio marca agora?
         relogio.incMinuto();
         relogio.incMinuto();
         System.out.println(relogio);
+
+        // Crie um segundo relógio e ajuste seu valor para 23:59:59;
         Relogio relogio2 = new Relogio("23:59:59");
+
+        // Incremente o valor do relógio em um segundo. Que horas o relógio marca agora?
         relogio2.incSegundo();
         System.out.println(relogio2);
+
+        // Sincronize o segundo relógio com o primeiro. Que horas o relógio marca agora?
         relogio2.sincronizar(relogio);
         System.out.println(relogio2);
     }

@@ -1,6 +1,5 @@
 package ifsc.poo.listaDois;
 
-import java.awt.geom.Point2D;
 import java.text.DecimalFormat;
 import java.util.Objects;
 
@@ -17,7 +16,7 @@ public class Ponto2D {
         this(0,0);
     }
 
-    public Ponto2D(Point2D p) {
+    public Ponto2D(Ponto2D p) {
         this(p.getX(), p.getY());
     }
 
@@ -43,7 +42,7 @@ public class Ponto2D {
     // Representação
     @Override
     public String toString() {
-        return String.format("(x=%s, y=%s)", df.format(this.x), df.format(this.x));
+        return String.format("(x=%s; y=%s)", df.format(this.x), df.format(this.y));
     }
 
     // Comparação semântica
@@ -64,9 +63,14 @@ public class Ponto2D {
     }
 
     public static void main(String[] args) {
+        // Crie dois pontos, um na origem do plano e outro em (3, 4);
         Ponto2D p1 = new Ponto2D();
         Ponto2D p2 = new Ponto2D(3, 4);
+
+        // Mostre que a distância entre os pontos é 5;
         System.out.println(p1.distancia(p2));
+
+        // Mostre que esses pontos são diferentes.
         System.out.println((p1 == p2) ? "São iguais" : "São diferentes");
     }
 }

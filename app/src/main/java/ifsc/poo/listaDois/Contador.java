@@ -44,14 +44,19 @@ public class Contador {
 
     // Teste
     public static void main(String[] args) {
+        // Crie um objeto contador e conte até 10;
         Contador contador = new Contador();
         for (int i = 0; i < 10; i++) {
             contador.incrementar();
         }
+
+        // Crie um segundo objeto contador e conte até ele ter o valor do primeiro contador;
         Contador contador2 = new Contador();
         for (int i = 0; i < contador.getCount(); i++) {
             contador2.incrementar();
         }
+
+        // Zere ambos os contadores.
         contador.zerar();
         contador2.zerar();
     }
