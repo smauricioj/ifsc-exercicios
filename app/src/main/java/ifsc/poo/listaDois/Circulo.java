@@ -106,7 +106,19 @@ public class Circulo {
         this.centro = ponto;
     }
 
-    public boolean pertence(Ponto2D ponto) {
+    public boolean contem(Ponto2D ponto) {
         return Double.compare(this.raio, this.centro.distancia(ponto)) >= 0;
+    }
+
+    public static void main(String[] args) {
+        Circulo c1 = new Circulo();
+        Circulo c2 = new Circulo(new Ponto2D(1, 1), 1);
+        Ponto2D p1 = new Ponto2D(0.5, 0.5);
+        Ponto2D p2 = new Ponto2D(2, -2);
+        if (c1.contem(p1) && c2.contem(p1)) System.out.println("p1 está dentro de c1 e c2");
+        System.out.printf("Foram criados %d objetos Circulo\n", Circulo.totalCriados());
+        c2.mover(p2);
+        c2.inflar(5);
+        if (c2.contem(p1)) System.out.println("p1 ainda está dentro de c2!");
     }
 }
