@@ -58,7 +58,6 @@ public class Geodistancias {
                     Double.parseDouble(partes[COL_LAT]), // latitude
                     Double.parseDouble(partes[COL_LON])  // longitude
             };
-//            System.out.println(partes[0]+','+nomes[i]+','+partes[4]+','+coord[i][0]+','+coord[i][1]);
         }
 
         // Variáveis de controle da maior distância
