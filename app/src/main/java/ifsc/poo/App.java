@@ -7,6 +7,7 @@ import ifsc.poo.listaDois.Contador;
 import ifsc.poo.listaDois.Relogio;
 import ifsc.poo.listaUm.*;
 import ifsc.poo.provaUm.*;
+import ifsc.poo.provaDois.*;
 
 import java.util.Arrays;
 
@@ -43,6 +44,11 @@ public class App {
                     case 2 -> Criptografador.main(args);
                     case 3 -> Geodistancias.main(args);
                     case 4 -> Calendario.main(args);
+                }
+            }
+            case "provaDois" -> {
+                switch (qual) {
+                    case 1 -> Hitbox.main(args);
                 }
             }
         }

@@ -58,8 +58,11 @@ public class Relogio {
     // Comparação semântica
     @Override
     public boolean equals(Object o) {
+        if (this == o) return true;
         if (!(o instanceof Relogio relogio)) return false;
-        return hora == relogio.hora && minuto == relogio.minuto && segundo == relogio.segundo;
+        return hora == relogio.hora
+                && minuto == relogio.minuto
+                && segundo == relogio.segundo;
     }
 
     @Override

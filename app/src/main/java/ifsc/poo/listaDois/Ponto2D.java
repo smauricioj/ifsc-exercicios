@@ -48,8 +48,10 @@ public class Ponto2D {
     // Comparação semântica
     @Override
     public boolean equals(Object o) {
+        if (this == o) return true;
         if (!(o instanceof Ponto2D outro)) return false;
-        return Double.compare(x, outro.x) == 0 && Double.compare(y, outro.y) == 0;
+        return Double.compare(x, outro.x) == 0
+            && Double.compare(y, outro.y) == 0;
     }
 
     @Override

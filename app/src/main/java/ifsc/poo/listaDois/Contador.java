@@ -25,6 +25,7 @@ public class Contador {
     // Comparação semântica
     @Override
     public boolean equals(Object o) {
+        if (this == o) return true;
         if (!(o instanceof Contador contador)) return false;
         return count == contador.count;
     }

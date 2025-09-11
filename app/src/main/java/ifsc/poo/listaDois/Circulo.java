@@ -56,8 +56,10 @@ public class Circulo {
     // Comparação semântica
     @Override
     public boolean equals(Object o) {
+        if (this == o) return true;
         if (!(o instanceof Circulo outro)) return false;
-        return Double.compare(this.raio, outro.raio) == 0 && Objects.equals(this.centro, outro.centro);
+        return Double.compare(this.raio, outro.raio) == 0
+            && Objects.equals(this.centro, outro.centro);
     }
 
     @Override

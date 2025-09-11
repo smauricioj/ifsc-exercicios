@@ -40,8 +40,10 @@ public class NumeroComplexo {
     // Comparação semântica
     @Override
     public boolean equals(Object o) {
+        if (this == o) return true;
         if (!(o instanceof NumeroComplexo outro)) return false;
-        return Double.compare(real, outro.real) == 0 && Double.compare(imag, outro.imag) == 0;
+        return Double.compare(real, outro.real) == 0
+            && Double.compare(imag, outro.imag) == 0;
     }
 
     @Override

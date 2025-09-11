@@ -75,8 +75,10 @@ public class Produto {
     // Comparação semântica
     @Override
     public boolean equals(Object o) {
+        if (this == o) return true;
         if (!(o instanceof Produto outro)) return false;
-        return this.preco == outro.preco && Objects.equals(this.nome, outro.nome);
+        return this.preco == outro.preco
+            && Objects.equals(this.nome, outro.nome);
     }
 
     @Override

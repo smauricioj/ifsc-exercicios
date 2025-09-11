@@ -62,6 +62,7 @@ public class Pais {
     // Comparação semântica
     @Override
     public boolean equals(Object o) {
+        if (this == o) return true;
         if (!(o instanceof Pais outro)) return false;
         return this.cod.equals(outro.cod);
     }

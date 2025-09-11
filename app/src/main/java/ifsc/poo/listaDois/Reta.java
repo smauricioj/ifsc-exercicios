@@ -33,8 +33,10 @@ public class Reta {
     // Comparação semântica
     @Override
     public boolean equals(Object o) {
+        if (this == o) return true;
         if (!(o instanceof Reta outra)) return false;
-        return Double.compare(ang, outra.ang) == 0 && Double.compare(lin, outra.lin) == 0;
+        return Double.compare(ang, outra.ang) == 0
+            && Double.compare(lin, outra.lin) == 0;
     }
 
     @Override
