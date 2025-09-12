@@ -74,9 +74,9 @@ public class NumeroComplexo {
     public void dividir(NumeroComplexo outro) {
         if (Objects.isNull(outro)) return;
         double divisor = (Math.pow(outro.real, 2) + Math.pow(outro.imag, 2));
-        double orig_real = this.real;
+        double this_real = this.real;
         this.real = ((this.real * outro.real) + (this.imag * outro.imag))/divisor;
-        this.imag = ((this.imag * outro.real) - (orig_real * outro.imag))/divisor;
+        this.imag = ((this.imag * outro.real) - (this_real * outro.imag))/divisor;
     }
 
     public NumeroComplexo conjugado() {

@@ -2,9 +2,11 @@ package ifsc.poo.listaDois;
 
 import java.util.Arrays;
 import java.util.Objects;
+import java.util.stream.Collectors;
 
 public class Relogio {
     // Atributos
+    // Escolhi bytes, pois esses valores são sempre menores que 127
     byte hora, minuto, segundo;
 
     // Construtores
@@ -13,18 +15,24 @@ public class Relogio {
     }
 
     public Relogio(String repr) {
-        if (!repr.matches("^\\d{2}:\\d{2}:\\d{2}$")) repr = "00:00:00";
-        String[] args = repr.split(":");
-        this.hora = Byte.parseByte(args[0]);
-        this.minuto = Byte.parseByte(args[1]);
-        this.segundo = Byte.parseByte(args[2]);
+        // Esse construtor não foi exigido. eu fiz pq gosto da ideia de iniciar o relógio com uma string
+        if (!repr.matches("^(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d$")) repr = "00:00:00";
+        String[] parts = repr.split(":");
+        this.hora = Byte.parseByte(parts[0]);
+        this.minuto = Byte.parseByte(parts[1]);
+        this.segundo = Byte.parseByte(parts[2]);
     }
 
     public Relogio(byte hora, byte minuto, byte segundo) {
-        if (naoValido(hora, 24)) hora = 0;
-        if (naoValido(minuto, 59)) minuto = 0;
-        if (naoValido(segundo, 59)) segundo = 0;
-        this.setHMS(hora, minuto, segundo);
+        // Se a hora informada for inválida, inicia em 00:00:00
+        if (this.horaInvalida(hora, minuto, segundo)) {
+            hora = 0;
+            minuto = 0;
+            segundo = 0;
+        }
+        this.hora = hora;
+        this.minuto = minuto;
+        this.segundo = segundo;
     }
 
     // Acessos
@@ -41,9 +49,8 @@ public class Relogio {
     }
 
     public void setHMS(byte hora, byte minuto, byte segundo) {
-        if (this.naoValido(hora, 24)
-                || this.naoValido(minuto, 59)
-                || this.naoValido(segundo, 59)) return;
+        // Se a hora informada for inválida, não altera o estado
+        if (this.horaInvalida(hora, minuto, segundo)) return;
         this.hora = hora;
         this.minuto = minuto;
         this.segundo = segundo;
@@ -75,6 +82,12 @@ public class Relogio {
         return (valor < 0 || valor > max);
     }
 
+    private boolean horaInvalida(byte hora, byte minuto, byte segundo) {
+        return (this.naoValido(hora, 24)
+                || this.naoValido(minuto, 59)
+                || this.naoValido(segundo, 59));
+    }
+
     // Métodos
     public void incHora() {
         if (++this.hora > 23) {
@@ -101,6 +114,8 @@ public class Relogio {
     }
 
     public int tempoDiferenca(Relogio outro) {
+        // Se for negativo, então quem recebeu a mensagem (this) está na frente
+        // Se for positivo, então o outro Relogio está na frente!
         if (Objects.isNull(outro)) return 0;
         return outro.tempoTotal() - this.tempoTotal();
     }
@@ -112,7 +127,7 @@ public class Relogio {
 
     public static void main(String[] args) {
         // Crie um relógio e ajuste o seu valor para 14:58:32;
-        Relogio relogio = new Relogio("14:58:32");
+        Relogio relogio = new Relogio((byte) 14, (byte) 58, (byte) 32);
 
         // Incremente o valor do relógio em dois minutos. Que horas o relógio marca agora?
         relogio.incMinuto();

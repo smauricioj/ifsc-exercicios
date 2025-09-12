@@ -4,8 +4,7 @@ import java.text.DecimalFormat;
 import java.util.Objects;
 
 public class Ponto2D {
-    // Estáticos
-    // Para mostrar até 4 casas decimais sempre significativas
+    // Opcional, só para mostrar até 4 casas decimais sempre significativas
     static private final DecimalFormat df = new DecimalFormat("0.####");
 
     // Atributos
@@ -16,13 +15,13 @@ public class Ponto2D {
         this(0,0);
     }
 
-    public Ponto2D(Ponto2D p) {
-        this(p.getX(), p.getY());
+    public Ponto2D(Ponto2D outro) {
+        this(outro.getX(), outro.getY());
     }
 
     public Ponto2D(double x, double y) {
-        this.x = x;
-        this.y = y;
+        this.x = Double.isFinite(x) ? x : 0;
+        this.y = Double.isFinite(x) ? y : 0;
     }
 
     // Acessos
@@ -33,10 +32,10 @@ public class Ponto2D {
         return y;
     }
     public void setX(double x) {
-        this.x = x;
+        if (Double.isFinite(x)) this.x = x;
     }
     public void setY(double y) {
-        this.y = y;
+        if (Double.isFinite(y)) this.y = y;
     }
 
     // Representação
@@ -61,7 +60,9 @@ public class Ponto2D {
 
     // Métodos
     public double distancia(Ponto2D outro) {
-        return Math.sqrt(Math.pow(this.x - outro.x, 2) + Math.pow(this.y - outro.y, 2));
+        if (this == outro) return 0.0;
+        if (Objects.isNull(outro)) return Double.POSITIVE_INFINITY;
+        return Math.sqrt(Math.pow(Double.compare(this.x, outro.x), 2) + Math.pow(Double.compare(this.x, outro.x), 2));
     }
 
     public static void main(String[] args) {
@@ -73,6 +74,6 @@ public class Ponto2D {
         System.out.println(p1.distancia(p2));
 
         // Mostre que esses pontos são diferentes.
-        System.out.println((p1 == p2) ? "São iguais" : "São diferentes");
+        System.out.println((p1.equals(p2)) ? "São iguais" : "São diferentes");
     }
 }

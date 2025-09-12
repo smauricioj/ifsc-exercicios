@@ -5,8 +5,8 @@ import java.util.Objects;
 
 public class Produto {
     // Constantes
-    private static final char DELIMITADOR = ';';
-    private static final byte MAX_REGISTRO = 50;
+    public static final char DELIMITADOR = ';';
+    public static final byte MAX_REGISTRO = 50;
 
     // Estáticos
     private static int count;
