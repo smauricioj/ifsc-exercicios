@@ -48,9 +48,11 @@ public class Hitbox {
         return altura;
     }
     public void setX(double x) {
+        if (!Double.isFinite(x)) return;
         this.x = Math.max(x, X_MIN);
     }
     public void setY(double y) {
+        if (!Double.isFinite(y)) return;
         this.y = Math.max(y, Y_MIN);
     }
 
@@ -105,31 +107,8 @@ public class Hitbox {
     }
 
     public void mover(double dx, double dy){
+        if (!Double.isFinite(dx) || !Double.isFinite(dy)) return;
         this.setX(this.x + dx);
         this.setY(this.y + dy);
-    }
-
-    public static void main(String[] args) {
-        Random r = new Random();
-        final int LARGURA_TELA = 50;
-        final int ALTURA_TELA = 30;
-        final int N_HITBOXES = 20;
-        Hitbox[] hitboxes = new Hitbox[N_HITBOXES];
-        for (int i = 0; i < N_HITBOXES; i++) {
-            double x = r.nextDouble(LARGURA_TELA);
-            double y = r.nextDouble(ALTURA_TELA);
-            double largura = r.nextDouble(LARGURA_TELA - x);
-            double altura = r.nextDouble(ALTURA_TELA - y);
-            hitboxes[i] = new Hitbox(x, y, largura, altura);
-        }
-        int contagem = 0;
-        for (int i = 0; i < N_HITBOXES; i++) {
-            for (int j = i+1; j < N_HITBOXES; j++) {
-                if (Hitbox.intersecta(hitboxes[i], hitboxes[j])) {
-                    contagem++;
-                }
-            }
-        }
-        System.out.println("Numero de pares que estão sobrepostos: "+contagem);
     }
 }
