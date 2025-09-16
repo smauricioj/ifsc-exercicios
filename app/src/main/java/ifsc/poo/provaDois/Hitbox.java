@@ -96,6 +96,11 @@ public class Hitbox {
         //        a.x + a.largura > b.x &&
         //        a.y < b.y + b.altura &&
         //        a.y + a.altura > b.y;
+        // Se a hitbox está implementada com atributos x e y dos cantos opostos, a solução seria
+        // return a.getX1() < b.getX2() &&
+        //        a.getX2() > b.getX1() &&
+        //        a.getY1() < b.getY2() &&
+        //        a.getY2() > b.getY1();
     }
 
     public double area() {
