@@ -115,5 +115,9 @@ public class Hitbox {
         if (!Double.isFinite(dx) || !Double.isFinite(dy)) return;
         this.setX(this.x + dx);
         this.setY(this.y + dy);
+        // Também é possível:
+        // this.setX(dx);
+        // this.setY(dy);
+        // Mas eu pensei primeiro em translado (mover de forma relativa) e não transposição (mover de forma absoluta)
     }
 }
