@@ -3,10 +3,13 @@ import java.util.Objects;
 import java.util.Random;
 
 public class Hitbox {
-    // Estáticos
-    public static int contagem;
+    // Constantes
+    // Não descontei pela falta, mas altamente indicado o uso de constantes nomeadas
     public static final byte LARGURA_PADRAO, ALTURA_PADRAO;
     public static final byte X_MIN, Y_MIN;
+
+    // Estáticos
+    public static int contagem;
 
     static {
         LARGURA_PADRAO = 1;
@@ -38,19 +41,24 @@ public class Hitbox {
     public double getX() {
         return x;
     }
+
     public double getY() {
         return y;
     }
+
     public double getLargura() {
         return largura;
     }
+
     public double getAltura() {
         return altura;
     }
+
     public void setX(double x) {
         if (!Double.isFinite(x)) return;
         this.x = Math.max(x, X_MIN);
     }
+
     public void setY(double y) {
         if (!Double.isFinite(y)) return;
         this.y = Math.max(y, Y_MIN);
@@ -83,12 +91,14 @@ public class Hitbox {
     public static int getContagem() {
         return contagem;
     }
+
     public static void zeraContagem() {
         contagem = 0;
     }
 
     public static boolean intersecta(Hitbox a, Hitbox b) {
         if (Objects.isNull(a) || Objects.isNull(b)) return false;
+        if (a.equals(b)) return true;
         return Math.max(a.x, b.x) < Math.min(a.x + a.largura, b.x + b.largura)
                 && Math.max(a.y, b.y) < Math.min(a.y+a.altura, b.y+b.altura);
         // Também é possível:
@@ -113,15 +123,24 @@ public class Hitbox {
 
     public void mover(double dx, double dy){
         if (!Double.isFinite(dx) || !Double.isFinite(dy)) return;
+        // Para fazer movimento via translado (relativo)
         this.setX(this.x + dx);
         this.setY(this.y + dy);
-        // Também é possível:
+        // Para fazer movimento via transposição (absoluto)
         // this.setX(dx);
         // this.setY(dy);
-        // Mas eu pensei primeiro em translado (mover de forma relativa) e não transposição (mover de forma absoluta)
     }
 
     public static void main(String[] args) {
-
+        // Testando a sobreposição
+        Hitbox h1 =  new Hitbox(0, 0, 5, 5);
+        Hitbox h2 = new Hitbox(2, 2, 5, 5);
+        System.out.println(Hitbox.intersecta(h1, h2)); //true
+        System.out.println(Hitbox.intersecta(h2, h1)); //true
+        Hitbox h3 =  new Hitbox(2, 2, 1, 1);
+        System.out.println(Hitbox.intersecta(h1, h3)); //true
+        System.out.println(Hitbox.intersecta(h3, h1)); //true
+        Hitbox h4 =  new Hitbox(10, 10, 1, 1);
+        System.out.println(Hitbox.intersecta(h1, h4)); //false
     }
 }
