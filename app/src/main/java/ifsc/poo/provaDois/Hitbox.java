@@ -120,4 +120,8 @@ public class Hitbox {
         // this.setY(dy);
         // Mas eu pensei primeiro em translado (mover de forma relativa) e não transposição (mover de forma absoluta)
     }
+
+    public static void main(String[] args) {
+
+    }
 }

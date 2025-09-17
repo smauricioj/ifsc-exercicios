@@ -5,7 +5,7 @@ import java.util.Objects;
 
 public class Produto {
     // Constantes
-    public static final char DELIMITADOR = ';';
+    public static final char CSV_DELIMITADOR = ';';
     public static final byte MAX_REGISTRO = 50;
 
     // Estáticos
@@ -33,7 +33,13 @@ public class Produto {
         this.setPreco(preco);
         this.desconto = 0.0f;
         this.codigo = String.format("COD-%03d-%03d", count++/1000, count%1000);
-        atualizaRegistro(this);
+        if (++n_registros == MAX_REGISTRO) {
+            n_registros--;
+            for (int i = 1; i < MAX_REGISTRO; i++) {
+                registro[i - 1] = registro[i];
+            }
+        }
+        registro[n_registros] = this;
     }
 
     // Acessos
@@ -68,7 +74,8 @@ public class Produto {
     @Override
     public String toString() {
         return String.format("%s%c%s%c%.2f%c%.2f",
-                this.codigo,DELIMITADOR,this.nome,DELIMITADOR,this.getPrecoAplicado(),DELIMITADOR,this.desconto
+                this.codigo, CSV_DELIMITADOR, this.nome, CSV_DELIMITADOR,
+                this.getPrecoAplicado(), CSV_DELIMITADOR, this.desconto
             );
     }
 
@@ -87,16 +94,6 @@ public class Produto {
     }
 
     // Métodos
-    private static void atualizaRegistro(Produto produto) {
-        if (++n_registros == MAX_REGISTRO) {
-            n_registros--;
-            for (int i = 1; i < MAX_REGISTRO; i++) {
-                registro[i - 1] = registro[i];
-            }
-        }
-        registro[n_registros] = produto;
-    }
-
     public static Produto[] totalCriados() {
         return Arrays.copyOf(registro, n_registros);
     }
@@ -104,8 +101,8 @@ public class Produto {
     public static String[] exportarCSV() {
         String[] csv = new String[n_registros+1];
         csv[0] = "Código;Nome;Preço;Desconto";
-        for (int i = 1; i <= n_registros; i++) {
-            csv[i] = registro[i-1].toString();
+        for (int i = 0; i < n_registros; i++) {
+            csv[i+1] = registro[i].toString();
         }
         return csv;
     }
