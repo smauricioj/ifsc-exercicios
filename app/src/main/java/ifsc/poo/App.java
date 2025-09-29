@@ -51,6 +51,11 @@ public class App {
                     case 1 -> Hitbox.main(args);
                 }
             }
+            case "sistemas" -> {
+                switch (qual) {
+                    case 1 -> ifsc.poo.handebol.App.main(args);
+                }
+            }
         }
     }
 }
