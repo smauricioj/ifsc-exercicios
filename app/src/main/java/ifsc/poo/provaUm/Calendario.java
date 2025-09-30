@@ -58,13 +58,15 @@ public class Calendario {
             return;
         }
         // N de partes nas datas
-        String[] textoData1 = args[0].split("/"), textoData2 = args[1].split("/");
+        String[] textoData1 = args[0].split("/");
+        String[] textoData2 = args[1].split("/");
         if (textoData1.length != 3 || textoData2.length != 3) {
             System.out.println("Data inválida");
             return;
         }
         // Nomes de meses
-        int mes1 = numeroMes(textoData1[1]), mes2 = numeroMes(textoData2[1]);
+        int mes1 = numeroMes(textoData1[1]);
+        int mes2 = numeroMes(textoData2[1]);
         if (mes1 == VALUE_ERROR || mes2 == VALUE_ERROR) {
             System.out.println("Mês inválido");
             return;
