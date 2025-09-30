@@ -36,6 +36,7 @@ public class Mesa {
     private int nPernas;
 
     // Invariantes
+    // Essas checagens podem também ser feitas individualmente em cada Setter e no construtor!
     private void checkInvariantes() {
         if (largura < LARG_MIN) largura = LARG_MIN;
         if (comprimento < COMP_MIN) comprimento = COMP_MIN;
