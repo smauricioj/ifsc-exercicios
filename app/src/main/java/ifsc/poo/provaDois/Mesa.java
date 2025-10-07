@@ -8,10 +8,6 @@ public class Mesa {
     public static final double LARG_MIN, COMP_MIN, ALT_MIN, ALT_MAX;
     public static final double PRECO_MADEIRA, PRECO_VIDRO;
     public static final int N_PERNAS_MIN, N_PERNAS_MAX, PERNA_LARGURA, GROSSURA_TAMPO, GROSSURA_VIDRO;
-    // ------------------------------------------------------
-
-    // Estáticos
-    private static int contagem;
 
     static {
         LARG_MIN = 80;
@@ -25,6 +21,13 @@ public class Mesa {
         PERNA_LARGURA = 5;
         GROSSURA_TAMPO = 3;
         GROSSURA_VIDRO = 1;
+    }
+    // ------------------------------------------------------
+
+    // Estáticos
+    private static int contagem;
+
+    static {
         contagem = 0;
     }
 
@@ -37,14 +40,15 @@ public class Mesa {
 
     // Invariantes
     // Essas checagens podem também ser feitas individualmente em cada Setter e no construtor!
+    // Eu decidir apenas agrupá-las em um utilitário privado por simplicidade
     private void checkInvariantes() {
         if (largura < LARG_MIN) largura = LARG_MIN;
         if (comprimento < COMP_MIN) comprimento = COMP_MIN;
         if (altura < ALT_MIN) altura = ALT_MIN;
         if (altura > ALT_MAX) altura = ALT_MAX;
-        if (nPernas % 2 != 0) nPernas--;
         if (nPernas < N_PERNAS_MIN) nPernas = N_PERNAS_MIN;
         if (nPernas > N_PERNAS_MAX) nPernas = N_PERNAS_MAX;
+        if (nPernas % 2 != 0) nPernas--;
     }
 
     // Construtor
@@ -92,7 +96,7 @@ public class Mesa {
         this.checkInvariantes();
     }
 
-    public boolean isVidro() {
+    public boolean hasVidro() {
         return vidro;
     }
 
@@ -154,5 +158,10 @@ public class Mesa {
             precoTotal += this.getAreaTampo() * GROSSURA_VIDRO * PRECO_VIDRO;
         }
         return precoTotal;
+    }
+
+    public static void main(String[] args) {
+        Mesa m1 = new Mesa(60, 90, 100, true, 5);
+        System.out.println(m1); // Mesa{largura=80, comprimento=90, altura=100, vidro=true, nPernas=4}
     }
 }

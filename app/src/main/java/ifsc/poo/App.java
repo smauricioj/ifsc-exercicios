@@ -49,6 +49,7 @@ public class App {
             case "provaDois" -> {
                 switch (qual) {
                     case 1 -> Hitbox.main(args);
+                    case 2 -> Mesa.main(args);
                 }
             }
             case "sistemas" -> {
