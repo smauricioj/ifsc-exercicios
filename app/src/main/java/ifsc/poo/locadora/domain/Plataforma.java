@@ -1,6 +1,8 @@
 package ifsc.poo.locadora.domain;
 
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 public class Plataforma {
     // Estáticos
@@ -12,16 +14,29 @@ public class Plataforma {
 
     // Atributos
     private final String nome;
+    private final Set<JogoPlataforma> jogos;
 
     // Construtor
-
     public Plataforma(String nome) {
         this.nome = nome;
+        this.jogos = new HashSet<>();
     }
 
     // Acessos
     public String getNome() {
         return nome;
+    }
+
+    public Set<JogoPlataforma> getJogos() {
+        return new HashSet<>(jogos);
+    }
+
+    public void addJogo(JogoPlataforma plataforma) {
+        jogos.add(plataforma);
+    }
+
+    public void removeJogo(JogoPlataforma plataforma) {
+        jogos.remove(plataforma);
     }
 
     // Representação    @Override

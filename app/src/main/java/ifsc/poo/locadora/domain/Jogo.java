@@ -17,7 +17,7 @@ public class Jogo {
     // Atributos
     private final int id;
     private String nome;
-    private Set<JogoPlataforma> plataformas;
+    private final Set<JogoPlataforma> plataformas;
 
     // Utils
     private void checkInvariants(){
@@ -44,6 +44,18 @@ public class Jogo {
     public void setNome(String nome) {
         this.nome = nome;
         this.checkInvariants();
+    }
+
+    public Set<JogoPlataforma> getPlataformas() {
+        return new HashSet<>(plataformas);
+    }
+
+    public void addPlataforma(JogoPlataforma plataforma) {
+        plataformas.add(plataforma);
+    }
+
+    public void removePlataforma(JogoPlataforma plataforma) {
+        plataformas.remove(plataforma);
     }
 
     // Representação
