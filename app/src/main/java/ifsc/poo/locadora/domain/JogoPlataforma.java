@@ -1,11 +1,15 @@
 package ifsc.poo.locadora.domain;
 
+import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.Objects;
+import java.util.Set;
 
 public class JogoPlataforma {
     // Atributos
     private double precoDiaria;
     private int estoque, disponivel;
+    private final Set<JogoLocado> locacoes;
 
     // Classe de associação
     private final Jogo jogo;
@@ -35,6 +39,7 @@ public class JogoPlataforma {
         this.disponivel = disponivel;
         this.estoque = estoque;
         this.precoDiaria = precoDiaria;
+        this.locacoes = new LinkedHashSet<>();
         this.checkInvariants();
     }
 
@@ -72,6 +77,18 @@ public class JogoPlataforma {
 
     public Plataforma getPlataforma() {
         return plataforma;
+    }
+
+    public Set<JogoLocado> getLocacoes() {
+        return new LinkedHashSet<>(locacoes);
+    }
+
+    public void addLocacao(JogoLocado locacao) {
+        this.locacoes.add(locacao);
+    }
+
+    public void removeLocacao(JogoLocado locacao) {
+        this.locacoes.remove(locacao);
     }
 
     // Representacao
