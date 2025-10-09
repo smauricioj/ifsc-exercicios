@@ -20,10 +20,6 @@ public class JogoLocado {
 
     // Construtor
     public JogoLocado(JogoPlataforma jogo, Locacao locacao, int dias) {
-        // Clausulas guardiãs
-        if (Objects.isNull(jogo)) jogo = new JogoPlataforma(null, null);
-        if (Objects.isNull(locacao)) locacao = new Locacao(LocalDate.now());
-
         // Inicializações
         this.jogo = jogo;
         this.locacao = locacao;

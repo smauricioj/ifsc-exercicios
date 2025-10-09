@@ -1,6 +1,9 @@
 package ifsc.poo.locadora.domain;
 
+import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.Objects;
+import java.util.Set;
 
 public class Cliente {
     // Estáticos
@@ -11,7 +14,9 @@ public class Cliente {
     }
 
     // Atributos
-    private String login, nome, email, telefone, senha;
+    private final String login;
+    private String nome, email, telefone, senha;
+    private Set<Locacao> locacoes;
 
     // Utils
     private void checkInvariants() {
@@ -25,16 +30,13 @@ public class Cliente {
         this.email = email;
         this.telefone = telefone;
         this.senha = senha;
+        this.locacoes = new LinkedHashSet<>();
         this.checkInvariants();
     }
 
     // Acessos
     public String getLogin() {
         return login;
-    }
-
-    public void setLogin(String login) {
-        this.login = login;
     }
 
     public String getNome() {
@@ -68,6 +70,18 @@ public class Cliente {
 
     public void setTelefone(String telefone) {
         this.telefone = telefone;
+    }
+
+    public Set<Locacao> getLocacoes() {
+        return new LinkedHashSet<>(locacoes);
+    }
+
+    public void addLocacao(Locacao locacao) {
+        this.locacoes.add(locacao);
+    }
+
+    public void removeLocacao(Locacao locacao) {
+        this.locacoes.remove(locacao);
     }
 
     // Representação

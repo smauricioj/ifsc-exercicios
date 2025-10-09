@@ -15,8 +15,9 @@ public class Locacao {
 
     // Atributos
     private final int id;
-    private LocalDate data;
     private final Set<JogoLocado> jogos;
+    private final Cliente cliente;
+    private LocalDate data;
 
     // Utils
     private void checkInvariants() {
@@ -24,9 +25,10 @@ public class Locacao {
     }
 
     // Construtor
-    public Locacao(LocalDate data) {
-        this.data = data;
+    public Locacao(Cliente cliente, LocalDate data) {
         this.id = count++;
+        this.cliente = cliente;
+        this.data = data;
         this.jogos = new HashSet<>();
         this.checkInvariants();
     }
@@ -57,11 +59,16 @@ public class Locacao {
         this.jogos.remove(jogoLocado);
     }
 
+    public Cliente getCliente() {
+        return cliente;
+    }
+
     // Representação
     @Override
     public String toString() {
         return "Locacao{" +
                 "id=" + id +
+                ", cliente.login=" + cliente.getLogin() +
                 ", data=" + data +
                 '}';
     }
