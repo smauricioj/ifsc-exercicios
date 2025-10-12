@@ -1,6 +1,6 @@
 package ifsc.alg;
 
-import ifsc.alg.listaCinco.L5E1;
+import ifsc.alg.lista05.L5E1;
 
 import java.util.Arrays;
 

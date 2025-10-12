@@ -3,11 +3,11 @@
  */
 package ifsc.poo;
 
-import ifsc.poo.listaDois.Contador;
-import ifsc.poo.listaDois.Relogio;
-import ifsc.poo.listaUm.*;
-import ifsc.poo.provaUm.*;
-import ifsc.poo.provaDois.*;
+import ifsc.poo.lista02.Contador;
+import ifsc.poo.lista02.Relogio;
+import ifsc.poo.lista01.*;
+import ifsc.poo.prova01.*;
+import ifsc.poo.prova02.*;
 
 import java.util.Arrays;
 
