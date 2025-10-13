@@ -16,6 +16,7 @@ public class L6E3 {
         double graus = sc.nextDouble();
 
         if (graus < 0 || graus > 360) {
+            System.out.println("Valor inválido!");
             sc.close();
             return;
         }

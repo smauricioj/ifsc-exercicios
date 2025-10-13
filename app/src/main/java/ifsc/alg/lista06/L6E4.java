@@ -20,6 +20,13 @@ public class L6E4 {
         Scanner sc = new Scanner(System.in);
         System.out.print("Entre com o valor negociado: ");
         double val = sc.nextDouble();
+
+        if (val < 0){
+            System.out.println("Valor inválido!");
+            sc.close();
+            return;
+        }
+
         double taxa;
         if (val > 500_000) {
             taxa = 255 + (0.09 / 100) * val;
@@ -31,12 +38,8 @@ public class L6E4 {
             taxa = 76 + (0.34 / 100) * val;
         } else if (val > 2_500) {
             taxa = 56 + (0.66 / 100) * val;
-        } else if (val > 0) {
-            taxa = Math.max(30 + (1.7 / 100) * val, 39);
         } else {
-            System.out.println("Valor inválido");
-            sc.close();
-            return;
+            taxa = Math.max(30 + (1.7 / 100) * val, 39);
         }
         System.out.printf("Taxa de corretagem %.2f%n: ", taxa);
         sc.close();

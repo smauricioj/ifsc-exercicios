@@ -17,6 +17,7 @@ public class L6E2 {
         double ladoC = sc.nextDouble();
 
         if (ladoA <= 0 || ladoB <= 0 || ladoC <= 0 ) {
+            System.out.println("Valor inválido!");
             sc.close();
             return;
         }

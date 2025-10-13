@@ -37,7 +37,7 @@ public class A9E2 {
                     System.out.printf("%.2f", operando1 / operando2);
                 }
             }
-            default -> System.out.println("Erro: oepração inválida");
+            default -> System.out.println("Erro: operação inválida");
         }
 
         sc.close();

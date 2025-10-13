@@ -20,6 +20,12 @@ public class A9E1 {
         System.out.print("Digite a altura: ");
         altura = sc.nextDouble();
 
+        if (peso < 0 || altura < 0) {
+            System.out.println("Valor inválido!");
+            sc.close();
+            return;
+        }
+
         imc = peso/(altura*altura);
 
         System.out.printf("IMC: %.2f, ", imc);

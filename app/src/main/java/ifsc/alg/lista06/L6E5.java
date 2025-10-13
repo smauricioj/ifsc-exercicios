@@ -8,6 +8,7 @@ public class L6E5 {
         System.out.print("Digite um número inteiro de 1 a 99: ");
         int n = sc.nextInt();
         if (n < 1 || n > 99) {
+            System.out.println("Valor inválido!");
             sc.close();
             return;
         }

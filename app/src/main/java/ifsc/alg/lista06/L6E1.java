@@ -23,6 +23,7 @@ public class L6E1 {
         int aval = sc.nextInt();
 
         if (vendas < 0 || aval < 0 || aval > 10) {
+            System.out.println("Valor inválido!");
             sc.close();
             return;
         }
