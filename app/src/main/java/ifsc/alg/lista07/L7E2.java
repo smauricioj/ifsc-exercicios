@@ -20,5 +20,18 @@ public class L7E2 {
         Scanner sc = new Scanner(System.in);
         final int SENHA_CORRETA = 314159;
         final int MAX_TENTATIVAS = 3;
+        int senha_informada, tentativas = 0;
+        do {
+            tentativas++;
+            System.out.print("Entre com a senha: ");
+            senha_informada = sc.nextInt();
+            if (senha_informada == SENHA_CORRETA) {
+                System.out.println("Acesso autorizado");
+                return;
+            }
+            System.out.println("Acesso negado (senha incorreta)");
+        } while (tentativas < MAX_TENTATIVAS);
+        System.out.println("Sistema bloqueado");
+        sc.close();
     }
 }
