@@ -20,20 +20,20 @@ public class L5E5 {
         System.out.print("Entre com a terceira parte (5 dígitos): ");
         terceiraParte = sc.nextInt();
 
-        // Decifrando a terceira parte
+        // Decifrando a terceira parte           // Uma forma:
         d12 = terceiraParte % 10;                // Extrai o último dígito
         d11 = terceiraParte % 100 / 10;          // Extrai os últimos 2 dígitos e divide por 10 para remover o último
         d10 = terceiraParte % 1000 / 100;        // Extrai os últimos 3 dígitos e divide por 100 para remover os 2 últimos
         d9 = terceiraParte % 10000 / 1000;       // E assim por diante...
         d8 = terceiraParte / 10000;
 
-        // Decifrando a segunda parte
-        d7 = segundaParte % 10;
-        d6 = segundaParte % 100 / 10;
-        d5 = segundaParte % 1000 / 100;
-        d4 = segundaParte % 10000 / 1000;
-        d3 = segundaParte % 100000 / 10000;
-        d2 = segundaParte / 100000;
+        // Decifrando a segunda parte            // Outra forma:
+        d2 = segundaParte / 100000;              // Extrai o primeiro dígito
+        d3 = segundaParte / 10000 % 10;          // Extrai os 2 primeiros dígitos e depois isola o último
+        d4 = segundaParte / 1000 % 10;           // Extrai os 2 primeiros dígitos e depois isola o último
+        d5 = segundaParte / 100 % 10;            // E assim por diante...
+        d6 = segundaParte / 10 % 10;             //
+        d7 = segundaParte % 10;                  //
 
         // Algoritmo de verificação
         somaA = d1 + d3 + d5 + d7 + d9 + d11;
