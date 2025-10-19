@@ -16,7 +16,7 @@ public class L7E3 {
 
         System.out.print("Entre com a vitalidade desejada: ");
         int vitalidadeDesejada = sc.nextInt();
-        int vitalidade = 0, incremento = 0, nivelNecessario = 0;
+        int vitalidade = 0, incremento = 0;
 
         switch (classe) {
             case 1 -> {
@@ -37,8 +37,12 @@ public class L7E3 {
             }
         }
 
+        int nivelNecessario = 0;
+
         while (vitalidade < vitalidadeDesejada) {
+            // Em uma linha só, priorizando tamanho:
             // vitalidade += incremento * (++nivelNecessario % 5 == 0 ? 2 : 1);
+            // Em várias, priorizando legibilidade:
             nivelNecessario++;
             vitalidade += incremento;
             if (nivelNecessario % 5 == 0) {

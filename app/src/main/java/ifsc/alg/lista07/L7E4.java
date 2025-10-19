@@ -23,8 +23,7 @@ public class L7E4 {
         int diasDoMes = switch (mes) {
             case 1, 3, 5, 7, 8, 10, 12 -> 31;
             case 4, 6, 9, 11 -> 30;
-            case 2 -> 28;
-            default -> 0; // Nunca acontece, mas é necessário por causa da inicialização de diasDoMes (pattern matching)
+            default -> 28; // Fevereiro
         };
 
         // Impressão do calendário
