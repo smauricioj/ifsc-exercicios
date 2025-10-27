@@ -35,13 +35,13 @@ public class L8E1 {
         int nAlunos = (int) lerNaFaixa("Entre com o número de alunos: ", 1, Integer.MAX_VALUE);
         double mediaDisciplina = 0.0;
         for (int i = 1; i <= nAlunos; i++) {
-            OUT.printf("\tEntre com as notas das provas do aluno %d:%n", i);
+            OUT.printf("Entre com as notas das provas do aluno %d:%n", i);
             double mediaProvas = mediaMenosUm(
                     lerNaFaixa("Nota 1:",  0.0, 10.0),
                     lerNaFaixa("Nota 2:",  0.0, 10.0),
                     lerNaFaixa("Nota 3:",  0.0, 10.0)
             );
-            OUT.printf("\tEntre com as notas dos trabalhos do aluno %d:%n", i);
+            OUT.printf("Entre com as notas dos trabalhos do aluno %d:%n", i);
             double mediaTrabalhos = mediaMenosUm(
                     lerNaFaixa("Nota 1:",  0.0, 10.0),
                     lerNaFaixa("Nota 2:",  0.0, 10.0),

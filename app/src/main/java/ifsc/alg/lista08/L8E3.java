@@ -50,12 +50,12 @@ public class L8E3 {
     }
 
     static char leiaEscala(String rotulo) {
-        char escolha;
+        char escala;
         do {
             OUT.printf("Entre com a escala de %s (C, K ou F): ", rotulo);
-            escolha = IN.next().charAt(0);
-        } while (escolha != 'C' && escolha != 'K' && escolha != 'F');
-        return escolha;
+            escala = IN.next().charAt(0);
+        } while (escala != 'C' && escala != 'K' && escala != 'F');
+        return escala;
     }
 
     public static void main(String[] args) {
@@ -63,10 +63,11 @@ public class L8E3 {
         double temperatura = IN.nextDouble();
         char origem = leiaEscala("origem");
         char destino = leiaEscala("destino");
-        if (origem == 'K' && temperatura < 0) {
-            OUT.printf("Temperatura %.2f inválida para escala de origem Kelvin", temperatura);
+        if (converteTemp(temperatura, origem, 'K') < 0) {
+            OUT.printf("Temperatura %.2f inválida", temperatura);
             return;
         }
         OUT.printf("Temperatura convertida: %.2f%n", converteTemp(temperatura, origem, destino));
+        IN.close();
     }
 }

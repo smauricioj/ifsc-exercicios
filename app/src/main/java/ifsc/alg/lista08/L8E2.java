@@ -36,7 +36,7 @@ public class L8E2 {
         /*
         Como encontrar amigos:
 
-        for (int i = 0; i < 3200; i++) {
+        for (int i = 0; i < 3200; i++) {          //
             for (int j = 0; j < i; j++) {         // Todas as combinações de (0, 0) até (3200, 3200)
                 if (saoAmigos(i, j)) {
                     OUT.println(i + " " + j);
