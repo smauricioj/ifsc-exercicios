@@ -8,7 +8,7 @@ public class ContaEspecial extends Conta {
 
     static {
         CHEQUE_ESPECIAL = BigDecimal.valueOf(1_000.00);
-        TAXA_OPERACAO = 0.001;
+        TAXA_OPERACAO = 0.1 / 100;
     }
 
     public ContaEspecial() {
@@ -17,6 +17,6 @@ public class ContaEspecial extends Conta {
 
     @Override
     public void saque(int centavos) {
-        this.saque(centavos, TAXA_OPERACAO, CHEQUE_ESPECIAL);
+        super.saque(centavos, TAXA_OPERACAO, CHEQUE_ESPECIAL);
     }
 }
