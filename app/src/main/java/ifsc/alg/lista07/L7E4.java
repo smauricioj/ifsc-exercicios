@@ -27,7 +27,7 @@ public class L7E4 {
         };
 
         // Impressão do calendário
-        System.out.printf("%n D  S  T  Q  Q  S  S%n");
+        System.out.printf("%n D  S  T  Q  Q  S  S%n%n");
         for (int i = 0; i < diaDaSemana - 1; i++) {
             System.out.print("   ");                    // Espaços em branco antes de começar a contagem
         }

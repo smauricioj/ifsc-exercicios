@@ -40,7 +40,7 @@ public class L7E3 {
         int nivelNecessario = 0;
 
         while (vitalidade < vitalidadeDesejada) {
-            // Em uma linha só, priorizando tamanho:
+            // Em uma linha só:
             // vitalidade += incremento * (++nivelNecessario % 5 == 0 ? 2 : 1);
             // Em várias, priorizando legibilidade:
             nivelNecessario++;
