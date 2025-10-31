@@ -1,6 +1,6 @@
 package ifsc.poo.lista03.E3.domain;
 
-import java.awt.*;
+import java.util.Objects;
 
 public class Linha extends ObjetoDeDesenho {
     private final Ponto inicio;
@@ -8,6 +8,8 @@ public class Linha extends ObjetoDeDesenho {
 
     public Linha(Ponto inicio, Ponto fim) {
         super();
+        Objects.requireNonNull(inicio, "O vértice deve ser informado");
+        Objects.requireNonNull(fim, "O vértice deve ser informado");
         this.inicio = inicio;
         this.fim = fim;
     }

@@ -1,7 +1,5 @@
 package ifsc.poo.lista03.E3.domain;
 
-import java.awt.*;
-
 public class Circulo extends ObjetoDeDesenho{
     private Ponto centro;
     private double raio;
@@ -17,5 +15,11 @@ public class Circulo extends ObjetoDeDesenho{
         return String.format("Circulo com centro em %s e raio %.3f", this.centro, this.raio);
     }
 
+    public double getArea() {
+        return Math.PI * this.raio * this.raio;
+    }
 
+    public double getPerimetro() {
+        return 2 * Math.PI * this.raio;
+    }
 }
