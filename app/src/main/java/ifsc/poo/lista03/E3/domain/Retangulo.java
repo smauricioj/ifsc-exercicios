@@ -21,21 +21,26 @@ public class Retangulo extends ObjetoDeDesenho {
         );
     }
 
+    public double getLargura() {
+        return Math.abs(verticeI.x() - this.verticeF.x());
+    }
+
+    public double getAltura() {
+        return Math.abs(verticeI.y() - this.verticeF.y());
+    }
+
+    public double[] getLados() {
+        return new double[]{
+                this.getLargura(), this.getAltura(),
+                this.getLargura(), this.getAltura()
+        };
+    }
+
     public double getArea() {
-        double[] lados = this.getLados();
-        return lados[0] * lados[2];
+        return this.getLargura() * this.getAltura();
     }
 
     public double getPerimetro() {
         return Arrays.stream(this.getLados()).sum();
-    }
-
-    public double[] getLados() {
-        double[] lados = new double[4];
-        lados[0] = Math.abs(verticeI.x() - this.verticeF.x());
-        lados[1] = Math.abs(verticeI.x() - this.verticeF.x());
-        lados[2] = Math.abs(verticeI.y() - this.verticeF.y());
-        lados[3] = Math.abs(verticeI.y() - this.verticeF.y());
-        return lados;
     }
 }

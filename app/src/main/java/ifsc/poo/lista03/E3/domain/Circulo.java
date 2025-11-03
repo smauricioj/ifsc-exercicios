@@ -1,11 +1,14 @@
 package ifsc.poo.lista03.E3.domain;
 
+import java.util.Objects;
+
 public class Circulo extends ObjetoDeDesenho{
-    private Ponto centro;
-    private double raio;
+    private final Ponto centro;
+    private final double raio;
 
     public Circulo(Ponto centro, double raio) {
         super();
+        Objects.requireNonNull(centro, "O centro deve ser informado");
         this.centro = centro;
         this.raio = Math.max(raio, 0);
     }

@@ -4,8 +4,8 @@ import java.awt.Color;
 import java.util.Objects;
 
 public class ObjetoDeDesenho {
-    protected static final Color COR_PADRAO;
-    protected static final int ESPESSURA_PADRAO;
+    public static final Color COR_PADRAO;
+    public static final int ESPESSURA_PADRAO;
 
     static {
         COR_PADRAO = Color.BLACK;

@@ -11,9 +11,9 @@ public class Triangulo extends ObjetoDeDesenho{
         Objects.requireNonNull(v1, "O vértice deve ser informado");
         Objects.requireNonNull(v2, "O vértice deve ser informado");
         Objects.requireNonNull(v3, "O vértice deve ser informado");
-        this.v1=v1;
-        this.v2=v2;
-        this.v3=v3;
+        this.v1 = v1;
+        this.v2 = v2;
+        this.v3 = v3;
     }
 
     @Override
@@ -27,19 +27,15 @@ public class Triangulo extends ObjetoDeDesenho{
         return p1.x() * (p2.y() - p3.y());
     }
 
+    public double[] getLados() {
+        return new double[]{v1.distancia(v2), v2.distancia(v3), v3.distancia(v1)};
+    }
+
     public double getArea() {
         return Math.abs(xVezesDeltaY(v1, v2, v3) + xVezesDeltaY(v2, v3, v1) + xVezesDeltaY(v3, v1, v2)) / 2;
     }
 
     public double getPerimetro() {
         return Arrays.stream(this.getLados()).sum();
-    }
-
-    public double[] getLados() {
-        double[] lados = new double[3];
-        lados[0] = v1.distancia(v2);
-        lados[1] = v2.distancia(v3);
-        lados[2] = v3.distancia(v1);
-        return lados;
     }
 }
