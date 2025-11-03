@@ -4,7 +4,7 @@ import ifsc.poo.joe.Main;
 
 import javax.swing.*;
 import java.awt.*;
-import java.net.URL;
+import java.util.Objects;
 
 public class Aldeao {
 
@@ -98,10 +98,10 @@ public class Aldeao {
      * @return Retorna um objeto Image
      */
     private Image carregarImagem(String imagem) {
-        URL url = Main.class.getResource("../../resources/" + imagem + ".png");
+        return new ImageIcon(Objects.requireNonNull(
+                getClass().getClassLoader().getResource("./"+imagem+".png")
+        )).getImage();
 
-        ImageIcon iicon = new ImageIcon(url);
-        return iicon.getImage();
     }
 
 }
