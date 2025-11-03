@@ -3,6 +3,7 @@
  */
 package ifsc.poo;
 
+import ifsc.poo.joe.Main;
 import ifsc.poo.lista02.Contador;
 import ifsc.poo.lista02.Relogio;
 import ifsc.poo.lista01.*;
@@ -13,50 +14,6 @@ import java.util.Arrays;
 
 public class App {
     public static void main(String[] args) {
-        if (args.length < 2) return;
-        String pacote = String.valueOf(args[0]);
-        byte qual = Byte.parseByte(args[1]);
-        args =  Arrays.copyOfRange(args, 2, args.length);
-        switch (pacote) {
-            case "listaUm" -> {
-                switch (qual) {
-                    case 1 -> L1E1.main(args);
-                    case 2 -> L1E2.main(args);
-                    case 3 -> L1E3.main(args);
-                    case 4 -> L1E4.main(args);
-                    case 5 -> L1E5.main(args);
-                    case 6 -> L1E6.main(args);
-                    case 7 -> L1E7.main(args);
-                    case 8 -> L1E8.main(args);
-                    case 9 -> L1E9.main(args);
-                    case 10 -> L1E10.main(args);
-                }
-            }
-            case "listaDois" -> {
-                switch (qual) {
-                    case 1 -> Contador.main(args);
-                    case 2 -> Relogio.main(args);
-                }
-            }
-            case "provaUm" -> {
-                switch (qual) {
-                    case 1 -> CalculadoraResistencia.main(args);
-                    case 2 -> Criptografador.main(args);
-                    case 3 -> Geodistancias.main(args);
-                    case 4 -> Calendario.main(args);
-                }
-            }
-            case "provaDois" -> {
-                switch (qual) {
-                    case 1 -> Hitbox.main(args);
-                    case 2 -> Mesa.main(args);
-                }
-            }
-            case "sistemas" -> {
-                switch (qual) {
-                    case 1 -> ifsc.poo.handebol.App.main(args);
-                }
-            }
-        }
+        Main.main(args);
     }
 }

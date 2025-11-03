@@ -13,6 +13,7 @@ plugins {
 repositories {
     // Use Maven Central for resolving dependencies.
     mavenCentral()
+    flatDir dirs: "${rootDir}/lib"
 }
 
 dependencies {
@@ -21,6 +22,9 @@ dependencies {
 
     // This dependency is used by the application.
     implementation libs.guava
+
+    // Para execução do formulário via Gradle
+    implementation group: 'com.github.adedayo.intellij.sdk', name: 'forms_rt', version: '142.1'
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
