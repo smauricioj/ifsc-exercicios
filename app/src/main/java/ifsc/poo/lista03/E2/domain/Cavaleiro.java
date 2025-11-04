@@ -10,17 +10,13 @@ public class Cavaleiro extends Personagem{
               Constantes.CAVALEIRO_ATAQUE,
               Constantes.CAVALEIRO_VELOCIDADE
         );
-        montado = true;
+        this.montado = true;
     }
 
     public void alternarMontado() {
         this.montado = !this.montado;
-        this.velocidade /= montado
+        this.velocidade = this.montado
                 ? Constantes.CAVALEIRO_VELOCIDADE
                 : Constantes.CAVALEIRO_VELOCIDADE / 2.0;
-    }
-
-    public boolean estaMontado() {
-        return montado;
     }
 }

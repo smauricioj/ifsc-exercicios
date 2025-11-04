@@ -15,8 +15,7 @@ public class Arqueiro extends Personagem{
 
     @Override
     public String atacar() {
-        if (this.flechas > 0) {
-            --this.flechas;
+        if (this.flechas-- > 0) {
             return super.atacar();
         }
         return "O Arqueiro está sem flechas!";

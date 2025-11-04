@@ -16,7 +16,7 @@ public class ContaEspecial extends Conta {
     }
 
     @Override
-    public void saque(int centavos) {
-        super.saque(centavos, TAXA_OPERACAO, CHEQUE_ESPECIAL);
+    public boolean saque(BigDecimal valor) {
+        return this.saque(valor, TAXA_OPERACAO, CHEQUE_ESPECIAL);
     }
 }
