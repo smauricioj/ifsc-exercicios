@@ -1,21 +1,24 @@
 package ifsc.poo.joe;
 
 import ifsc.poo.joe.classes.Aldeao;
+import ifsc.poo.joe.enums.Direcao;
 
-import javax.swing.*;
-import java.awt.*;
-import java.util.ArrayList;
+import javax.swing.JPanel;
+import java.awt.Graphics;
+import java.awt.Color;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Screen extends JPanel {
 
-    private final ArrayList<Aldeao> aldeoes;
+    private final Set<Aldeao> aldeoes;
 
     public Screen() {
 
         //TODO preciso ser melhorado
 
         this.setBackground(Color.white);
-        this.aldeoes = new ArrayList<>();
+        this.aldeoes = new HashSet<>();
     }
 
     /**
@@ -29,7 +32,7 @@ public class Screen extends JPanel {
         //TODO preciso ser melhorado
 
         // percorrendo a lista de aldeões e pedindo para cada um se desenhar na tela
-        aldeoes.forEach(aldeao -> aldeao.desenhar(g));
+        aldeoes.forEach(aldeao -> aldeao.desenhar(g, this));
 
         // liberando o contexto gráfico
         g.dispose();
@@ -43,22 +46,22 @@ public class Screen extends JPanel {
      * @param y coordenada Y
      */
     public void criarAldeao(int x, int y) {
-        Aldeao a = new Aldeao(this, "aldeao", x, y);
-        a.desenhar(super.getGraphics());
+        Aldeao a = new Aldeao(x, y);
+        a.desenhar(super.getGraphics(), this);
         aldeoes.add(a);
     }
 
     /**
      * Atualiza as coordenadas X ou Y de todos os aldeoes
      *
-     * @param direcao
+     * @param direcao direcao para movimentar
      */
-    public void movimentarAldeao(int direcao) {
+    public void movimentarAldeao(Direcao direcao) {
         //TODO preciso ser melhorado
 
-        aldeoes.forEach(aldeao -> aldeao.mover(direcao));
-        // Depois que as coordenadas foram atualizadas é necessário repintar o
-        //JPanel
+        aldeoes.forEach(aldeao -> aldeao.mover(direcao, this.getWidth(), this.getHeight()));
+
+        // Depois que as coordenadas foram atualizadas é necessário repintar o JPanel
         this.repaint();
     }
 

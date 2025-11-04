@@ -1,6 +1,6 @@
 package ifsc.poo.joe.classes;
 
-import ifsc.poo.joe.Main;
+import ifsc.poo.joe.enums.Direcao;
 
 import javax.swing.*;
 import java.awt.*;
@@ -8,28 +8,19 @@ import java.util.Objects;
 
 public class Aldeao {
 
-    private JPanel pai;  // referência ao JPanel onde será desenhado o Aldeao
-    private Image icone; // imagem do Aldeao
-    private String imagemNome; // nome da imagem do Aldeao
-    private int largura; // largura da imagem
-    private int altura;  // altura da imagem
+    public static final String NOME_IMAGEM = "aldeao";
+
     private int posX;    // posição X no JPanel onde a imagem será desenhada
     private int posY;    // posição Y no JPanel onde a imagem será desenhada
     private boolean atacando; // indica se está atacando ou não
+    private Image icone; // imagem do Aldeao
 
-    public Aldeao(JPanel p, String img, int x, int y) {
-
-        this.imagemNome = img;
-        this.icone = this.carregarImagem(this.imagemNome);
-        this.largura = this.icone.getWidth(null);
-        this.altura = this.icone.getHeight(null);
-
-        this.pai = p;
+    public Aldeao(int x, int y) {
+        this.icone = this.carregarImagem(NOME_IMAGEM);
         this.posX = x;
         this.posY = y;
         this.atacando = false;
     }
-
 
     /**
      * Desenhando o Aldeão, nas coordenadas X e Y, com a imagem 'icone'
@@ -37,53 +28,29 @@ public class Aldeao {
      *
      * @param g objeto do JPanel que será usado para desenhar o Aldeão
      */
-    public void desenhar(Graphics g) {
+    public void desenhar(Graphics g, JPanel painel) {
         // verificando qual imagem carregar
-        if (atacando == true) {
-            this.icone = this.carregarImagem(this.imagemNome + "2");
-        } else {
-            this.icone = this.carregarImagem(this.imagemNome);
-        }
+        this.icone = this.carregarImagem(NOME_IMAGEM + (atacando ? "2" : ""));
         // desenhando de fato a imagem no pai
-        g.drawImage(this.icone, this.posX, this.posY, this.pai);
+        g.drawImage(this.icone, this.posX, this.posY, painel);
     }
 
     /**
      * Atualiza as coordenadas X e Y do personagem
-     * 0 para cima
-     * 1 para baixo
-     * 2 para esquerda
-     * 3 para direita
      *
-     * @param direcao inteiro que indica a direcao a ir.
+     * @param direcao indica a direcao a ir.
      */
-    public void mover(int direcao) {
+    public void mover(Direcao direcao, int maxLargura, int maxAltura) {
         switch (direcao) {
-            case 0: // subir
-                this.posY -= 10;
-                break;
-            case 1: // descer
-                this.posY += 10;
-                break;
-            case 2: // esquerda
-                this.posX -= 10;
-                break;
-            case 3: // direita
-                this.posX += 10;
-                break;
+            case CIMA     -> this.posY -= 10;
+            case BAIXO    -> this.posY += 10;
+            case ESQUERDA -> this.posX -= 10;
+            case DIREITA  -> this.posX += 10;
         }
+
         //Não deixa a imagem ser desenhada fora dos limites do JPanel pai
-        if (this.posX > this.pai.getWidth() - this.largura) {
-            this.posX = this.pai.getWidth() - this.largura;
-        } else if (this.posX < 0) {
-            this.posX = 0;
-        }
-        //Não deixa a imagem ser desenhada fora dos limites do JPanel pai
-        if (this.posY > this.pai.getHeight() - this.altura) {
-            this.posY = this.pai.getHeight() - this.altura;
-        } else if (this.posY < 0) {
-            this.posY = 0;
-        }
+        this.posX = Math.min(Math.max(0, this.posX), maxLargura);
+        this.posY = Math.min(Math.max(0, this.posY), maxAltura);
     }
 
 
@@ -101,7 +68,6 @@ public class Aldeao {
         return new ImageIcon(Objects.requireNonNull(
                 getClass().getClassLoader().getResource("./"+imagem+".png")
         )).getImage();
-
     }
 
 }

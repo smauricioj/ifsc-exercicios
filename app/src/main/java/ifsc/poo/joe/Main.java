@@ -1,14 +1,14 @@
 package ifsc.poo.joe;
 
+import ifsc.poo.joe.enums.Direcao;
+
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.Random;
 
 public class Main {
+    private JPanel painelTela;
     private JPanel principal;
     private JPanel painelLateral;
-    private JPanel painelTela;
     private JButton bCriaAldeao;
     private JButton bCriaArqueiro;
     private JButton bCriaCavaleiro;
@@ -22,99 +22,67 @@ public class Main {
     private JButton buttonBaixo;
     private JButton buttonDireita;
     private JLabel logo;
-    private Random sorteio;
-
+    private final Random sorteio;
 
     public Main() {
         this.sorteio = new Random();
 
-        atacarButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                //TODO preciso ser melhorado
+        atacarButton.addActionListener(e -> {
+            //TODO preciso ser melhorado
 
-                if (aldeaoRadioButton.isSelected()) {
-                    ((Screen) painelTela).atacarAldeao();
-                }
-            }
-        });
-        buttonCima.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                //TODO preciso ser melhorado
-
-                ((Screen) painelTela).movimentarAldeao(0);
-            }
-        });
-        buttonBaixo.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                //TODO preciso ser melhorado
-
-                ((Screen) painelTela).movimentarAldeao(1);
-            }
-        });
-        buttonEsquerda.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                //TODO preciso ser melhorado
-
-                ((Screen) painelTela).movimentarAldeao(2);
-            }
-        });
-        buttonDireita.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                //TODO preciso ser melhorado
-
-                ((Screen) painelTela).movimentarAldeao(3);
+            if (aldeaoRadioButton.isSelected()) {
+                ((Screen) painelTela).atacarAldeao();
             }
         });
 
-        bCriaAldeao.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                //obtendo o tamanho do JPanel TELA
-                int largura = painelTela.getWidth();
-                int altura = painelTela.getHeight();
+        buttonCima.addActionListener(e -> {
+            //TODO preciso ser melhorado
 
-                // criando o aldeao em um local aleatorio
-                int x = sorteio.nextInt(largura - 50);
-                int y = sorteio.nextInt(altura - 50);
-                if (x < 0) { // garantindo que x não esteja fora do limite do JPanel
-                    x = 0;
-                }
-                if (y < 0) { // garantindo que x não esteja fora do limite do JPanel
-                    y = 0;
-                }
-
-                // invocando o método criarAldeao da classe Tela.
-                // Foi necessário a coerção de tipos pois painelTela é do tipo JPanel.
-                // Isso só foi possível pois Tela é uma subclasse de JPanel.
-                ((Screen) painelTela).criarAldeao(x, y);
-            }
+            ((Screen) painelTela).movimentarAldeao(Direcao.CIMA);
         });
 
-        bCriaArqueiro.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                //TODO preciso ser implementado
-                JOptionPane.showMessageDialog(null, "Preciso ser implementado", "Criar Arqueiro", JOptionPane.INFORMATION_MESSAGE);
-            }
+        buttonBaixo.addActionListener(e -> {
+            //TODO preciso ser melhorado
+
+            ((Screen) painelTela).movimentarAldeao(Direcao.BAIXO);
         });
-        bCriaCavaleiro.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                //TODO preciso ser implementado
-                JOptionPane.showMessageDialog(null, "Preciso ser implementado", "Criar Cavaleiro", JOptionPane.INFORMATION_MESSAGE);
-            }
+
+        buttonEsquerda.addActionListener(e -> {
+            //TODO preciso ser melhorado
+
+            ((Screen) painelTela).movimentarAldeao(Direcao.ESQUERDA);
+        });
+
+        buttonDireita.addActionListener(e -> {
+            //TODO preciso ser melhorado
+
+            ((Screen) painelTela).movimentarAldeao(Direcao.DIREITA);
+        });
+
+        bCriaAldeao.addActionListener(e -> {
+            // criando o aldeao em um local aleatorio
+            final int PADDING = 50;
+            int posX = sorteio.nextInt(painelTela.getWidth() - 2 * PADDING) + PADDING;
+            int posY = sorteio.nextInt(painelTela.getHeight() - 2 * PADDING) + PADDING;
+
+            // invocando o método criarAldeao da classe Tela.
+            ((Screen) painelTela).criarAldeao(posX, posY);
+        });
+
+        bCriaArqueiro.addActionListener(e -> {
+            //TODO preciso ser implementado
+            JOptionPane.showMessageDialog(null, "Preciso ser implementado", "Criar Arqueiro", JOptionPane.INFORMATION_MESSAGE);
+        });
+
+        bCriaCavaleiro.addActionListener(e -> {
+            //TODO preciso ser implementado
+            JOptionPane.showMessageDialog(null, "Preciso ser implementado", "Criar Cavaleiro", JOptionPane.INFORMATION_MESSAGE);
         });
     }
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("Java of Empires");
-        Main m = new Main();
-        frame.setContentPane(m.principal);
+        frame.setContentPane((new Main()).principal);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         // não será possível redimensionar a janela
@@ -128,7 +96,6 @@ public class Main {
     }
 
     private void createUIComponents() {
-        // TODO: place custom component creation code here
         this.painelTela = new Screen();
     }
 }

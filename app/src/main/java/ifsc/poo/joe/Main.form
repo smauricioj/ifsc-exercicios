@@ -204,12 +204,4 @@
       </grid>
     </children>
   </grid>
-  <buttonGroups>
-    <group name="buttonGroupPersonagens">
-      <member id="e0e0d"/>
-      <member id="e7ac3"/>
-      <member id="8aab4"/>
-      <member id="a9d09"/>
-    </group>
-  </buttonGroups>
 </form>
