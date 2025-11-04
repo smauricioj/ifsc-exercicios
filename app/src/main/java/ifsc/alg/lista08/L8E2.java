@@ -31,7 +31,8 @@ public class L8E2 {
     }
 
     public static void main(String[] args) {
-        OUT.printf("Os números%s são amigos%n", saoAmigos(leiaPositivo(), leiaPositivo()) ? "" : " não");
+        boolean amigos = saoAmigos(leiaPositivo(), leiaPositivo());
+        OUT.printf("Os números%s são amigos%s%n", amigos ? "" : " não", amigos ? " :)" : "");
         IN.close();
         /*
         Como encontrar amigos:

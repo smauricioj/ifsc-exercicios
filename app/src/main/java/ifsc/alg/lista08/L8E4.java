@@ -1,41 +1,52 @@
 package ifsc.alg.lista08;
 
+import java.io.PrintStream;
 import java.util.Scanner;
 
 public class L8E4 {
+    // Raio médio da Terra em km
     static final double RAIO_TERRA = 6378.13;
+    static final Scanner IN = new Scanner(System.in);
+    static final PrintStream OUT = System.out;
 
+    /**
+     * Função auxiliar que calcula o haverseno de um angulo em radianos
+     */
     static double hav(double theta) {
-        return Math.pow(Math.sin(theta) / 2, 2);
+        return Math.pow(Math.sin(theta / 2), 2);
     }
 
+    /**
+     * Fórmula de Haverseno para calcular a distância entre dois pontos
+     * na superfície de uma esfera de raio r, dados em coordenadas
+     * (latitude e longitude em graus).
+     */
     static double distancia(double lat1, double lon1, double lat2, double lon2) {
         lat1 = Math.toRadians(lat1);
-        lon1 = Math.toRadians(lon1);
         lat2 = Math.toRadians(lat2);
+        lon1 = Math.toRadians(lon1);
         lon2 = Math.toRadians(lon2);
-        return 2*RAIO_TERRA*Math.asin(
-                Math.sqrt(hav(lat2 - lat1) +  hav(lon2 - lon1) * Math.cos(lat1) * Math.cos(lat2))
-        );
+        return 2 * RAIO_TERRA * Math.asin(Math.sqrt(
+                hav(lat2 - lat1) + (hav(lon2 - lon1) * Math.cos(lat1) * Math.cos(lat2))
+        ));
+    }
+
+    static double lerCoordenada(String rotulo, double min, double max) {
+        double coordenada;
+        do {
+            OUT.printf("Entre com a %s (em graus): ", rotulo);
+            coordenada = IN.nextDouble();
+        } while (coordenada < min || coordenada > max);
+        return coordenada;
     }
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Entre com as coordenadas do primeiro ponto (em graus): ");
-        double lat1 = sc.nextDouble();
-        double lon1 = sc.nextDouble();
-        if (lat1 < -90 || lat1 > 90 || lon1 < -180 || lon1 > 180) {
-            System.out.println("Coordenadas inválidas");
-            return;
-        }
-        System.out.print("Entre com as coordenadas do segundo ponto (em graus): ");
-        double lat2 = sc.nextDouble();
-        double lon2 = sc.nextDouble();
-        if (lat2 < -90 || lat2 > 90 || lon2 < -180 || lon2 > 180) {
-            System.out.println("Coordenadas inválidas");
-            return;
-        }
-        System.out.printf("A distância entre os pontos é %.2f%n", distancia(lat1, lon1, lat2, lon2));
-        sc.close();
+        OUT.printf("A distância é: %.2f km%n", distancia(
+                lerCoordenada("latitude do primeiro ponto", -90.0, 90.0),
+                lerCoordenada("longitude do primeiro ponto", -180.0, 180.0),
+                lerCoordenada("latitude do segundo ponto", -90.0, 90.0),
+                lerCoordenada("longitude do segundo ponto", -180.0, 180.0)
+        ));
+        IN.close();
     }
 }

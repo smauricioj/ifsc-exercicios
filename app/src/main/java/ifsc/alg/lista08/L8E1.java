@@ -37,15 +37,15 @@ public class L8E1 {
         for (int i = 1; i <= nAlunos; i++) {
             OUT.printf("Entre com as notas das provas do aluno %d:%n", i);
             double mediaProvas = mediaMenosUm(
-                    lerNaFaixa("Nota 1:",  0.0, 10.0),
-                    lerNaFaixa("Nota 2:",  0.0, 10.0),
-                    lerNaFaixa("Nota 3:",  0.0, 10.0)
+                    lerNaFaixa("\tNota 1: ",  0.0, 10.0),
+                    lerNaFaixa("\tNota 2: ",  0.0, 10.0),
+                    lerNaFaixa("\tNota 3: ",  0.0, 10.0)
             );
             OUT.printf("Entre com as notas dos trabalhos do aluno %d:%n", i);
             double mediaTrabalhos = mediaMenosUm(
-                    lerNaFaixa("Nota 1:",  0.0, 10.0),
-                    lerNaFaixa("Nota 2:",  0.0, 10.0),
-                    lerNaFaixa("Nota 3:",  0.0, 10.0)
+                    lerNaFaixa("\tNota 1: ",  0.0, 10.0),
+                    lerNaFaixa("\tNota 2: ",  0.0, 10.0),
+                    lerNaFaixa("\tNota 3: ",  0.0, 10.0)
             );
             double mediaAluno = 0.8 * mediaProvas + 0.2 * mediaTrabalhos;
             OUT.printf("Média final do aluno %d: %.2f%n", i, mediaAluno);
