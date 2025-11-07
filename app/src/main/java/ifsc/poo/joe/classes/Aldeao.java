@@ -10,10 +10,10 @@ public class Aldeao {
 
     public static final String NOME_IMAGEM = "aldeao";
 
-    private int posX;    // posição X no JPanel onde a imagem será desenhada
-    private int posY;    // posição Y no JPanel onde a imagem será desenhada
-    private boolean atacando; // indica se está atacando ou não
-    private Image icone; // imagem do Aldeao
+    private int posX;
+    private int posY;
+    private boolean atacando;
+    private Image icone;
 
     public Aldeao(int x, int y) {
         this.icone = this.carregarImagem(NOME_IMAGEM);
@@ -49,8 +49,8 @@ public class Aldeao {
         }
 
         //Não deixa a imagem ser desenhada fora dos limites do JPanel pai
-        this.posX = Math.min(Math.max(0, this.posX), maxLargura);
-        this.posY = Math.min(Math.max(0, this.posY), maxAltura);
+        this.posX = Math.min(Math.max(0, this.posX), maxLargura - this.icone.getWidth(null));
+        this.posY = Math.min(Math.max(0, this.posY), maxAltura - this.icone.getHeight(null));
     }
 
 
@@ -59,7 +59,7 @@ public class Aldeao {
     }
 
     /**
-     * Method auxiliar para carregar uma imagem do disco
+     * Metodo auxiliar para carregar uma imagem do disco
      *
      * @param imagem Caminho da imagem
      * @return Retorna um objeto Image

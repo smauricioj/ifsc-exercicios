@@ -9,11 +9,11 @@ import java.awt.Color;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Screen extends JPanel {
+public class Tela extends JPanel {
 
     private final Set<Aldeao> aldeoes;
 
-    public Screen() {
+    public Tela() {
 
         //TODO preciso ser melhorado
 
@@ -56,7 +56,7 @@ public class Screen extends JPanel {
      *
      * @param direcao direcao para movimentar
      */
-    public void movimentarAldeao(Direcao direcao) {
+    public void movimentarAldeoes(Direcao direcao) {
         //TODO preciso ser melhorado
 
         aldeoes.forEach(aldeao -> aldeao.mover(direcao, this.getWidth(), this.getHeight()));
@@ -68,7 +68,7 @@ public class Screen extends JPanel {
     /**
      * Altera o estado do aldeão de atacando para não atacando e vice-versa
      */
-    public void atacarAldeao() {
+    public void atacarAldeoes() {
 
         //TODO preciso ser melhorado
 

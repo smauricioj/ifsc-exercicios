@@ -5,7 +5,7 @@ import ifsc.poo.joe.enums.Direcao;
 import javax.swing.*;
 import java.util.Random;
 
-public class Main {
+public class App {
     private JPanel painelTela;
     private JPanel principal;
     private JPanel painelLateral;
@@ -24,65 +24,73 @@ public class Main {
     private JLabel logo;
     private final Random sorteio;
 
-    public Main() {
+    private App() {
         this.sorteio = new Random();
 
         atacarButton.addActionListener(e -> {
             //TODO preciso ser melhorado
 
-            if (aldeaoRadioButton.isSelected()) {
-                ((Screen) painelTela).atacarAldeao();
-            }
+            ((Tela) painelTela).atacarAldeoes();
         });
 
         buttonCima.addActionListener(e -> {
             //TODO preciso ser melhorado
 
-            ((Screen) painelTela).movimentarAldeao(Direcao.CIMA);
+            ((Tela) painelTela).movimentarAldeoes(Direcao.CIMA);
         });
 
         buttonBaixo.addActionListener(e -> {
             //TODO preciso ser melhorado
 
-            ((Screen) painelTela).movimentarAldeao(Direcao.BAIXO);
+            ((Tela) painelTela).movimentarAldeoes(Direcao.BAIXO);
         });
 
         buttonEsquerda.addActionListener(e -> {
             //TODO preciso ser melhorado
 
-            ((Screen) painelTela).movimentarAldeao(Direcao.ESQUERDA);
+            ((Tela) painelTela).movimentarAldeoes(Direcao.ESQUERDA);
         });
 
         buttonDireita.addActionListener(e -> {
             //TODO preciso ser melhorado
 
-            ((Screen) painelTela).movimentarAldeao(Direcao.DIREITA);
+            ((Tela) painelTela).movimentarAldeoes(Direcao.DIREITA);
         });
 
         bCriaAldeao.addActionListener(e -> {
             // criando o aldeao em um local aleatorio
             final int PADDING = 50;
-            int posX = sorteio.nextInt(painelTela.getWidth() - 2 * PADDING) + PADDING;
-            int posY = sorteio.nextInt(painelTela.getHeight() - 2 * PADDING) + PADDING;
+            int posX = sorteio.nextInt(painelTela.getWidth() - PADDING);
+            int posY = sorteio.nextInt(painelTela.getHeight() - PADDING);
 
             // invocando o método criarAldeao da classe Tela.
-            ((Screen) painelTela).criarAldeao(posX, posY);
+            ((Tela) painelTela).criarAldeao(posX, posY);
         });
 
         bCriaArqueiro.addActionListener(e -> {
             //TODO preciso ser implementado
-            JOptionPane.showMessageDialog(null, "Preciso ser implementado", "Criar Arqueiro", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(
+                    null,
+                    "Preciso ser implementado",
+                    "Criar Arqueiro",
+                    JOptionPane.INFORMATION_MESSAGE
+            );
         });
 
         bCriaCavaleiro.addActionListener(e -> {
             //TODO preciso ser implementado
-            JOptionPane.showMessageDialog(null, "Preciso ser implementado", "Criar Cavaleiro", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(
+                    null,
+                    "Preciso ser implementado",
+                    "Criar Cavaleiro",
+                    JOptionPane.INFORMATION_MESSAGE
+            );
         });
     }
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("Java of Empires");
-        frame.setContentPane((new Main()).principal);
+        frame.setContentPane((new App()).principal);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         // não será possível redimensionar a janela
@@ -92,10 +100,12 @@ public class Main {
         // janela deverá ficar centralizada
         frame.setLocationRelativeTo(null);
 
+        // deve ser visível
         frame.setVisible(true);
     }
 
     private void createUIComponents() {
-        this.painelTela = new Screen();
+        // define o painel da tela como um objeto do tipo Tela
+        this.painelTela = new Tela();
     }
 }

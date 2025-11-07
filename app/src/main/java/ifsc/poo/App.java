@@ -3,17 +3,8 @@
  */
 package ifsc.poo;
 
-import ifsc.poo.joe.Main;
-import ifsc.poo.lista02.Contador;
-import ifsc.poo.lista02.Relogio;
-import ifsc.poo.lista01.*;
-import ifsc.poo.prova01.*;
-import ifsc.poo.prova02.*;
-
-import java.util.Arrays;
-
 public class App {
     public static void main(String[] args) {
-        Main.main(args);
+        ifsc.poo.joe.App.main(args);
     }
 }
