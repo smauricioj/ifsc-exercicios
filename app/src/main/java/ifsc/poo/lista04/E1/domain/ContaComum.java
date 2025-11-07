@@ -2,13 +2,13 @@ package ifsc.poo.lista04.E1.domain;
 
 import java.math.BigDecimal;
 
-public class ContaComum extends Conta implements Corrente {
+public class ContaComum extends Conta {
     public static final BigDecimal CHEQUE_ZERO;
-    public static final double TAXA_OPERACAO;
+    public static final double TAXA_SAQUE;
 
     static {
         CHEQUE_ZERO = BigDecimal.ZERO;
-        TAXA_OPERACAO = 0.5 / 100;
+        TAXA_SAQUE = 0.0;
     }
 
     public ContaComum(){
@@ -17,6 +17,6 @@ public class ContaComum extends Conta implements Corrente {
 
     @Override
     public boolean saque(BigDecimal valor) {
-        return super.saquePadrao(valor, TAXA_OPERACAO, CHEQUE_ZERO);
+        return super.saquePadrao(valor, TAXA_SAQUE, CHEQUE_ZERO);
     }
 }
