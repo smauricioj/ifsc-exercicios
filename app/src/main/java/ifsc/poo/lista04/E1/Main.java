@@ -9,7 +9,7 @@ import java.util.Set;
 public class Main {
     public static void main(String[] args) {
         // Testando zoológico de poo
-        Set<Animal> animais = new HashSet();
+        Set<Animal> animais = new HashSet<>();
         animais.add(new Arara("Iago"));
         // mais
 
