@@ -27,9 +27,15 @@ public class ContaPoupanca extends Conta implements ComRendimento {
     }
 
     @Override
-    public void render(byte diaDoMes) {
-        if (diaDoMes == this.diaRendimento) {
-            this.saldo = this.saldo.multiply(BigDecimal.valueOf(1 + RENDIMENTO));
+    public boolean deposito(BigDecimal valor) {
+        return super.depositoPadrao(valor);
+    }
+
+    @Override
+    public void render() {
+        if ((byte) LocalDate.now().getDayOfMonth() != this.diaRendimento || this.saldo.compareTo(BigDecimal.ZERO) == 0) {
+            return;
         }
+        this.saldo = this.saldo.multiply(BigDecimal.valueOf(1 + RENDIMENTO));
     }
 }

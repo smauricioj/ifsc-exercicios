@@ -1,5 +1,5 @@
 package ifsc.poo.lista04.E2.domain;
 
 public interface ComRendimento {
-    void render(byte diaDoMes);
+    void render();
 }

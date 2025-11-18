@@ -19,4 +19,8 @@ public class ContaComum extends Conta {
     public boolean saque(BigDecimal valor) {
         return super.saquePadrao(valor, TAXA_SAQUE, CHEQUE_ZERO);
     }
+
+    public boolean deposito(BigDecimal valor) {
+        return super.depositoPadrao(valor);
+    }
 }

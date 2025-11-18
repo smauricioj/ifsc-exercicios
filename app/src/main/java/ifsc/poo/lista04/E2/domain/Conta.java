@@ -14,15 +14,13 @@ public abstract class Conta {
         return saldo;
     }
 
-    public final void deposito(BigDecimal valor) {
-        this.saldo = this.saldo.add(valor);
-    }
+    public abstract boolean deposito(BigDecimal valor);
 
     public abstract boolean saque(BigDecimal valor);
 
     // Utilitários
     /**
-     * Método protegido que implementa o saque de um valor em centavos com base na taxa de operação
+     * Método protegido que implementa o saque de um valor com base na taxa de operação
      * e no valor do cheque especial. Assim, as subclasses só precisam informar esses parâmetros para
      * ter seu comportamento especializado, mas sem precisar reimplementar a lógica da operação
      *
@@ -40,9 +38,21 @@ public abstract class Conta {
         return false;
     }
 
+    /**
+     * Método protegiro que implementa o deposito de um valor na conta
+     * Contas Comum e Poupança sempre seguem esse padrão,
+     * mas Especial requer atenção ao estado de negligência
+     * @param valor ($) a ser depositado
+     * @return true se o deposito foi feito, false caso contrário
+     */
+    protected final boolean depositoPadrao(BigDecimal valor) {
+        this.saldo = this.saldo.add(valor);
+        return true;
+    }
+
     @Override
     public final String toString() {
-        return String.format("%s{saldo=%.2f}%n",
+        return String.format("%s{saldo=%.2f}",
                 this.getClass().getSimpleName(),
                 this.saldo.setScale(2, RoundingMode.HALF_EVEN)
         );
