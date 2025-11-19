@@ -1,6 +1,12 @@
 package ifsc.poo.lista04.E3;
 
-import ifsc.poo.lista04.E3.domain.*;
+import ifsc.poo.lista04.E3.domain.api.Coletador;
+import ifsc.poo.lista04.E3.domain.api.ComMontaria;
+import ifsc.poo.lista04.E3.domain.api.Guerreiro;
+import ifsc.poo.lista04.E3.domain.core.Personagem;
+import ifsc.poo.lista04.E3.domain.impl.Aldeao;
+import ifsc.poo.lista04.E3.domain.impl.Arqueiro;
+import ifsc.poo.lista04.E3.domain.impl.Cavaleiro;
 import ifsc.poo.lista04.E3.enums.Recurso;
 
 import java.util.ArrayList;

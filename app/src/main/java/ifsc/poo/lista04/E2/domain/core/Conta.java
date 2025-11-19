@@ -1,4 +1,4 @@
-package ifsc.poo.lista04.E2.domain;
+package ifsc.poo.lista04.E2.domain.core;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;

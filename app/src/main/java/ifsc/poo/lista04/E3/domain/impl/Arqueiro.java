@@ -1,10 +1,11 @@
-package ifsc.poo.lista04.E3.domain;
+package ifsc.poo.lista04.E3.domain.impl;
 
 import ifsc.poo.lista04.E3.consts.Constantes;
+import ifsc.poo.lista04.E3.domain.api.Coletador;
+import ifsc.poo.lista04.E3.domain.api.Guerreiro;
+import ifsc.poo.lista04.E3.domain.core.Personagem;
 import ifsc.poo.lista04.E3.enums.Recurso;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Set;
 
 public class Arqueiro extends Personagem implements Coletador, Guerreiro {
@@ -15,23 +16,20 @@ public class Arqueiro extends Personagem implements Coletador, Guerreiro {
     }
 
     private int flechas;
-    private final Map<Recurso, Integer> recursos;
+    private int madeiraColetada;
 
     public Arqueiro() {
         super(Constantes.ARQUEIRO_VIDA_INICIAL,
               Constantes.ARQUEIRO_ATAQUE,
               Constantes.ARQUEIRO_VELOCIDADE);
         this.flechas = Constantes.ARQUEIRO_FLECHAS_INICIAL;
-        this.recursos = new HashMap<>();
-        for (Recurso recurso : COLETAVEIS) {
-            this.recursos.put(recurso, 0);
-        }
+        this.madeiraColetada = 0;
     }
 
     @Override
     public boolean coletar(Recurso recurso) {
         if (!COLETAVEIS.contains(recurso)) return false;
-        this.recursos.put(recurso, this.recursos.get(recurso) + 1);
+        if (recurso == Recurso.MADEIRA) this.madeiraColetada++;
         return true;
     }
 
@@ -47,15 +45,15 @@ public class Arqueiro extends Personagem implements Coletador, Guerreiro {
         );
     }
 
+    public String produzirFlechas() {
+        if (this.madeiraColetada == 0) return "Arqueiro sem madeira para produção!";
+        this.madeiraColetada--;
+        return this.recarregarFlechas(Constantes.ARQUEIRO_FLECHAS_PRODUCAO);
+    }
+
     public String recarregarFlechas(int quant) {
         if (quant <= 0) return "Não é possível recarregar flechas negativas!";
         this.flechas +=  quant;
         return String.format("Arqueiro agora com %d flechas%n", quant);
-    }
-
-    public String produzirFlechas() {
-        if (this.recursos.get(Recurso.MADEIRA) == 0) return "Arqueiro sem madeira para produção!";
-        this.recursos.put(Recurso.MADEIRA, this.recursos.get(Recurso.MADEIRA) - 1);
-        return this.recarregarFlechas(10);
     }
 }

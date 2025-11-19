@@ -1,6 +1,9 @@
-package ifsc.poo.lista04.E3.domain;
+package ifsc.poo.lista04.E3.domain.impl;
 
 import ifsc.poo.lista04.E3.consts.Constantes;
+import ifsc.poo.lista04.E3.domain.api.ComMontaria;
+import ifsc.poo.lista04.E3.domain.api.Guerreiro;
+import ifsc.poo.lista04.E3.domain.core.Personagem;
 
 public class Cavaleiro extends Personagem implements Guerreiro, ComMontaria {
     private boolean montado;

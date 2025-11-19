@@ -1,4 +1,4 @@
-package ifsc.poo.lista04.E3.domain;
+package ifsc.poo.lista04.E3.domain.core;
 
 public abstract class Personagem {
     // Atributos

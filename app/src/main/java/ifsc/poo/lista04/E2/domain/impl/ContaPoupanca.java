@@ -1,4 +1,7 @@
-package ifsc.poo.lista04.E2.domain;
+package ifsc.poo.lista04.E2.domain.impl;
+
+import ifsc.poo.lista04.E2.domain.api.ComRendimento;
+import ifsc.poo.lista04.E2.domain.core.Conta;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;

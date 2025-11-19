@@ -1,21 +1,10 @@
 package ifsc.poo.lista04.E2;
 
-/*
-Em uma aplicação 'profissional', o pacote de domínio poderia ser
-subdivido em pacotes menores para cada tipo de classe. Por exemplo:
-
-domain
-├── api
-│   └── ComRendimento.java
-├── core
-│   └── Conta.java
-└── impl
-    ├── ContaComum.java
-    ├── ContaPoupanca.java
-    └── ContaEspecial.java
- */
-
-import ifsc.poo.lista04.E2.domain.*;
+import ifsc.poo.lista04.E2.domain.api.ComRendimento;
+import ifsc.poo.lista04.E2.domain.core.Conta;
+import ifsc.poo.lista04.E2.domain.impl.ContaComum;
+import ifsc.poo.lista04.E2.domain.impl.ContaEspecial;
+import ifsc.poo.lista04.E2.domain.impl.ContaPoupanca;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
