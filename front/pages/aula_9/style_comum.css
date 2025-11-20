@@ -1,0 +1,82 @@
+/* Padrões gerais --------------------------------------------- */
+
+html {
+    box-sizing: border-box;
+}
+
+*, *.before, *.after {
+    box-sizing: inherit;
+}
+
+/* Fontes ----------------------------------------------------- */
+
+body {
+    font-family: Roboto, monospace;
+    font-size: clamp(0.8rem, 2vmin, 1.2rem);
+    background-color: #f5ede2;
+    padding-top: 30px; /* mesma altura do menu fixo */
+}
+
+/* h1, h2, h3 {
+    font-family: 'M PLUS 1 Code', monospace;
+    text-align: center;
+    filter:drop-shadow(0 0 0.15rem #567ABC)
+}
+    
+h2, h3 {
+    font-weight: lighter;
+}
+    */
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+h1 {
+    font-size: clamp(2rem, 4vmin, 3rem);
+}
+
+h2 {
+    font-size: clamp(1.2rem, 3vmin, 2rem);
+}
+
+h3 {
+    font-size: clamp(1rem, 2.5vmin, 1.5rem);
+}
+
+a {
+    text-decoration: none;
+    color: #567ABC;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #564F56;
+}
+
+/* Navigation ------------------------------------------------ */
+
+#nav { /* Item Grid */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background-color: #CECFD8;
+    border: 2px solid #567ABC;
+    z-index: 1000;
+}
+
+#nav nav { /* Conteúdo do Item Grid */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+#nav nav a {
+    padding: 2px 8px;
+    margin: 0px 5px;
+}

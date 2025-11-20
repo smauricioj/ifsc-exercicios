@@ -1,0 +1,130 @@
+/* Padrões gerais */
+
+html {
+    box-sizing: border-box;
+}
+
+*, *.before, *.after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: Roboto, monospace;
+    font-size: clamp(0.5rem, 4vmin, 1.5rem);
+    background-color: ivory;
+}
+
+header {
+    text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #e76f51;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #f35e38;
+}
+
+/* Navigation */
+
+nav {
+    font-size: 0.6em;
+    font-style: italic;
+    display: inline-flex;
+}
+
+nav table {
+    table-layout: fixed;
+}
+
+/* Header */
+
+#header_banner_container {
+    height: 200px;
+    overflow: hidden;
+}
+
+#header_banner_img {
+    margin-top: -50px;
+    margin-left: -10px;
+    width: 100%;
+}
+
+/* Tabelas de organização (eventualmente grid?) */
+
+.tabelas_org {
+    width: 100%;
+}
+
+.tabelas_org_flush_right {
+    text-align: right;
+}
+
+#alinha_direita {
+    display: flex;
+}
+
+#alinha_direita table {
+    margin-left: auto;
+}
+
+/* Tabelas visuais */
+
+.tabela_com_bordas {
+    width: 100%;
+    text-align: center;
+}
+
+.tabela_com_bordas,
+.tabela_com_bordas td,
+.tabela_com_bordas th {
+    border: 1px solid gray;
+}
+
+.escuro,
+.escuro td {
+    background-color: rgb(241, 241, 241);
+}
+
+/* Caixa habilidades */
+.caixa-habilidades {
+    background-color: rgb(199, 240, 146);
+    border: 2px solid green;
+    padding: 20px;
+    margin: 30px;
+    height: 300px;
+    overflow: auto;
+}
+
+/* Seção ônibus */
+.secao-onibus {
+    background-color: rgb(199, 252, 234);
+    font-size: 0.8em;
+}
+
+.secao-onibus td {
+    background-color: #ddc0f8;
+}
+
+.secao-onibus td:hover {
+    border: 2px dashed green;
+}
+
+/* Disciplinas */
+#disciplinas dd {
+    color: rgb(65, 37, 0);
+}
+
+.turma-destaque {
+    font-weight:bold;
+}

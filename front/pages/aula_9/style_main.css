@@ -1,0 +1,192 @@
+/* Grid Layout ----------------------------------------------- */
+
+#layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "header" "comp" "disci" "prefe";
+}
+
+.layout-item {
+    width: 100%;
+}
+
+.layout-item::after{
+    content: "";
+    height: 1px;
+    background-color: darkgray;
+    margin: 6px 0;
+    display: block;
+}
+
+/* Header --------------------------------------------------- */
+
+#header {grid-area: header;}
+
+#header header { /* Conteúdo do Item Grid */
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "foto   sobre"
+        "player sobre"
+    ;
+    align-items: end;
+    justify-items: center;
+}
+
+#header-foto {
+    grid-area: foto;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+#header-foto img {
+    filter: drop-shadow(0 0 0.7rem #567ABC);
+    width: 100%;
+}
+
+#header-player {
+    grid-area: player;
+}
+
+#header-player audio {
+    display: block;
+    filter: drop-shadow(0 0 0.7rem #567ABC);
+    margin-bottom: 10px;
+}
+
+#header-sobre {
+    grid-area: sobre;
+    text-align: center;
+    align-self: center;
+}
+
+#header-sobre h1 {
+    font-size: clamp(1.5rem, 4.5vmin, 3rem);
+}
+
+#header-sobre p {
+    margin: 0px 20px;
+}
+
+/* Competencias ---------------------------------------------- */
+
+#comp {grid-area: comp;}
+
+#comp section { /* Conteudo do Item Grid */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px auto;
+    grid-template-areas:
+        "titulo titulo"
+        "atuais futuras"
+    ;
+    align-items: center;
+}
+
+#comp-titulo{
+    grid-area: titulo;
+}
+
+#comp-atuais{
+    grid-area: atuais;
+}
+
+#comp-futuras{
+    grid-area: futuras;
+}
+
+.comp-items, img {
+    filter:drop-shadow(2px 2px 1px #567ABC)
+}
+
+/* Disciplinas ---------------------------------------------- */
+
+#disci {grid-area: disci;}
+
+#disci-flex { /* Conteudo do Item Grid */
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#disci-lista{
+    flex-shrink: 0;
+    width: 30%;
+}
+
+#disci-tabela{
+    width: 50%;
+}
+
+/* Preferencias ---------------------------------------------- */
+
+#prefe {grid-area: prefe;}
+
+#prefe-flex { /* Conteudo do Item Grid */
+    display: flex;
+    justify-content: start;
+    gap: 20px;
+}
+
+/* Itens flex */
+.coluna-fixa {
+    width: 200px;
+    flex-shrink: 0;
+}
+
+.coluna-movel {
+    flex-grow: 1;
+}
+
+/* Conteúdo dos itens flex */
+.fotos-atividade img{
+    max-width: 100%;
+    border: 4px outset darkgrey;
+    margin-top: 3px;
+}
+
+.fotos-atividade:not(:last-child)::after{
+    content: "";
+    height: 1px;
+    background-color: darkgray;
+    margin: 6px 0;
+    display: block;
+}
+
+#coluna-filmes p{
+    text-align: center;
+}
+
+#coluna-filmes p:hover{
+    text-decoration: underline dotted 7px red;
+}
+
+#coluna-albuns a{
+    display: block;
+    margin: 20px;
+}
+
+#coluna-albuns a::before{
+    content: "🔊 ";
+}
+
+
+/* Tabelas --------------------------------------------------- */
+
+.tabela-com-bordas {
+    width: 100%;
+    text-align: center;
+}
+
+.tabela-com-bordas td,
+.tabela-com-bordas th {
+    border: 1px solid #567ABC;
+}
+
+.celula-escura,
+.celula-escura td {
+    background-color: #567ABC;
+    opacity: 0.2;
+}

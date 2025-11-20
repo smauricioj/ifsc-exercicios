@@ -1,0 +1,113 @@
+/* Variaveis -------------------------------------------------- */
+:root {
+    --cor-fundo: #fff9ee;
+    --cor-clara: #3261CD;
+    --cor-clara_t1: #61CD32;
+    --cor-clara_t2: #CD3261;
+    --cor-escura: #4d5566;
+    --cor-escura_t1: #405c35;
+    --cor-escura_t2: #643c48;
+
+    --nav-altura: clamp(30px, 5vh, 40px);
+}
+
+/* Padrões gerais --------------------------------------------- */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*.before,
+*.after {
+    box-sizing: inherit;
+}
+
+/* Fontes ----------------------------------------------------- */
+
+body {
+    font-family: Roboto, monospace;
+    font-size: clamp(0.8rem, 2vmin, 1.2rem);
+    background-color: var(--cor-fundo);
+    padding-top: var(--nav-altura);
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'M PLUS 1 Code', monospace;
+    text-align: center;
+    filter: drop-shadow(0 0 0.15rem var(--cor-clara));
+}
+
+h2,
+h3 {
+    font-weight: lighter;
+}
+
+h1 {
+    font-size: clamp(2rem, 4vmin, 3rem);
+}
+
+h2 {
+    font-size: clamp(1.2rem, 3vmin, 2rem);
+}
+
+h3 {
+    font-size: clamp(1rem, 2.5vmin, 1.5rem);
+}
+
+/* Transforms e transitions ---------------------------------- */
+
+a {
+    text-decoration: none;
+    color: var(--cor-clara);
+    display: inline-block;
+    transition: transform 0.4s;
+}
+
+a.negrito {
+    font-weight: bold;
+}
+
+a:hover {
+    color: var(--cor-escura);
+    transform: scale(1.1);
+}
+
+.img-rotate {
+    transition: transform 1.2s ease 0.25s;
+}
+
+.img-rotate:hover {
+    transform: rotate(360deg);
+}
+
+/* Navigation ------------------------------------------------ */
+
+#nav {
+    /* Item Grid */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--nav-altura);
+    background-color: color-mix(in srgb, var(--cor-fundo) 70%, var(--cor-escura_t2));
+    border: 2px solid var(--cor-clara);
+    z-index: 1000;
+}
+
+#nav nav {
+    /* Conteúdo do Item Grid */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+#nav nav a {
+    padding: 2px 8px;
+    margin: 0px 5px;
+}

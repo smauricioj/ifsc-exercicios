@@ -1,0 +1,53 @@
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+
+body {
+    min-height: 100vh;
+}
+
+div {
+    margin: auto;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+form {
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto 280px;
+    gap: 10px;
+    justify-content: center;
+}
+
+#fundo {
+    width: 400px;
+    aspect-ratio: 1;
+    background-color: red;
+}
+
+#meio {
+    width: 300px;
+    aspect-ratio: 1;
+    background-color: greenyellow;
+}
+
+#frente {
+    width: 200px;
+    aspect-ratio: 1;
+    background-color: blue;
+}
+
+#seta {
+    width: 200px;
+    transition: all ease 1s;
+}

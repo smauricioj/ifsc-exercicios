@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br>
+<head>
+    <meta charset=" UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cadastro de tarefas</title>
+</head>
+
+<body>
+    <header>
+        <a href="main.html">Voltar para página pessoal</a>
+        <h1>Sistema de cadastro de tarefas</h1>
+    </header>
+    <form enctype="multipart/form-data">
+        Nome <input type="text" name="nome" placeholder="Escreva o nome da tarefa" size="45">
+        <br>
+        <br>
+        Disciplina
+        <select name="disc">
+            <optgroup label="Engenharia de Telecomunicações">
+                <option value="poo_t1">Programação Orientada a Objetos</option>
+                <option value="prg1">Programação I</option>
+            </optgroup>
+            <optgroup label="Análise e Desenvolvimento de Sistemas">
+                <option value="poo_t2">Programação Orientada a Objetos</option>
+                <option value="fe1">Front-end I</option>
+            </optgroup>
+        </select>
+        <br>
+        <br>
+        Descrição
+        <textarea name="desc" placeholder="Descreva a tarefa (máximo 1000 caracteres)" maxlength="1000" rows="4"
+            cols="30"></textarea>
+        <br>
+        <br>
+        <label>
+            Documento da tarefa <i>(opcional)</i>
+            <br>
+            <input type="file" name="documento" accept=".pdf, .docx">
+        </label>
+        <br>
+        <br>
+        <table>
+            <tr>
+                <td>
+                    <label>
+                        Data de início:
+                        <br>
+                        <input type="date" name="data_inicio">
+                    </label>
+                </td>
+                <td>
+                    <label>
+                        Data limite de entrega:
+                        <br>
+                        <input type="datetime-local" name="data_entrega">
+                    </label>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <label>
+            Nota máxima [0 - 10] <input type="number" name="nota" min="0" max="10" placeholder="10">
+        </label>
+        <br>
+        <br>
+        <label>
+            Escolha uma cor para cadastro
+            <input type="color" name="cor">
+        </label>
+
+        <br>
+        <br>
+        <input type="submit" value="Registrar"> <input type="reset" value="Recomeçar">
+    </form>
+</body>
+
+</html>
