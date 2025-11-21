@@ -1,0 +1,22 @@
+---
+BasedOnStyle: LLVM
+
+AllowShortCaseLabelsOnASingleLine: "true"
+AlwaysBreakAfterDefinitionReturnType: None
+AlwaysBreakAfterReturnType: None
+BreakBeforeBraces: Linux
+ColumnLimit: 0
+IncludeBlocks: Merge
+IndentCaseLabels: "true"
+IndentWidth: 4
+KeepEmptyLinesAtTheStartOfBlocks: "false"
+MaxEmptyLinesToKeep: 1
+SeparateDefinitionBlocks: Always
+SortIncludes: "false"
+SpaceBeforeParens: ControlStatements
+SpaceInEmptyParentheses: "false"
+SpacesBeforeTrailingComments: 2
+SpacesInParentheses: "false"
+SpacesInSquareBrackets: "false"
+TabWidth: 4
+UseTab: Never

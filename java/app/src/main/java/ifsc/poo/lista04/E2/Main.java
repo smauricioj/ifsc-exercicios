@@ -31,14 +31,17 @@ public class Main {
         for (Conta conta : contas) {
             System.out.println("-".repeat(40));
 
+            // Polimorfismo no invocar de deposito()
             conta.deposito(BigDecimal.valueOf(r.nextDouble(100.0)));
             System.out.println(conta);
 
+            // Polimorfismo no invocar de saque()
             boolean saqueRealizado = conta.saque(BigDecimal.valueOf(r.nextDouble(100.0)));
             System.out.println(saqueRealizado ? "Saque realizado" : "Saque nao realizado" );
             System.out.println(conta);
 
             if (conta instanceof ComRendimento) {
+                // Polimorfismo no invocar de render()
                 ((ComRendimento) conta).render();
                 System.out.println("Após rendimento mensal:"+conta);
             }

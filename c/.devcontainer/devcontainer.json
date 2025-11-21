@@ -1,0 +1,22 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/cpp
+{
+    "name": "C/C++",
+    "image": "mcr.microsoft.com/devcontainers/cpp:1-ubuntu-22.04",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools-extension-pack"
+            ],
+            "settings": {
+                "editor.inlayHints.enabled": "offUnlessPressed",
+                "editor.wordWrap": "on",
+                "files.autoSave": "off",
+                "C_Cpp.codeAnalysis.clangTidy.enabled": true,
+                "[c]": {
+                    "editor.formatOnSave": true
+                }
+            }
+        }
+    }
+}

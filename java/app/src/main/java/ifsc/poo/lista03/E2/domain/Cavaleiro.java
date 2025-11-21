@@ -1,6 +1,6 @@
 package ifsc.poo.lista03.E2.domain;
 
-import ifsc.poo.lista03.E2.consts.Constantes;
+import ifsc.poo.lista03.E2.domain.consts.Constantes;
 
 public class Cavaleiro extends Personagem{
     private boolean montado;

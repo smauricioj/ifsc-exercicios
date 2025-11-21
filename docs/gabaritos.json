@@ -1,0 +1,793 @@
+{
+  "info": {
+    "titulo": "IFSC - Gabaritos de Exercícios",
+    "descricao": "Repositório de gabaritos dos exercícios das disciplinas de Programação do IFSC - Campus São José",
+    "autor": "Prof. Sergio",
+    "github_repo": "https://github.com/smauricioj/ifsc-exercicios",
+    "ultima_atualizacao": "2025-11-21"
+  },
+  "disciplinas": {
+    "alg-java": {
+      "nome": "Algoritmos (Java)",
+      "linguagem": "Java",
+      "descricao": "Exercícios de algoritmos e lógica de programação em Java",
+      "path_base": "java/app/src/main/java/ifsc/alg",
+      "categorias": {
+        "aulas": [
+          {
+            "id": "alg-aula08",
+            "titulo": "Aula 08 - Estruturas de Repetição",
+            "descricao": "Exercícios sobre loops (while, for, do-while)",
+            "path": "java/app/src/main/java/ifsc/alg/aula08",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/java/app/src/main/java/ifsc/alg/aula08",
+            "exercicios": [
+              "A8E1.java",
+              "A8E2a.java",
+              "A8E2b.java"
+            ],
+            "tags": [
+              "loops",
+              "while",
+              "for"
+            ],
+            "nivel": "básico"
+          },
+          {
+            "id": "alg-aula09",
+            "titulo": "Aula 09",
+            "descricao": "Exercícios da aula 09",
+            "path": "java/app/src/main/java/ifsc/alg/aula09",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/java/app/src/main/java/ifsc/alg/aula09",
+            "exercicios": [
+              "A9E1.java",
+              "A9E2.java"
+            ],
+            "tags": [
+              "algoritmos"
+            ],
+            "nivel": "básico"
+          },
+          {
+            "id": "alg-aula10",
+            "titulo": "Aula 10",
+            "descricao": "Exercícios da aula 10",
+            "path": "java/app/src/main/java/ifsc/alg/aula10",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/java/app/src/main/java/ifsc/alg/aula10",
+            "exercicios": [
+              "A10E1.java",
+              "A10E2.java"
+            ],
+            "tags": [
+              "algoritmos"
+            ],
+            "nivel": "intermediário"
+          },
+          {
+            "id": "alg-aula11",
+            "titulo": "Aula 11",
+            "descricao": "Exercícios da aula 11",
+            "path": "java/app/src/main/java/ifsc/alg/aula11",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/java/app/src/main/java/ifsc/alg/aula11",
+            "exercicios": [],
+            "tags": [
+              "algoritmos"
+            ],
+            "nivel": "intermediário"
+          }
+        ],
+        "listas": [
+          {
+            "id": "alg-lista05",
+            "titulo": "Lista 05 - Estruturas Condicionais e Entrada/Saída",
+            "descricao": "Exercícios básicos de condicionais e I/O",
+            "path": "java/app/src/main/java/ifsc/alg/lista05",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/java/app/src/main/java/ifsc/alg/lista05",
+            "exercicios": [
+              "L5E1.java",
+              "L5E2.java",
+              "L5E3.java",
+              "L5E4.java",
+              "L5E5.java"
+            ],
+            "tags": [
+              "condicionais",
+              "if",
+              "entrada-saida"
+            ],
+            "nivel": "básico"
+          },
+          {
+            "id": "alg-lista06",
+            "titulo": "Lista 06",
+            "descricao": "Lista de exercícios 06",
+            "path": "java/app/src/main/java/ifsc/alg/lista06",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/java/app/src/main/java/ifsc/alg/lista06",
+            "exercicios": [
+              "L6E1.java",
+              "L6E2.java",
+              "L6E3.java",
+              "L6E4.java",
+              "L6E5.java"
+            ],
+            "tags": [
+              "algoritmos"
+            ],
+            "nivel": "básico"
+          },
+          {
+            "id": "alg-lista07",
+            "titulo": "Lista 07",
+            "descricao": "Lista de exercícios 07",
+            "path": "java/app/src/main/java/ifsc/alg/lista07",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/java/app/src/main/java/ifsc/alg/lista07",
+            "exercicios": [
+              "L7E1.java",
+              "L7E2.java",
+              "L7E3.java",
+              "L7E4.java"
+            ],
+            "tags": [
+              "algoritmos"
+            ],
+            "nivel": "intermediário"
+          },
+          {
+            "id": "alg-lista08",
+            "titulo": "Lista 08",
+            "descricao": "Lista de exercícios 08",
+            "path": "java/app/src/main/java/ifsc/alg/lista08",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/java/app/src/main/java/ifsc/alg/lista08",
+            "exercicios": [
+              "L8E1.java",
+              "L8E2.java",
+              "L8E3.java",
+              "L8E4.java"
+            ],
+            "tags": [
+              "algoritmos",
+              "loops"
+            ],
+            "nivel": "intermediário"
+          },
+          {
+            "id": "alg-lista09",
+            "titulo": "Lista 09",
+            "descricao": "Lista de exercícios 09",
+            "path": "java/app/src/main/java/ifsc/alg/lista09",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/java/app/src/main/java/ifsc/alg/lista09",
+            "exercicios": [
+              "L9E1.java",
+              "L9E2.java",
+              "L9E3.java",
+              "L9E4.java"
+            ],
+            "tags": [
+              "algoritmos"
+            ],
+            "nivel": "intermediário"
+          }
+        ]
+      }
+    },
+    "poo": {
+      "nome": "Programação Orientada a Objetos",
+      "linguagem": "Java",
+      "descricao": "Exercícios de POO em Java",
+      "path_base": "java/app/src/main/java/ifsc/poo",
+      "categorias": {
+        "listas": [
+          {
+            "id": "poo-lista01",
+            "titulo": "Lista 01 - Introdução a POO",
+            "descricao": "Classes, objetos, atributos e métodos básicos",
+            "path": "java/app/src/main/java/ifsc/poo/lista01",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/java/app/src/main/java/ifsc/poo/lista01",
+            "exercicios": [
+              "L1E1.java",
+              "L1E2.java",
+              "L1E3.java",
+              "L1E4.java",
+              "L1E5.java",
+              "L1E6.java",
+              "L1E7.java",
+              "L1E8.java",
+              "L1E9.java",
+              "L1E10.java"
+            ],
+            "tags": [
+              "classes",
+              "objetos",
+              "básico",
+              "introducao"
+            ],
+            "nivel": "básico"
+          },
+          {
+            "id": "poo-lista02",
+            "titulo": "Lista 02 - Encapsulamento e Métodos",
+            "descricao": "Getters, setters, construtores e encapsulamento",
+            "path": "java/app/src/main/java/ifsc/poo/lista02",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/java/app/src/main/java/ifsc/poo/lista02",
+            "exercicios": [],
+            "tags": [
+              "encapsulamento",
+              "construtores",
+              "métodos"
+            ],
+            "nivel": "básico"
+          },
+          {
+            "id": "poo-lista03",
+            "titulo": "Lista 03 - Associações e Relacionamentos",
+            "descricao": "Agregação, composição e relacionamentos entre classes",
+            "path": "java/app/src/main/java/ifsc/poo/lista03",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/java/app/src/main/java/ifsc/poo/lista03",
+            "exercicios": [
+              "E1",
+              "E2",
+              "E3"
+            ],
+            "estrutura_complexa": true,
+            "tags": [
+              "associações",
+              "agregação",
+              "composição"
+            ],
+            "nivel": "intermediário"
+          },
+          {
+            "id": "poo-lista04",
+            "titulo": "Lista 04 - Herança e Polimorfismo",
+            "descricao": "Herança, polimorfismo, classes abstratas e interfaces",
+            "path": "java/app/src/main/java/ifsc/poo/lista04",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/java/app/src/main/java/ifsc/poo/lista04",
+            "exercicios": [
+              "E1",
+              "E2",
+              "E3"
+            ],
+            "estrutura_complexa": true,
+            "tags": [
+              "herança",
+              "polimorfismo",
+              "interfaces",
+              "abstração"
+            ],
+            "nivel": "avançado"
+          }
+        ]
+      }
+    },
+    "alg-c": {
+      "nome": "Algoritmos (C)",
+      "linguagem": "C",
+      "descricao": "Exercícios de algoritmos e estruturas de dados em C",
+      "path_base": "c",
+      "categorias": {
+        "parte_1": [
+          {
+            "id": "c-arruela",
+            "titulo": "Arruela",
+            "descricao": "Exercício arruela",
+            "path": "c/parte_1/arruela.c",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/blob/main/c/parte_1/arruela.c",
+            "compilar": "gcc arruela.c -o arruela",
+            "tags": [
+              "básico",
+              "c"
+            ],
+            "nivel": "básico"
+          },
+          {
+            "id": "c-temperatura",
+            "titulo": "Conversão de Temperatura",
+            "descricao": "Fahrenheit para Celsius",
+            "path": "c/parte_1/temperatura.c",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/blob/main/c/parte_1/temperatura.c",
+            "compilar": "gcc temperatura.c -o temperatura",
+            "tags": [
+              "básico",
+              "conversão"
+            ],
+            "nivel": "básico"
+          },
+          {
+            "id": "c-avaliacoes",
+            "titulo": "Avaliações",
+            "descricao": "Cálculo de médias",
+            "path": "c/parte_1/avaliacoes.c",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/blob/main/c/parte_1/avaliacoes.c",
+            "compilar": "gcc avaliacoes.c -o avaliacoes",
+            "tags": [
+              "básico",
+              "média"
+            ],
+            "nivel": "básico"
+          },
+          {
+            "id": "c-triangulos",
+            "titulo": "Triângulos",
+            "descricao": "Classificação de triângulos",
+            "path": "c/parte_1/triangulos.c",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/blob/main/c/parte_1/triangulos.c",
+            "compilar": "gcc triangulos.c -o triangulos",
+            "tags": [
+              "condicionais",
+              "geometria"
+            ],
+            "nivel": "básico"
+          },
+          {
+            "id": "c-evento",
+            "titulo": "Evento",
+            "descricao": "Gerenciamento de eventos",
+            "path": "c/parte_1/evento.c",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/blob/main/c/parte_1/evento.c",
+            "compilar": "gcc evento.c -o evento",
+            "tags": [
+              "básico"
+            ],
+            "nivel": "básico"
+          },
+          {
+            "id": "c-bissexto",
+            "titulo": "Ano Bissexto",
+            "descricao": "Verificação de ano bissexto",
+            "path": "c/parte_1/bissexto.c",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/blob/main/c/parte_1/bissexto.c",
+            "compilar": "gcc bissexto.c -o bissexto",
+            "tags": [
+              "condicionais",
+              "data"
+            ],
+            "nivel": "básico"
+          },
+          {
+            "id": "c-ean13",
+            "titulo": "EAN-13",
+            "descricao": "Validação de código de barras",
+            "path": "c/parte_1/ean13.c",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/blob/main/c/parte_1/ean13.c",
+            "compilar": "gcc ean13.c -o ean13",
+            "tags": [
+              "validação",
+              "strings"
+            ],
+            "nivel": "intermediário"
+          },
+          {
+            "id": "c-moedas",
+            "titulo": "Moedas",
+            "descricao": "Troco com moedas",
+            "path": "c/parte_1/moedas.c",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/blob/main/c/parte_1/moedas.c",
+            "compilar": "gcc moedas.c -o moedas",
+            "tags": [
+              "algoritmos",
+              "matemática"
+            ],
+            "nivel": "básico"
+          },
+          {
+            "id": "c-seno",
+            "titulo": "Seno (Série de Taylor)",
+            "descricao": "Cálculo de seno usando série",
+            "path": "c/parte_1/seno.c",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/blob/main/c/parte_1/seno.c",
+            "compilar": "gcc seno.c -o seno -lm",
+            "tags": [
+              "matemática",
+              "séries"
+            ],
+            "nivel": "intermediário"
+          },
+          {
+            "id": "c-hms",
+            "titulo": "HMS (Horas, Minutos, Segundos)",
+            "descricao": "Conversão de tempo",
+            "path": "c/parte_1/hms.c",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/blob/main/c/parte_1/hms.c",
+            "compilar": "gcc hms.c -o hms",
+            "tags": [
+              "conversão",
+              "tempo"
+            ],
+            "nivel": "básico"
+          },
+          {
+            "id": "c-cpf",
+            "titulo": "Validador de CPF",
+            "descricao": "Validação de CPF",
+            "path": "c/parte_1/cpf.c",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/blob/main/c/parte_1/cpf.c",
+            "compilar": "gcc cpf.c -o cpf",
+            "tags": [
+              "validação",
+              "strings"
+            ],
+            "nivel": "intermediário"
+          },
+          {
+            "id": "c-extenso",
+            "titulo": "Número por Extenso",
+            "descricao": "Converte número para extenso",
+            "path": "c/parte_1/extenso.c",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/blob/main/c/parte_1/extenso.c",
+            "compilar": "gcc extenso.c -o extenso",
+            "tags": [
+              "strings",
+              "conversão"
+            ],
+            "nivel": "intermediário"
+          },
+          {
+            "id": "c-corretagem",
+            "titulo": "Corretagem",
+            "descricao": "Cálculo de corretagem",
+            "path": "c/parte_1/corretagem.c",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/blob/main/c/parte_1/corretagem.c",
+            "compilar": "gcc corretagem.c -o corretagem",
+            "tags": [
+              "cálculo",
+              "financeiro"
+            ],
+            "nivel": "básico"
+          },
+          {
+            "id": "c-fahrenheit",
+            "titulo": "Fahrenheit",
+            "descricao": "Conversão de temperatura",
+            "path": "c/parte_1/fahrenheit.c",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/blob/main/c/parte_1/fahrenheit.c",
+            "compilar": "gcc fahrenheit.c -o fahrenheit",
+            "tags": [
+              "básico",
+              "conversão"
+            ],
+            "nivel": "básico"
+          }
+        ],
+        "parte_2": [
+          {
+            "id": "c-floyd",
+            "titulo": "Triângulo de Floyd",
+            "descricao": "Imprime triângulo de Floyd",
+            "path": "c/parte_2/floyd.c",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/blob/main/c/parte_2/floyd.c",
+            "compilar": "gcc floyd.c -o floyd",
+            "tags": [
+              "loops",
+              "padrões"
+            ],
+            "nivel": "intermediário"
+          },
+          {
+            "id": "c-maior",
+            "titulo": "Maior Elemento",
+            "descricao": "Encontra o maior elemento",
+            "path": "c/parte_2/maior.c",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/blob/main/c/parte_2/maior.c",
+            "compilar": "gcc maior.c -o maior",
+            "tags": [
+              "arrays",
+              "busca"
+            ],
+            "nivel": "básico"
+          },
+          {
+            "id": "c-amigos",
+            "titulo": "Números Amigos",
+            "descricao": "Verifica números amigos",
+            "path": "c/parte_2/amigos.c",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/blob/main/c/parte_2/amigos.c",
+            "compilar": "gcc amigos.c -o amigos",
+            "tags": [
+              "matemática",
+              "números"
+            ],
+            "nivel": "intermediário"
+          },
+          {
+            "id": "c-calendario",
+            "titulo": "Calendário",
+            "descricao": "Geração de calendário",
+            "path": "c/parte_2/calendario.c",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/blob/main/c/parte_2/calendario.c",
+            "compilar": "gcc calendario.c -o calendario",
+            "tags": [
+              "data",
+              "formatação"
+            ],
+            "nivel": "intermediário"
+          },
+          {
+            "id": "c-turma",
+            "titulo": "Turma",
+            "descricao": "Gerenciamento de turma",
+            "path": "c/parte_2/turma.c",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/blob/main/c/parte_2/turma.c",
+            "compilar": "gcc turma.c -o turma",
+            "tags": [
+              "arrays",
+              "structs"
+            ],
+            "nivel": "intermediário"
+          },
+          {
+            "id": "c-elefante",
+            "titulo": "Incomodam Elefante",
+            "descricao": "Música do elefante",
+            "path": "c/parte_2/elefante.c",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/blob/main/c/parte_2/elefante.c",
+            "compilar": "gcc elefante.c -o elefante",
+            "tags": [
+              "strings",
+              "loops"
+            ],
+            "nivel": "básico"
+          },
+          {
+            "id": "c-collatz",
+            "titulo": "Conjectura de Collatz",
+            "descricao": "Sequência de Collatz",
+            "path": "c/parte_2/collatz.c",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/blob/main/c/parte_2/collatz.c",
+            "compilar": "gcc collatz.c -o collatz",
+            "tags": [
+              "algoritmos",
+              "matemática"
+            ],
+            "nivel": "intermediário"
+          },
+          {
+            "id": "c-palavras",
+            "titulo": "Contador de Palavras",
+            "descricao": "Conta palavras em texto",
+            "path": "c/parte_2/palavras.c",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/blob/main/c/parte_2/palavras.c",
+            "compilar": "gcc palavras.c -o palavras",
+            "tags": [
+              "strings",
+              "parsing"
+            ],
+            "nivel": "intermediário"
+          },
+          {
+            "id": "c-heron",
+            "titulo": "Fórmula de Heron",
+            "descricao": "Área do triângulo",
+            "path": "c/parte_2/heron.c",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/blob/main/c/parte_2/heron.c",
+            "compilar": "gcc heron.c -o heron -lm",
+            "tags": [
+              "matemática",
+              "geometria"
+            ],
+            "nivel": "básico"
+          },
+          {
+            "id": "c-acesso",
+            "titulo": "Controle de Acesso",
+            "descricao": "Sistema de acesso",
+            "path": "c/parte_2/acesso.c",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/blob/main/c/parte_2/acesso.c",
+            "compilar": "gcc acesso.c -o acesso",
+            "tags": [
+              "strings",
+              "validação"
+            ],
+            "nivel": "intermediário"
+          },
+          {
+            "id": "c-rpg",
+            "titulo": "RPG - Sistema de Combate",
+            "descricao": "Sistema simples de RPG",
+            "path": "c/parte_2/rpg.c",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/blob/main/c/parte_2/rpg.c",
+            "compilar": "gcc rpg.c -o rpg",
+            "tags": [
+              "structs",
+              "jogo"
+            ],
+            "nivel": "avançado"
+          },
+          {
+            "id": "c-resistencias",
+            "titulo": "Resistências em Série/Paralelo",
+            "descricao": "Cálculo de resistências",
+            "path": "c/parte_2/resistencias.c",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/blob/main/c/parte_2/resistencias.c",
+            "compilar": "gcc resistencias.c -o resistencias -lm",
+            "tags": [
+              "física",
+              "cálculo"
+            ],
+            "nivel": "intermediário"
+          }
+        ],
+        "parte_3": [
+          {
+            "id": "c-parte3",
+            "titulo": "Parte 3 - Exercícios Avançados",
+            "descricao": "Exercícios mais complexos",
+            "path": "c/parte_3",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/c/parte_3",
+            "tags": [
+              "avançado"
+            ],
+            "nivel": "avançado"
+          }
+        ]
+      }
+    },
+    "frontend": {
+      "nome": "Desenvolvimento Frontend",
+      "linguagem": "HTML/CSS/JavaScript",
+      "descricao": "Exercícios de desenvolvimento web frontend",
+      "path_base": "front",
+      "categorias": {
+        "aulas": [
+          {
+            "id": "front-aula02",
+            "titulo": "Aula 02 - Introdução ao HTML",
+            "descricao": "Primeiros passos com HTML",
+            "path": "front/pages/aula_2",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/front/pages/aula_2",
+            "demo_link": "https://smauricioj.github.io/ifsc-exercicios/front/pages/aula_2/main.html",
+            "arquivos": [
+              "main.html"
+            ],
+            "tags": [
+              "html",
+              "básico"
+            ],
+            "nivel": "básico"
+          },
+          {
+            "id": "front-aula03",
+            "titulo": "Aula 03 - Estrutura HTML",
+            "descricao": "Estruturando páginas HTML",
+            "path": "front/pages/aula_3",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/front/pages/aula_3",
+            "demo_link": "https://smauricioj.github.io/ifsc-exercicios/front/pages/aula_3/main.html",
+            "arquivos": [
+              "main.html"
+            ],
+            "tags": [
+              "html",
+              "estrutura"
+            ],
+            "nivel": "básico"
+          },
+          {
+            "id": "front-aula04",
+            "titulo": "Aula 04 - CSS Básico",
+            "descricao": "Introdução ao CSS",
+            "path": "front/pages/aula_4",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/front/pages/aula_4",
+            "demo_link": "https://smauricioj.github.io/ifsc-exercicios/front/pages/aula_4/main.html",
+            "arquivos": [
+              "main.html"
+            ],
+            "tags": [
+              "css",
+              "estilo"
+            ],
+            "nivel": "básico"
+          },
+          {
+            "id": "front-aula05",
+            "titulo": "Aula 05 - Formulários",
+            "descricao": "Criação de formulários HTML",
+            "path": "front/pages/aula_5",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/front/pages/aula_5",
+            "demo_link": "https://smauricioj.github.io/ifsc-exercicios/front/pages/aula_5/main.html",
+            "arquivos": [
+              "main.html",
+              "form.html"
+            ],
+            "tags": [
+              "html",
+              "formulários"
+            ],
+            "nivel": "básico"
+          },
+          {
+            "id": "front-aula07",
+            "titulo": "Aula 07 - JavaScript Básico",
+            "descricao": "Introdução ao JavaScript",
+            "path": "front/pages/aula_7",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/front/pages/aula_7",
+            "demo_link": "https://smauricioj.github.io/ifsc-exercicios/front/pages/aula_7/main.html",
+            "arquivos": [
+              "main.html",
+              "form.html"
+            ],
+            "tags": [
+              "javascript",
+              "básico"
+            ],
+            "nivel": "básico"
+          },
+          {
+            "id": "front-aula09",
+            "titulo": "Aula 09 - DOM e Eventos",
+            "descricao": "Manipulação do DOM e eventos",
+            "path": "front/pages/aula_9",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/front/pages/aula_9",
+            "demo_link": "https://smauricioj.github.io/ifsc-exercicios/front/pages/aula_9/main.html",
+            "arquivos": [
+              "main.html",
+              "form.html",
+              "loja.html"
+            ],
+            "tags": [
+              "javascript",
+              "dom",
+              "eventos"
+            ],
+            "nivel": "intermediário"
+          },
+          {
+            "id": "front-aula11",
+            "titulo": "Aula 11 - JavaScript Avançado",
+            "descricao": "Conceitos avançados de JavaScript",
+            "path": "front/pages/aula_11",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/front/pages/aula_11",
+            "demo_link": "https://smauricioj.github.io/ifsc-exercicios/front/pages/aula_11/main.html",
+            "arquivos": [
+              "main.html",
+              "form.html",
+              "loja.html"
+            ],
+            "tags": [
+              "javascript",
+              "avançado"
+            ],
+            "nivel": "intermediário"
+          },
+          {
+            "id": "front-eventos",
+            "titulo": "Aula Eventos - Manipulação de Eventos",
+            "descricao": "Prática com eventos JavaScript",
+            "path": "front/pages/aula_eventos",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/front/pages/aula_eventos",
+            "demo_link": "https://smauricioj.github.io/ifsc-exercicios/front/pages/aula_eventos/index.html",
+            "arquivos": [
+              "index.html"
+            ],
+            "tags": [
+              "javascript",
+              "eventos"
+            ],
+            "nivel": "intermediário"
+          }
+        ],
+        "projetos": [
+          {
+            "id": "front-snake",
+            "titulo": "Snake Game 🐍",
+            "descricao": "Jogo da cobrinha em JavaScript puro",
+            "path": "front/snake",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/front/snake",
+            "demo_link": "https://smauricioj.github.io/ifsc-exercicios/front/snake/index.html",
+            "arquivos": [
+              "index.html",
+              "snake.js",
+              "food.js",
+              "utils.js",
+              "init.js"
+            ],
+            "tags": [
+              "javascript",
+              "jogo",
+              "canvas",
+              "projeto"
+            ],
+            "nivel": "avançado"
+          }
+        ]
+      }
+    }
+  }
+}

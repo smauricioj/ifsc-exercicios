@@ -1,10 +1,10 @@
 package ifsc.poo.lista04.E3.domain.impl;
 
-import ifsc.poo.lista04.E3.consts.Constantes;
+import ifsc.poo.lista04.E3.domain.consts.Constantes;
 import ifsc.poo.lista04.E3.domain.api.Coletador;
 import ifsc.poo.lista04.E3.domain.api.ComMontaria;
 import ifsc.poo.lista04.E3.domain.core.Personagem;
-import ifsc.poo.lista04.E3.enums.Recurso;
+import ifsc.poo.lista04.E3.domain.enums.Recurso;
 
 import java.util.Set;
 
