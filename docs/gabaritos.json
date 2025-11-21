@@ -270,7 +270,7 @@
             "titulo": "Arruela",
             "descricao": "Exercício arruela",
             "path": "c/parte_1/arruela.c",
-            "github_link": "https://github.com/smauricioj/ifsc-exercicios/blob/main/c/parte_1/arruela.c",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/c/parte_1/arruela.c",
             "compilar": "gcc arruela.c -o arruela",
             "tags": [
               "básico",
@@ -283,7 +283,7 @@
             "titulo": "Conversão de Temperatura",
             "descricao": "Fahrenheit para Celsius",
             "path": "c/parte_1/temperatura.c",
-            "github_link": "https://github.com/smauricioj/ifsc-exercicios/blob/main/c/parte_1/temperatura.c",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/c/parte_1/temperatura.c",
             "compilar": "gcc temperatura.c -o temperatura",
             "tags": [
               "básico",
@@ -296,7 +296,7 @@
             "titulo": "Avaliações",
             "descricao": "Cálculo de médias",
             "path": "c/parte_1/avaliacoes.c",
-            "github_link": "https://github.com/smauricioj/ifsc-exercicios/blob/main/c/parte_1/avaliacoes.c",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/c/parte_1/avaliacoes.c",
             "compilar": "gcc avaliacoes.c -o avaliacoes",
             "tags": [
               "básico",
@@ -309,7 +309,7 @@
             "titulo": "Triângulos",
             "descricao": "Classificação de triângulos",
             "path": "c/parte_1/triangulos.c",
-            "github_link": "https://github.com/smauricioj/ifsc-exercicios/blob/main/c/parte_1/triangulos.c",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/c/parte_1/triangulos.c",
             "compilar": "gcc triangulos.c -o triangulos",
             "tags": [
               "condicionais",
@@ -322,7 +322,7 @@
             "titulo": "Evento",
             "descricao": "Gerenciamento de eventos",
             "path": "c/parte_1/evento.c",
-            "github_link": "https://github.com/smauricioj/ifsc-exercicios/blob/main/c/parte_1/evento.c",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/c/parte_1/evento.c",
             "compilar": "gcc evento.c -o evento",
             "tags": [
               "básico"
@@ -334,7 +334,7 @@
             "titulo": "Ano Bissexto",
             "descricao": "Verificação de ano bissexto",
             "path": "c/parte_1/bissexto.c",
-            "github_link": "https://github.com/smauricioj/ifsc-exercicios/blob/main/c/parte_1/bissexto.c",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/c/parte_1/bissexto.c",
             "compilar": "gcc bissexto.c -o bissexto",
             "tags": [
               "condicionais",
@@ -347,7 +347,7 @@
             "titulo": "EAN-13",
             "descricao": "Validação de código de barras",
             "path": "c/parte_1/ean13.c",
-            "github_link": "https://github.com/smauricioj/ifsc-exercicios/blob/main/c/parte_1/ean13.c",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/c/parte_1/ean13.c",
             "compilar": "gcc ean13.c -o ean13",
             "tags": [
               "validação",
@@ -360,7 +360,7 @@
             "titulo": "Moedas",
             "descricao": "Troco com moedas",
             "path": "c/parte_1/moedas.c",
-            "github_link": "https://github.com/smauricioj/ifsc-exercicios/blob/main/c/parte_1/moedas.c",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/c/parte_1/moedas.c",
             "compilar": "gcc moedas.c -o moedas",
             "tags": [
               "algoritmos",
@@ -373,7 +373,7 @@
             "titulo": "Seno (Série de Taylor)",
             "descricao": "Cálculo de seno usando série",
             "path": "c/parte_1/seno.c",
-            "github_link": "https://github.com/smauricioj/ifsc-exercicios/blob/main/c/parte_1/seno.c",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/c/parte_1/seno.c",
             "compilar": "gcc seno.c -o seno -lm",
             "tags": [
               "matemática",
@@ -386,7 +386,7 @@
             "titulo": "HMS (Horas, Minutos, Segundos)",
             "descricao": "Conversão de tempo",
             "path": "c/parte_1/hms.c",
-            "github_link": "https://github.com/smauricioj/ifsc-exercicios/blob/main/c/parte_1/hms.c",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/c/parte_1/hms.c",
             "compilar": "gcc hms.c -o hms",
             "tags": [
               "conversão",
@@ -399,7 +399,7 @@
             "titulo": "Validador de CPF",
             "descricao": "Validação de CPF",
             "path": "c/parte_1/cpf.c",
-            "github_link": "https://github.com/smauricioj/ifsc-exercicios/blob/main/c/parte_1/cpf.c",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/c/parte_1/cpf.c",
             "compilar": "gcc cpf.c -o cpf",
             "tags": [
               "validação",
@@ -412,7 +412,7 @@
             "titulo": "Número por Extenso",
             "descricao": "Converte número para extenso",
             "path": "c/parte_1/extenso.c",
-            "github_link": "https://github.com/smauricioj/ifsc-exercicios/blob/main/c/parte_1/extenso.c",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/c/parte_1/extenso.c",
             "compilar": "gcc extenso.c -o extenso",
             "tags": [
               "strings",
@@ -425,7 +425,7 @@
             "titulo": "Corretagem",
             "descricao": "Cálculo de corretagem",
             "path": "c/parte_1/corretagem.c",
-            "github_link": "https://github.com/smauricioj/ifsc-exercicios/blob/main/c/parte_1/corretagem.c",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/c/parte_1/corretagem.c",
             "compilar": "gcc corretagem.c -o corretagem",
             "tags": [
               "cálculo",
@@ -438,7 +438,7 @@
             "titulo": "Fahrenheit",
             "descricao": "Conversão de temperatura",
             "path": "c/parte_1/fahrenheit.c",
-            "github_link": "https://github.com/smauricioj/ifsc-exercicios/blob/main/c/parte_1/fahrenheit.c",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/c/parte_1/fahrenheit.c",
             "compilar": "gcc fahrenheit.c -o fahrenheit",
             "tags": [
               "básico",
@@ -453,7 +453,7 @@
             "titulo": "Triângulo de Floyd",
             "descricao": "Imprime triângulo de Floyd",
             "path": "c/parte_2/floyd.c",
-            "github_link": "https://github.com/smauricioj/ifsc-exercicios/blob/main/c/parte_2/floyd.c",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/c/parte_2/floyd.c",
             "compilar": "gcc floyd.c -o floyd",
             "tags": [
               "loops",
@@ -466,7 +466,7 @@
             "titulo": "Maior Elemento",
             "descricao": "Encontra o maior elemento",
             "path": "c/parte_2/maior.c",
-            "github_link": "https://github.com/smauricioj/ifsc-exercicios/blob/main/c/parte_2/maior.c",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/c/parte_2/maior.c",
             "compilar": "gcc maior.c -o maior",
             "tags": [
               "arrays",
@@ -479,7 +479,7 @@
             "titulo": "Números Amigos",
             "descricao": "Verifica números amigos",
             "path": "c/parte_2/amigos.c",
-            "github_link": "https://github.com/smauricioj/ifsc-exercicios/blob/main/c/parte_2/amigos.c",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/c/parte_2/amigos.c",
             "compilar": "gcc amigos.c -o amigos",
             "tags": [
               "matemática",
@@ -492,7 +492,7 @@
             "titulo": "Calendário",
             "descricao": "Geração de calendário",
             "path": "c/parte_2/calendario.c",
-            "github_link": "https://github.com/smauricioj/ifsc-exercicios/blob/main/c/parte_2/calendario.c",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/c/parte_2/calendario.c",
             "compilar": "gcc calendario.c -o calendario",
             "tags": [
               "data",
@@ -505,7 +505,7 @@
             "titulo": "Turma",
             "descricao": "Gerenciamento de turma",
             "path": "c/parte_2/turma.c",
-            "github_link": "https://github.com/smauricioj/ifsc-exercicios/blob/main/c/parte_2/turma.c",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/c/parte_2/turma.c",
             "compilar": "gcc turma.c -o turma",
             "tags": [
               "arrays",
@@ -518,7 +518,7 @@
             "titulo": "Incomodam Elefante",
             "descricao": "Música do elefante",
             "path": "c/parte_2/elefante.c",
-            "github_link": "https://github.com/smauricioj/ifsc-exercicios/blob/main/c/parte_2/elefante.c",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/c/parte_2/elefante.c",
             "compilar": "gcc elefante.c -o elefante",
             "tags": [
               "strings",
@@ -531,7 +531,7 @@
             "titulo": "Conjectura de Collatz",
             "descricao": "Sequência de Collatz",
             "path": "c/parte_2/collatz.c",
-            "github_link": "https://github.com/smauricioj/ifsc-exercicios/blob/main/c/parte_2/collatz.c",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/c/parte_2/collatz.c",
             "compilar": "gcc collatz.c -o collatz",
             "tags": [
               "algoritmos",
@@ -544,7 +544,7 @@
             "titulo": "Contador de Palavras",
             "descricao": "Conta palavras em texto",
             "path": "c/parte_2/palavras.c",
-            "github_link": "https://github.com/smauricioj/ifsc-exercicios/blob/main/c/parte_2/palavras.c",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/c/parte_2/palavras.c",
             "compilar": "gcc palavras.c -o palavras",
             "tags": [
               "strings",
@@ -557,7 +557,7 @@
             "titulo": "Fórmula de Heron",
             "descricao": "Área do triângulo",
             "path": "c/parte_2/heron.c",
-            "github_link": "https://github.com/smauricioj/ifsc-exercicios/blob/main/c/parte_2/heron.c",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/c/parte_2/heron.c",
             "compilar": "gcc heron.c -o heron -lm",
             "tags": [
               "matemática",
@@ -570,7 +570,7 @@
             "titulo": "Controle de Acesso",
             "descricao": "Sistema de acesso",
             "path": "c/parte_2/acesso.c",
-            "github_link": "https://github.com/smauricioj/ifsc-exercicios/blob/main/c/parte_2/acesso.c",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/c/parte_2/acesso.c",
             "compilar": "gcc acesso.c -o acesso",
             "tags": [
               "strings",
@@ -583,7 +583,7 @@
             "titulo": "RPG - Sistema de Combate",
             "descricao": "Sistema simples de RPG",
             "path": "c/parte_2/rpg.c",
-            "github_link": "https://github.com/smauricioj/ifsc-exercicios/blob/main/c/parte_2/rpg.c",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/c/parte_2/rpg.c",
             "compilar": "gcc rpg.c -o rpg",
             "tags": [
               "structs",
@@ -596,7 +596,7 @@
             "titulo": "Resistências em Série/Paralelo",
             "descricao": "Cálculo de resistências",
             "path": "c/parte_2/resistencias.c",
-            "github_link": "https://github.com/smauricioj/ifsc-exercicios/blob/main/c/parte_2/resistencias.c",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/c/parte_2/resistencias.c",
             "compilar": "gcc resistencias.c -o resistencias -lm",
             "tags": [
               "física",
