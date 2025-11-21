@@ -1,9 +1,9 @@
-package ifsc.poo.lista04.E1.domain.core;
+package ifsc.poo.lista04.E1.domain;
 
 public abstract class Animal {
     protected String nome;
 
-    public Animal(String nome) {
+    protected Animal(String nome) {
         this.nome = nome;
     }
 
