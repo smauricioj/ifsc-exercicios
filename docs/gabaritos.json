@@ -661,8 +661,8 @@
           },
           {
             "id": "front-aula04",
-            "titulo": "Aula 04 - CSS Básico",
-            "descricao": "Introdução ao CSS",
+            "titulo": "Aula 04 - Tabela e mídia",
+            "descricao": "Inserindo dados tabulares, imagens e músicas",
             "path": "front/pages/aula_4",
             "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/front/pages/aula_4",
             "demo_link": "https://smauricioj.github.io/ifsc-exercicios/front/pages/aula_4/main.html",
@@ -670,8 +670,8 @@
               "main.html"
             ],
             "tags": [
-              "css",
-              "estilo"
+              "html",
+              "mídia"
             ],
             "nivel": "básico"
           },
@@ -688,43 +688,64 @@
             ],
             "tags": [
               "html",
-              "formulários"
+              "formulário"
             ],
             "nivel": "básico"
           },
           {
             "id": "front-aula07",
-            "titulo": "Aula 07 - JavaScript Básico",
-            "descricao": "Introdução ao JavaScript",
+            "titulo": "Aula 07 - Introdução ao CSS",
+            "descricao": "Adicionar cores e estilos",
             "path": "front/pages/aula_7",
             "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/front/pages/aula_7",
             "demo_link": "https://smauricioj.github.io/ifsc-exercicios/front/pages/aula_7/main.html",
             "arquivos": [
               "main.html",
-              "form.html"
+              "form.html",
+              "style.css"
             ],
             "tags": [
-              "javascript",
+              "css",
               "básico"
             ],
             "nivel": "básico"
           },
           {
+            "id": "front-aula08",
+            "titulo": "Aula 08 - Flex box e floats",
+            "descricao": "Inserindo elementos de posição flutuante e colunas flexíveis",
+            "path": "front/pages/aula_8",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/front/pages/aula_8",
+            "demo_link": "https://smauricioj.github.io/ifsc-exercicios/front/pages/aula_8/main.html",
+            "arquivos": [
+              "main.html",
+              "form.html",
+              "style.css"
+            ],
+            "tags": [
+              "css",
+              "flex"
+            ],
+            "nivel": "básico"
+          },
+          {
             "id": "front-aula09",
-            "titulo": "Aula 09 - DOM e Eventos",
-            "descricao": "Manipulação do DOM e eventos",
+            "titulo": "Aula 09 - Grid e position",
+            "descricao": "Inserindo elementos de posição fixa, grid box e afins",
             "path": "front/pages/aula_9",
             "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/front/pages/aula_9",
             "demo_link": "https://smauricioj.github.io/ifsc-exercicios/front/pages/aula_9/main.html",
             "arquivos": [
               "main.html",
               "form.html",
-              "loja.html"
+              "loja.html",
+              "style_comum.css",
+              "style_loja.css",
+              "style_main.css"
             ],
             "tags": [
-              "javascript",
-              "dom",
-              "eventos"
+              "css",
+              "grid"
             ],
             "nivel": "intermediário"
           },
