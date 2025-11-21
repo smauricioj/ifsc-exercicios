@@ -4,17 +4,7 @@ Página estática para navegação dos gabaritos de exercícios de programação
 
 ## 🌐 Acesso
 
-Acesse a página em: `https://smauricioj.github.io/ifsc-exercicios/`
-
-## 📁 Estrutura
-
-```
-docs/
-├── index.html      # Página principal
-├── style.css       # Estilos
-├── script.js       # Lógica e filtros
-└── README.md       # Este arquivo
-```
+Acesse a página [aqui](https://smauricioj.github.io/ifsc-exercicios/)
 
 ## ✨ Funcionalidades
 
@@ -34,14 +24,6 @@ docs/
 - Demos ao vivo para exercícios frontend
 - Tags para fácil identificação
 - Design responsivo (mobile-friendly)
-
-## 🎨 Design
-
-O design foi inspirado no tema do "Untitled Goose Game", com cores suaves e pastéis:
-- 🦆 Paleta de cores verde-bege
-- 🎨 Animações suaves
-- 📱 Totalmente responsivo
-- ♿ Acessível
 
 ## 🚀 Como Funciona
 
@@ -92,16 +74,6 @@ O design foi inspirado no tema do "Untitled Goose Game", com cores suaves e past
 - JavaScript Vanilla (ES6+)
 - JSON para metadados
 - GitHub Pages para hospedagem
-
-## 📝 Melhorias Futuras
-
-- [ ] Sistema de favoritos (localStorage)
-- [ ] Histórico de visualizações
-- [ ] Modo escuro/claro
-- [ ] Exportar lista de exercícios
-- [ ] Integração com API do GitHub para mostrar stars/forks
-- [ ] Comentários/discussões por exercício
-- [ ] PWA (Progressive Web App)
 
 ## 🤝 Contribuindo
 
