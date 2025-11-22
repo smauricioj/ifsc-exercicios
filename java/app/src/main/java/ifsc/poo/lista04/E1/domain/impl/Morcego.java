@@ -1,4 +1,8 @@
-package ifsc.poo.lista04.E1.domain;
+package ifsc.poo.lista04.E1.domain.impl;
+
+import ifsc.poo.lista04.E1.domain.api.Mordedor;
+import ifsc.poo.lista04.E1.domain.api.Voador;
+import ifsc.poo.lista04.E1.domain.core.Animal;
 
 public class Morcego extends Animal implements Voador, Mordedor {
     public Morcego(String nome) {
