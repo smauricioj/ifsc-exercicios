@@ -16,8 +16,8 @@
         "aulas": [
           {
             "id": "alg-aula08",
-            "titulo": "Aula 08 - Estruturas de Repetição",
-            "descricao": "Exercícios sobre loops (while, for, do-while)",
+            "titulo": "Aula 08 - Entrada e saídas",
+            "descricao": "Usando Scanner e System.out para conversar com o usuário",
             "path": "java/app/src/main/java/ifsc/alg/aula08",
             "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/java/app/src/main/java/ifsc/alg/aula08",
             "exercicios": [
@@ -26,16 +26,17 @@
               "A8E2b.java"
             ],
             "tags": [
-              "loops",
-              "while",
-              "for"
+              "algoritmos",
+              "i/o",
+              "Scanner",
+              "System.out"
             ],
             "nivel": "básico"
           },
           {
             "id": "alg-aula09",
-            "titulo": "Aula 09",
-            "descricao": "Exercícios da aula 09",
+            "titulo": "Aula 09 - Estruturas de decisão",
+            "descricao": "Criando múltiplos caminhos no algoritmo",
             "path": "java/app/src/main/java/ifsc/alg/aula09",
             "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/java/app/src/main/java/ifsc/alg/aula09",
             "exercicios": [
@@ -43,14 +44,19 @@
               "A9E2.java"
             ],
             "tags": [
-              "algoritmos"
+              "algoritmos",
+              "decisao",
+              "if",
+              "else",
+              "switch",
+              "case"
             ],
             "nivel": "básico"
           },
           {
             "id": "alg-aula10",
-            "titulo": "Aula 10",
-            "descricao": "Exercícios da aula 10",
+            "titulo": "Aula 10 - Estruturas de repetição",
+            "descricao": "Laços de repetição de código",
             "path": "java/app/src/main/java/ifsc/alg/aula10",
             "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/java/app/src/main/java/ifsc/alg/aula10",
             "exercicios": [
@@ -58,19 +64,26 @@
               "A10E2.java"
             ],
             "tags": [
-              "algoritmos"
+              "algoritmos",
+              "repetição",
+              "while",
+              "do",
+              "for"
             ],
             "nivel": "intermediário"
           },
           {
             "id": "alg-aula11",
-            "titulo": "Aula 11",
-            "descricao": "Exercícios da aula 11",
+            "titulo": "Aula 11 - Métodos estáticos",
+            "descricao": "Paradigma funcional com métodos estáticos em Java",
             "path": "java/app/src/main/java/ifsc/alg/aula11",
             "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/java/app/src/main/java/ifsc/alg/aula11",
-            "exercicios": [],
+            "exercicios": [
+              "A11E1.java"
+            ],
             "tags": [
-              "algoritmos"
+              "algoritmos",
+              "funções"
             ],
             "nivel": "intermediário"
           }
@@ -78,8 +91,8 @@
         "listas": [
           {
             "id": "alg-lista05",
-            "titulo": "Lista 05 - Estruturas Condicionais e Entrada/Saída",
-            "descricao": "Exercícios básicos de condicionais e I/O",
+            "titulo": "Lista 05",
+            "descricao": "Exercícios básicos de I/O",
             "path": "java/app/src/main/java/ifsc/alg/lista05",
             "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/java/app/src/main/java/ifsc/alg/lista05",
             "exercicios": [
@@ -90,9 +103,12 @@
               "L5E5.java"
             ],
             "tags": [
-              "condicionais",
+              "algoritmos",
+              "decisao",
               "if",
-              "entrada-saida"
+              "else",
+              "switch",
+              "case"
             ],
             "nivel": "básico"
           },
