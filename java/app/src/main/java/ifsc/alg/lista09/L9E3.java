@@ -33,5 +33,6 @@ public class L9E3 {
             valores[i] = sc.nextInt();
         }
         System.out.printf("O desvio padrão é %.4f%n", desvioPadrao(valores));
+        sc.close();
     }
 }

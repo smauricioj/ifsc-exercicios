@@ -19,5 +19,6 @@ public class L1E7 {
             System.out.println();
             System.arraycopy(linhaAtual, 0, linhaAnterior, 0, i + 1);
         }
+        sc.close();
     }
 }

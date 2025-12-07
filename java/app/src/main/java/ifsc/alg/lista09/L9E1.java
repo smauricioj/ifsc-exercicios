@@ -26,5 +26,6 @@ public class L9E1 {
                 System.out.printf("%d: %d vez%s%n", i, count[i], count[i] > 1 ? "es" : "");
             }
         }
+        sc.close();
     }
 }

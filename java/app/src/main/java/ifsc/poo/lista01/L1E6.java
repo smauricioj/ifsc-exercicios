@@ -11,14 +11,17 @@ public class L1E6 {
             valores[i] = Integer.parseInt(valoresTexto[i]);
         }
         double m = media(valores), sum = 0;
-        for (int valor : valores)  sum += Math.pow((valor-m), 2);
+        for (int valor : valores)
+            sum += Math.pow((valor - m), 2);
         double dp = Math.sqrt(sum / (valores.length - 1));
         System.out.printf("%.2f\n", dp);
+        sc.close();
     }
 
     static double media(int[] arr) {
         double m = 0.0;
-        for (int v : arr) m += v;
+        for (int v : arr)
+            m += v;
         return m / arr.length;
     }
 }

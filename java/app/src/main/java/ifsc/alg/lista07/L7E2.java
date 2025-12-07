@@ -27,6 +27,7 @@ public class L7E2 {
             senha_informada = sc.nextInt();
             if (senha_informada == SENHA_CORRETA) {
                 System.out.println("Acesso autorizado");
+                sc.close();
                 return;
             }
             System.out.println("Acesso negado (senha incorreta)");

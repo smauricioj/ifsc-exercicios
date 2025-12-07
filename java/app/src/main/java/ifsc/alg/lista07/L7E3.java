@@ -11,6 +11,7 @@ public class L7E3 {
 
         if (classe < 1 || classe > 4) {
             System.out.println("Classe inválida");
+            sc.close();
             return;
         }
 
