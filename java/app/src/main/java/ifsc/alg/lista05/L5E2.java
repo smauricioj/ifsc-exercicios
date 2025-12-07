@@ -1,3 +1,9 @@
+/*Considere uma disciplina onde o aluno deve alcançar média igual ou superior a 6 em quatro
+avaliações e ter presença igual ou maior a 75% para ser aprovado. Elabore programa Java
+que LÊ quatro número reais representando as notas do aluno, bem como um número inteiro
+representando a frequência do aluno, para depois, ESCREVEr a média aritmética simples das
+notas e “Aprovado”, caso ele possa ser aprovado, ou “Reprovado” caso contrário. Não
+utilize mais do que duas variáveis de tipos primitivos no programa todo. */
 package ifsc.alg.lista05;
 
 import java.util.Scanner;

@@ -3,7 +3,7 @@ Elabore um programa Java que LÊ a altura de uma pessoa em metros e
 ESCREVE a altura correspondente em pés + polegadas.
 */
 
-package ifsc.alg.aula08;
+package ifsc.alg.aula01;
 
 import java.util.Scanner;
 

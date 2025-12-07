@@ -4,7 +4,7 @@ a altura de uma pessoa e ESCREVE o índice de massa corpórea (IMC) desta
 pessoa, bem com a classificação do seu estado nutricional.
 */
 
-package ifsc.alg.aula09;
+package ifsc.alg.aula02;
 
 import java.util.Scanner;
 
@@ -26,7 +26,7 @@ public class A9E1 {
             return;
         }
 
-        imc = peso/(altura*altura);
+        imc = peso / (altura * altura);
 
         System.out.printf("IMC: %.2f, ", imc);
         if (imc >= 30) {

@@ -15,30 +15,30 @@
       "categorias": {
         "aulas": [
           {
-            "id": "alg-aula08",
-            "titulo": "Aula 08 - Entrada e saídas",
+            "id": "alg-aula01",
+            "titulo": "Aula 01 - Entrada e saída",
             "descricao": "Usando Scanner e System.out para conversar com o usuário",
-            "path": "java/app/src/main/java/ifsc/alg/aula08",
-            "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/java/app/src/main/java/ifsc/alg/aula08",
-            "exercicios": [
-              "A8E1.java",
-              "A8E2a.java",
-              "A8E2b.java"
-            ],
+            "path": "java/app/src/main/java/ifsc/alg/aula01",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/java/app/src/main/java/ifsc/alg/aula01",
             "tags": [
               "algoritmos",
               "i/o",
               "Scanner",
               "System.out"
             ],
-            "nivel": "básico"
+            "nivel": "básico",
+            "exercicios": [
+              "A8E1.java",
+              "A8E2a.java",
+              "A8E2b.java"
+            ]
           },
           {
-            "id": "alg-aula09",
-            "titulo": "Aula 09 - Estruturas de decisão",
+            "id": "alg-aula02",
+            "titulo": "Aula 02 - Estruturas de decisão",
             "descricao": "Criando múltiplos caminhos no algoritmo com if, if-else, else-if e switch",
-            "path": "java/app/src/main/java/ifsc/alg/aula09",
-            "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/java/app/src/main/java/ifsc/alg/aula09",
+            "path": "java/app/src/main/java/ifsc/alg/aula02",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/java/app/src/main/java/ifsc/alg/aula02",
             "tags": [
               "algoritmos",
               "decisao",
@@ -54,11 +54,11 @@
             ]
           },
           {
-            "id": "alg-aula10",
-            "titulo": "Aula 10 - Estruturas de repetição",
+            "id": "alg-aula3",
+            "titulo": "Aula 03 - Estruturas de repetição",
             "descricao": "Laços de repetição de código com while e for",
-            "path": "java/app/src/main/java/ifsc/alg/aula10",
-            "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/java/app/src/main/java/ifsc/alg/aula10",
+            "path": "java/app/src/main/java/ifsc/alg/aula03",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/java/app/src/main/java/ifsc/alg/aula03",
             "tags": [
               "algoritmos",
               "repetição",
@@ -73,114 +73,122 @@
             ]
           },
           {
-            "id": "alg-aula11",
-            "titulo": "Aula 11 - Métodos estáticos",
+            "id": "alg-aula04",
+            "titulo": "Aula 04 - Métodos estáticos",
             "descricao": "Paradigma funcional com métodos estáticos em Java",
-            "path": "java/app/src/main/java/ifsc/alg/aula11",
-            "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/java/app/src/main/java/ifsc/alg/aula11",
-            "exercicios": [
-              "A11E1.java"
-            ],
+            "path": "java/app/src/main/java/ifsc/alg/aula04",
+            "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/java/app/src/main/java/ifsc/alg/aula04",
             "tags": [
               "algoritmos",
               "funções"
             ],
-            "nivel": "intermediário"
+            "nivel": "intermediário",
+            "exercicios": [
+              "A11E1.java"
+            ]
           }
         ],
         "listas": [
           {
             "id": "alg-lista05",
-            "titulo": "Lista 05",
-            "descricao": "Exercícios básicos de I/O",
+            "titulo": "Lista 05 - Entrada e saída",
+            "descricao": "Exercícios básicos de I/O com Scanner",
             "path": "java/app/src/main/java/ifsc/alg/lista05",
             "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/java/app/src/main/java/ifsc/alg/lista05",
+            "tags": [
+              "algoritmos",
+              "scanner",
+              "i/o"
+            ],
+            "nivel": "básico",
             "exercicios": [
               "L5E1.java",
               "L5E2.java",
               "L5E3.java",
               "L5E4.java",
               "L5E5.java"
-            ],
-            "tags": [
-              "algoritmos",
-              "decisao",
-              "if",
-              "else",
-              "switch",
-              "case"
-            ],
-            "nivel": "básico"
+            ]
           },
           {
             "id": "alg-lista06",
-            "titulo": "Lista 06",
-            "descricao": "Lista de exercícios 06",
+            "titulo": "Lista 06 - Estruturas de decisão",
+            "descricao": "Usando estruturas de decisão para resolver problemas de complexidade média",
             "path": "java/app/src/main/java/ifsc/alg/lista06",
             "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/java/app/src/main/java/ifsc/alg/lista06",
+            "tags": [
+              "algoritmos",
+              "if",
+              "else",
+              "switch"
+            ],
+            "nivel": "básico",
             "exercicios": [
               "L6E1.java",
               "L6E2.java",
               "L6E3.java",
               "L6E4.java",
               "L6E5.java"
-            ],
-            "tags": [
-              "algoritmos"
-            ],
-            "nivel": "básico"
+            ]
           },
           {
             "id": "alg-lista07",
-            "titulo": "Lista 07",
-            "descricao": "Lista de exercícios 07",
+            "titulo": "Lista 07 - Estruturas de repetição",
+            "descricao": "Usando laços de repetição, como for e while, para iterar comandos e gerar soluções mais generalizadas",
             "path": "java/app/src/main/java/ifsc/alg/lista07",
             "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/java/app/src/main/java/ifsc/alg/lista07",
+            "tags": [
+              "algoritmos",
+              "for",
+              "while",
+              "do"
+            ],
+            "nivel": "intermediário",
             "exercicios": [
               "L7E1.java",
               "L7E2.java",
               "L7E3.java",
               "L7E4.java"
-            ],
-            "tags": [
-              "algoritmos"
-            ],
-            "nivel": "intermediário"
+            ]
           },
           {
             "id": "alg-lista08",
-            "titulo": "Lista 08",
-            "descricao": "Lista de exercícios 08",
+            "titulo": "Lista 08 - Métodos estáticos",
+            "descricao": "Usando métodos estáticos como simples funções para implementar códigos seguindo o paradigma da programação estruturada.",
             "path": "java/app/src/main/java/ifsc/alg/lista08",
             "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/java/app/src/main/java/ifsc/alg/lista08",
+            "tags": [
+              "algoritmos",
+              "função",
+              "static"
+            ],
+            "nivel": "intermediário",
             "exercicios": [
               "L8E1.java",
               "L8E2.java",
               "L8E3.java",
               "L8E4.java"
-            ],
-            "tags": [
-              "algoritmos",
-              "loops"
-            ],
-            "nivel": "intermediário"
+            ]
           },
           {
             "id": "alg-lista09",
-            "titulo": "Lista 09",
-            "descricao": "Lista de exercícios 09",
+            "titulo": "Lista 09 - Arranjos e matrizes",
+            "descricao": "Usando arranjos para armazenar e manipular conjuntos de valores em Java",
             "path": "java/app/src/main/java/ifsc/alg/lista09",
             "github_link": "https://github.com/smauricioj/ifsc-exercicios/tree/master/java/app/src/main/java/ifsc/alg/lista09",
+            "tags": [
+              "algoritmos",
+              "array",
+              "matrix",
+              "arranjo",
+              "matriz"
+            ],
+            "nivel": "intermediário",
             "exercicios": [
               "L9E1.java",
               "L9E2.java",
               "L9E3.java",
               "L9E4.java"
-            ],
-            "tags": [
-              "algoritmos"
-            ],
-            "nivel": "intermediário"
+            ]
           }
         ]
       }

@@ -1,3 +1,12 @@
+/*
+Escreva um programa Java que LÊ um inteiro positivo entre 1 e 999999999 e ESCREVE uma
+tabela mostrando quantas vezes cada dígito aparece no número fornecido. Utilize um arranjo
+na sua solução.
+
+Restrições
+• Garanta que o número está na faixa válida
+• Se dígito não estiver presente no número, não mostre-o na tabela
+*/
 package ifsc.alg.lista09;
 
 import java.util.Scanner;
@@ -22,9 +31,9 @@ public class L9E1 {
 
         System.out.println("Quantidade de cada dígito:");
         for (int i = 0; i < count.length; i++) {
-            if (count[i] > 0) {
-                System.out.printf("%d: %d vez%s%n", i, count[i], count[i] > 1 ? "es" : "");
-            }
+            if (count[i] == 0)
+                continue;
+            System.out.printf("%d: %d vez%s%n", i, count[i], count[i] > 1 ? "es" : "");
         }
         sc.close();
     }

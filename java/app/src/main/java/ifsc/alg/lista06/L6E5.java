@@ -1,3 +1,7 @@
+/*
+Elabore um programa Java que LÊ um número inteiro entre 1 e 99, e ESCREVE o número por
+extenso em português.
+*/
 package ifsc.alg.lista06;
 
 import java.util.Scanner;
@@ -13,7 +17,7 @@ public class L6E5 {
             return;
         }
         System.out.print("Número por extenso: ");
-        
+
         int unidade = n % 10;
         int dezena = n / 10;
 

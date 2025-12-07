@@ -6,7 +6,7 @@ preço do metro quadrado (em R$/m2) e ESCREVE o custo total de produção
 das caixas.
 */
 
-package ifsc.alg.aula08;
+package ifsc.alg.aula01;
 
 import java.util.Scanner;
 
@@ -34,7 +34,7 @@ public class A8E1 {
         System.out.print("Entre com o custo por m2: ");
         custo = sc.nextDouble();
 
-        System.out.printf("O custo total de produção é %.2f R$%n", quantidade * custo * area );
+        System.out.printf("O custo total de produção é %.2f R$%n", quantidade * custo * area);
 
         sc.close();
         // Fim

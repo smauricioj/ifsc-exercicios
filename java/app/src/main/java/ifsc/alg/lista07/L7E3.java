@@ -1,3 +1,28 @@
+/*
+Em um determinado jogo de interpretação de papéis, a vitalidade de um personagem aumenta a
+cada nível alcançado pelo mesmo, de acordo com sua classe; além disso, cada classe começa
+(no nível 0) com um valor de vitalidade pré-estabelecido. A tabela abaixo traz as informações
+relevantes.
+
+Classe   Vitalidade inicial Incremento por nível
+Arqueiro 150                10
+Bárbaro  200                15
+Druida   100                5
+Mago     80                 4
+
+Há também o seguinte fator complicador que deve ser levado em conta: se o nível recém
+alcançado for um múltiplo de 5, então o incremento é dobrado, a título de bônus para o
+personagem.
+
+Escreva um programa que LÊ a classe do personagem (codificada da seguinte maneira: 1 –
+arqueiro, 2 – bárbaro, 3 – druida, 4 – mago) e um valor de vitalidade desejado e ESCREVE o
+nível mínimo necessário que fornece vitalidade maior ou igual a desejada para a classe em
+questão.
+Caso o usuário entre com um código de classe fora da faixa de 1 a 4, o programa deve exibir uma
+mensagem informando que a classe é inválida e terminar imediatamente. Utilize os comandos
+switch e while na sua solução.
+*/
+
 package ifsc.alg.lista07;
 
 import java.util.Scanner;

@@ -1,3 +1,10 @@
+/*
+Escreva um programa que LÊ do teclado um valor em centavos e ESCREVE na tela a quantidade
+de moedas necessárias para formar esse valor, dando preferência para as moedas de maior
+valor. Não utilize mais do que duas variáveis de tipos primitivos no programa todo. As
+moedas disponíveis são de 50, 25, 10, 5 e 1 centavo.
+ */
+
 package ifsc.alg.lista05;
 
 import java.util.Scanner;

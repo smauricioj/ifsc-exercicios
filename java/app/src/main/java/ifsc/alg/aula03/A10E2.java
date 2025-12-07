@@ -6,7 +6,7 @@ Utilize o comando for na sua solução e apresente o conjunto de divisores
 como nos exemplos abaixo. Não use arranjos.
  */
 
-package ifsc.alg.aula10;
+package ifsc.alg.aula03;
 
 import java.util.Scanner;
 
@@ -17,7 +17,7 @@ public class A10E2 {
         int n = sc.nextInt();
         System.out.print("Divisores: [1, ");
         boolean ehPrimo = true;
-        for (int i = 2; i <= n/2; i++) {
+        for (int i = 2; i <= n / 2; i++) {
             if (n % i == 0) {
                 ehPrimo = false;
                 System.out.printf("%d, ", i);

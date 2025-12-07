@@ -1,3 +1,8 @@
+/*
+Elabore programa Java que LÊ um número real representando uma temperatura em graus
+Fahrenheit e ESCREVE esta temperatura em graus Celsius.
+*/
+
 package ifsc.alg.lista05;
 
 import java.util.Scanner;
@@ -10,8 +15,8 @@ public class L5E1 {
         // Início
         Scanner sc = new Scanner(System.in);
         System.out.print("Digite o valor da temperatura em Fahrenheit: ");
-        tempF = sc.nextDouble();            // 'Leia tempF'
-        tempC = (tempF - 32)*(5.0 / 9.0);   // Atenção para a divisão de doubles!
+        tempF = sc.nextDouble(); // 'Leia tempF'
+        tempC = (tempF - 32) * (5.0 / 9.0); // Atenção para a divisão de doubles!
         System.out.printf("Temperatura em Celcius: %.3f%n", tempC);
         sc.close();
         // Fim

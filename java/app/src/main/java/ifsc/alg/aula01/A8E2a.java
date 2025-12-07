@@ -4,7 +4,7 @@ polegadas e ESCREVE a altura correspondente em metros, com duas casas
 decimais
 */
 
-package ifsc.alg.aula08;
+package ifsc.alg.aula01;
 
 import java.util.Scanner;
 

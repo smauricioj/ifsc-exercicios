@@ -9,7 +9,7 @@ Em caso de operação inválida ou divisão por zero, o programa deve
 reportar um erro.
 */
 
-package ifsc.alg.aula09;
+package ifsc.alg.aula02;
 
 import java.util.Scanner;
 

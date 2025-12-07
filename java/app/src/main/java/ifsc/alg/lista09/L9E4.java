@@ -1,3 +1,11 @@
+/*
+Desenvolva um programa Java que LÊ os valores de uma matriz quadrada e ESCREVE o índice
+da coluna com maior soma dos elementos. A leitura da matriz deve ser feita da seguinte forma:
+primeiro será lido um valor inteiro positivo n que representa quantas linhas/colunas a matriz
+possui (ela é quadrada), depois serão lidos os n2 valores inteiros da matriz, linha por linha, da
+esquerda para direita.
+*/
+
 package ifsc.alg.lista09;
 
 import java.io.PrintStream;
@@ -7,40 +15,52 @@ public class L9E4 {
     static final Scanner IN = new Scanner(System.in);
     static final PrintStream OUT = System.out;
 
+    /**
+     * Calcula as somas de cada coluna de uma matriz m
+     */
     static int[] somaColunas(int[][] m) {
         // Verificando se matriz faz sentido
-        int nLinhas = m.length;
-        if (nLinhas == 0) return new int[]{0};
+        if (m.length == 0)
+            return new int[] { 0 };
         int nColunas = m[0].length;
-        if (nColunas == 0) return new int[]{0};
+        if (nColunas == 0)
+            return new int[] { 0 };
 
         // Calculando soma
-        int[] colunas = new int[nColunas];
+        int[] somas = new int[nColunas];
         for (int j = 0; j < nColunas; j++) {
             for (int[] linha : m) {
-                colunas[j] += linha[j];
+                somas[j] += linha[j];
             }
         }
-        return colunas;
+        return somas;
     }
 
+    /**
+     * Encontra o índice do maior elemento de um arranjo
+     */
     static int encontraIndiceMaiorValor(int[] arr) {
         // Verificando se arranjo faz sentido
-        if (arr.length == 0) return 0;
+        if (arr.length == 0)
+            return 0;
 
         // Procurando maior valor
         int maior = arr[0], indiceMaior = 0;
         for (int i = 1; i < arr.length; i++) {
-            if (arr[i] > maior) {
-                maior = arr[i];
-                indiceMaior = i;
-            }
+            if (arr[i] <= maior)
+                continue;
+            maior = arr[i];
+            indiceMaior = i;
         }
         return indiceMaior;
     }
 
+    /**
+     * Exaustivamente lê um inteiro positivo da entrada padrão
+     */
     static int lerPositivo(String rotulo) {
-        if (rotulo.isEmpty()) rotulo = "o número positivo";
+        if (rotulo.isEmpty())
+            rotulo = "o número positivo";
         int res;
         do {
             OUT.printf("Entre com %s: ", rotulo);
@@ -49,6 +69,10 @@ public class L9E4 {
         return res;
     }
 
+    /**
+     * Lê os elementos, na ordem de leitura, de uma matriz quadrada
+     * de tamanho tam
+     */
     static int[][] lerMatriz(int tam) {
         OUT.println("Entre com os valores:");
         int[][] matriz = new int[tam][tam];
@@ -60,6 +84,9 @@ public class L9E4 {
         return matriz;
     }
 
+    /**
+     * Função principal do programa
+     */
     public static void main(String[] args) {
         // Não é boa prática, mas eu achei divertido haha
         System.out.printf("O índice da coluna com maior valor é: %d%n",
