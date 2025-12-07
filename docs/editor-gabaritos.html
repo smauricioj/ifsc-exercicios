@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor de Gabaritos - IFSC</title>
+    <link rel="stylesheet" href="editor-gabaritos.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🛠️ Editor de Gabaritos - IFSC</h1>
+            <p>Adicione, edite e gerencie exercícios facilmente</p>
+            <div id="editModeIndicator"
+                style="display: none; margin-top: 15px; padding: 10px 15px; background: #ffd43b; border-radius: 8px; color: #4a453d; font-weight: 600;">
+                ✏️ MODO DE EDIÇÃO ATIVO - Alterando um exercício existente
+            </div>
+        </div>
+
+        <div id="alertContainer"></div>
+
+        <div class="stats">
+            <div class="stat-card">
+                <div class="number" id="totalExercicios">0</div>
+                <div class="label">Total de Exercícios</div>
+            </div>
+            <div class="stat-card">
+                <div class="number" id="totalDisciplinas">0</div>
+                <div class="label">Disciplinas</div>
+            </div>
+            <div class="stat-card">
+                <div class="number" id="totalCategorias">0</div>
+                <div class="label">Categorias</div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <!-- Painel Esquerdo: Formulário -->
+            <div class="panel">
+                <h2>📝 Adicionar Novo Exercício</h2>
+
+                <div class="file-actions">
+                    <label for="fileInput">📂 Carregar gabaritos.json</label>
+                    <input type="file" id="fileInput" accept=".json">
+                    <button class="btn btn-secondary" id="btnNewExercise">➕ Novo</button>
+                </div>
+
+                <form id="exerciseForm">
+                    <div class="form-group">
+                        <label>Disciplina *</label>
+                        <select id="disciplina" required>
+                            <option value="">Selecione...</option>
+                            <option value="alg-java">Algoritmos (Java)</option>
+                            <option value="poo">POO</option>
+                            <option value="alg-c">Algoritmos (C)</option>
+                            <option value="frontend">Frontend</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Categoria *</label>
+                        <select id="categoria" required>
+                            <option value="">Selecione disciplina primeiro...</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>ID único *</label>
+                        <input type="text" id="id" placeholder="Ex: alg-lista10" required>
+                        <small>Identificador único (sem espaços, use hífen)</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Título *</label>
+                        <input type="text" id="titulo" placeholder="Ex: Lista 10 - Arrays e Matrizes" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Descrição *</label>
+                        <textarea id="descricao" placeholder="Breve descrição do exercício..." required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Caminho (path) *</label>
+                        <input type="text" id="path" placeholder="Ex: java/app/src/main/java/ifsc/alg/lista10" required>
+                        <small>Caminho relativo no repositório</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Link GitHub *</label>
+                        <input type="url" id="githubLink"
+                            placeholder="https://github.com/smauricioj/ifsc-exercicios/tree/master/..." required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Link Demo (opcional - só para frontend)</label>
+                        <input type="url" id="demoLink"
+                            placeholder="https://smauricioj.github.io/ifsc-exercicios/front/...">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Nível *</label>
+                        <select id="nivel" required>
+                            <option value="básico">Básico</option>
+                            <option value="intermediário">Intermediário</option>
+                            <option value="avançado">Avançado</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Tags</label>
+                        <div class="tags-input" id="tagsContainer">
+                            <input type="text" id="tagInput" placeholder="Digite e pressione Enter...">
+                        </div>
+                        <small>Pressione Enter para adicionar tag</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Arquivos/Exercícios (separados por vírgula)</label>
+                        <input type="text" id="exercicios" placeholder="L10E1.java, L10E2.java, L10E3.java">
+                        <small>Lista de arquivos do exercício</small>
+                    </div>
+
+                    <div class="form-group" id="compilarGroup" style="display: none;">
+                        <label>Comando de Compilação (para C)</label>
+                        <input type="text" id="compilar" placeholder="gcc arquivo.c -o arquivo">
+                    </div>
+
+                    <div class="btn-group">
+                        <button type="submit" class="btn btn-primary">✅ Adicionar Exercício</button>
+                        <button type="button" class="btn btn-secondary" id="btnClearForm">🗑️ Limpar</button>
+                        <button type="button" class="btn btn-danger" id="btnCancelEdit" style="display: none;">❌
+                            Cancelar Edição</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Painel Direito: Preview e Download -->
+            <div class="panel">
+                <h2>👁️ Preview & Download</h2>
+
+                <div class="preview" style="margin-top: 20px;">
+                    <h3>📋 Exercícios Cadastrados:</h3>
+                    <div id="exercisesList">Nenhum exercício ainda...</div>
+                </div>
+
+                <div class="preview">
+                    <h3>JSON Preview:</h3>
+                    <pre id="jsonPreview">Carregue um gabaritos.json ou adicione um exercício...</pre>
+                </div>
+
+                <div class="btn-group">
+                    <button class="btn btn-primary" id="btnDownload">💾 Download gabaritos.json</button>
+                    <button class="btn btn-secondary" id="btnCopy">📋 Copiar JSON</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="editor-gabaritos.js"></script>
+</body>
+
+</html>
